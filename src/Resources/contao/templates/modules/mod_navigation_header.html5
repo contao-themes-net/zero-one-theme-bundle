@@ -7,7 +7,7 @@
       <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
     <?php endif; ?>
     {{theme::content::ZeroOne01/04}}
-  </section>  
+  </section>
 
   <section class="navbar-section">
     <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
@@ -15,8 +15,9 @@
     <?= $this->items ?>
 
     <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
-  </section>  
+  </section>
 
 </nav>
 <!-- indexer::continue -->
-<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'navbar'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_navbar'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/navbar'; ?>

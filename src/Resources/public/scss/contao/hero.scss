@@ -1,0 +1,82 @@
+.hero {
+  opacity: 1;
+  min-height: 1080px;
+
+  .hero-body {
+    background-image:url(/bundles/contaothemesnetzeroonetheme/img/bubbles.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 729px;
+  }
+
+  &.quote {
+    min-height: inherit;
+
+    .ce_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2,h3,h4,h5 {
+      position: absolute;
+      width: 50%;
+      font-size: 2em;
+      font-style: italic;
+      color: $dark-color;
+      text-transform: uppercase;
+    }
+
+    .hero-body {
+      min-height: inherit;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  &.parallax {
+    color: $light-color;
+    min-height: inherit;
+
+    .hero-body {
+      min-height: inherit;
+    }
+
+    h2,h3,h4,h5 {
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 1px 1px 3px rgba(123, 123, 123, 0.5);
+    }
+
+    .parallax-body {
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-attachment: fixed;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      p {
+        font-size: 18px;
+        text-shadow: 1px 1px 3px rgba(123, 123, 123, 0.5);
+      }
+    }
+  }
+}
+
+.mod_article.hero {
+  max-width: inherit;
+  padding-top: 270px;
+
+  &.quote {
+    padding-top: 50px;
+  }
+
+  &.parallax {
+    padding-top: 0;
+  }
+}

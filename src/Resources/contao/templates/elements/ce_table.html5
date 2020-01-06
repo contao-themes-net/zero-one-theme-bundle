@@ -45,4 +45,4 @@
   </table>
 
 <?php $this->endblock(); ?>
-<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'tables'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_tables'; ?>

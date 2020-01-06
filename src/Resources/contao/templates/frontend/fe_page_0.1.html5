@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{env::url}}/{{env::request}}"/>
   <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
 
-  <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="files/zeroOne/favicon.ico" type="image/x-icon"/>
 <?php $this->endblock(); ?>
 
 <?php $this->block('body'); ?>
@@ -30,10 +30,11 @@
   $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
 
   // add 0.1 to end of array
-  $GLOBALS['ZERO_ONE_STYLES'][] = '0.1';
+  $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
+  $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
 
   foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-    $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/_' . $style . '.scss";' . "\n";
+    $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
   }
   \File::putContent($file->path, $scssStr);
 ?>

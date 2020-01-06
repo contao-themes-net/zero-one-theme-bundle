@@ -47,7 +47,7 @@
     <?php endif; ?>
 
     <?php $this->block('content'); ?>
-      <?php if(strpos($this->class,"hero")!==false): echo '<div class="hero-body">'; endif; ?>	
+      <?php if(strpos($this->class,"hero")!==false): echo '<div class="hero-body">'; endif; ?>
       <?= implode('', $this->elements) ?>
       <?php if(strpos($this->class,"hero")!==false): echo '</div>'; endif; ?>
     <?php $this->endblock(); ?>
@@ -63,5 +63,8 @@
 
 <?php endif; ?>
 <?php // theme css  optimization
-if(strpos($this->class,"hero")!==false): $GLOBALS['ZERO_ONE_STYLES'][] = 'hero'; endif;
+if(strpos($this->class,"hero")!==false):
+  $GLOBALS['ZERO_ONE_STYLES'][] = '_hero';
+  $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/hero';
+endif;
 ?>

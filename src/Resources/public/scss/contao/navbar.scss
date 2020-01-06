@@ -1,0 +1,135 @@
+.homepage .navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  &.bg-sunrise {
+    background: none;
+  }
+
+  .logo img {
+    width: inherit;
+  }
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 0 95px;
+
+  .mod_article {
+    padding: 0;
+  }
+
+  ul {
+    padding-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.level_1 > li > a {
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        text-decoration: none;
+        border-color: $dark-color;
+      }
+
+      &.submenu:after {
+        content: "↓";
+        padding: 0 0 0 5px;
+      }
+    }
+
+    li {
+      display: flex;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding: 0 1em;
+      position: relative;
+      z-index: 1;
+
+      a,strong {
+        color: $dark-color;
+        font-weight: bold;
+      }
+
+      &.active, &.trail {
+        &:after {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: -15px;
+          left: 50%;
+          margin-left: -5px;
+          border-radius: 60px;
+          content: " ";
+          background: $dark-color;
+        }
+      }
+
+      &:hover > ul {
+        display: block;
+      }
+
+      &.homepage {
+        margin-right: 50px;
+      }
+    }
+
+    .level_2, .level_3 {
+      display: none;
+      position: absolute;
+      background-size: auto;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      li {
+        width: 100%;
+        text-align: center;
+        padding: 3px 0;
+
+        a {
+          margin: auto;
+          font-size: 18px;
+          text-transform: initial;
+          padding: 3px 20px;
+          width: 100%;
+        }
+      }
+    }
+
+    .level_2 {
+      margin-left: -55px;
+      background-image: url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_2.svg);
+      background-size: 100% calc(100% - 40px);
+      padding: 90px 0 55px;
+      background-position: bottom;
+      width: 200px;
+
+      a {
+        color: $light-color;
+      }
+    }
+    .level_3 {
+      background-image:url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_3.svg);
+      background-size: 100% 100%;
+      padding: 70px 0;
+      left: 190px;
+      width: 200px;
+      min-height: 180px;
+      margin-top: -18px;
+
+      a {
+        color: $dark-color;
+      }
+    }
+
+  }
+
+  .logo img {
+    padding-top: 19px;
+    width: 132px;
+    height: auto;
+  }
+}

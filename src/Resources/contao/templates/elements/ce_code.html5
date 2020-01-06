@@ -3,6 +3,6 @@
 <?php $this->block('content'); ?>
 
   <pre class="code" data-lang="<?= $this->cssClass ?>"><code class="<?= $this->cssClass ?>"><?= $this->code ?></code></pre>
-  
+
 <?php $this->endblock(); ?>
-<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'codes'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_codes'; ?>
