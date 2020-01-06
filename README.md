@@ -1,6 +1,4 @@
-# 0.1 Theme Bundle
-
-0.1 Energy Saving Contao Theme
+# 0.1 Energy Saving Contao Theme
 
 license
 

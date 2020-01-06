@@ -1,1 +1,7 @@
-/.idea
+# Composer
+.idea
+/composer.lock
+/vendor/
+
+# PhpUnit
+/phpunit.xml

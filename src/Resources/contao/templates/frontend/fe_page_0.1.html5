@@ -1,54 +1,72 @@
 <?php $this->extend('fe_page'); ?>
 
 <?php $this->block('head'); ?>
-<meta charset="<?= $this->charset ?>">
-<title><?= $this->title ?></title>
-<base href="<?= $this->base ?>">
+  <meta charset="<?= $this->charset ?>">
+  <title><?= $this->title ?></title>
+  <base href="<?= $this->base ?>">
 
-<meta name="robots" content="<?= $this->robots ?>">
-<meta name="description" content="<?= $this->description ?>">
-<meta name="generator" content="Contao Open Source CMS">
+  <meta name="robots" content="<?= $this->robots ?>">
+  <meta name="description" content="<?= $this->description ?>">
+  <meta name="generator" content="Contao Open Source CMS">
 
-<?= $this->viewport ?>
+  <?= $this->viewport ?>
 
-<meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
-<meta property="og:description" content="<?php echo $this->description; ?>" />
-<meta property="og:url" content="{{env::url}}/{{env::request}}" />
-<?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>"/>
+  <meta property="og:description" content="<?php echo $this->description; ?>"/>
+  <meta property="og:url" content="{{env::url}}/{{env::request}}"/>
+  <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
 
-<link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon" />
-
+  <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
 <?php $this->endblock(); ?>
 
 <?php $this->block('body'); ?>
-<?php $this->parent(); ?>
+  <?php $this->parent(); ?>
 
-<?= $this->stylesheets ?>
+  <?= $this->stylesheets ?>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php
-        // add stylesheets
-        $combiner = new Combiner();
-        foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-            $combiner->add('bundles/contaothemesnetzeroonetheme/scss/_' . $style . '.scss');
-        }
-        echo $combiner->getCombinedFile(); ?>">
+<?php // @todo write class for this funtions
+  $scssStr = '';
+  $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
+  $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
 
-<?= $this->head ?>
+  foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
+    $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/_' . $style . '.scss";' . "\n";
+  }
+  \File::putContent($file->path, $scssStr);
+?>
 
-<?= $this->mooScripts ?>
-<?= $this->framework ?>
+  <link rel="stylesheet" type="text/css" media="all" href="<?php
+          // add stylesheets
+          $combiner = new Combiner();
+          $combiner->add($file->path);
+          echo $combiner->getCombinedFile(); ?>">
+
+<?php /* <link rel="stylesheet" type="text/css" media="all" href="<?php
+          // add stylesheets
+          $combiner = new Combiner();
+          $combiner->add('web/bundles/contaothemesnetzeroonetheme/scss/spectre.scss');
+          echo $combiner->getCombinedFile(); ?>"> */ ?>
+
+  <?= $this->head ?>
+
+  <?= $this->mooScripts ?>
+  <?= $this->framework ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('container'); ?>
-<?php if ($this->left || $this->right): ?><div class="column-wrapper"><div class="container"><?php endif; ?>
-    <?php $this->parent(); ?>
-    <?php if ($this->left || $this->right): ?></div></div><?php endif; ?>
+  <?php if ($this->left || $this->right): ?>
+  <div class="column-wrapper">
+    <div class="container"><?php endif; ?>
+      <?php $this->parent(); ?>
+      <?php if ($this->left || $this->right): ?>
+    </div>
+  </div><?php endif; ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('footer'); ?>
-<?php if ($this->footer): ?>
-<footer id="footer" class="page-footer">
-    <?= $this->footer ?>
+  <?php if ($this->footer): ?>
+    <footer id="footer" class="page-footer">
+  <?= $this->footer ?>
 </footer>
 <pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre>
 <?php endif; ?>
