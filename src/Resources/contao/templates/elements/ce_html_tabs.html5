@@ -1,0 +1,3 @@
+
+<?= $this->html ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'tabs'; ?>

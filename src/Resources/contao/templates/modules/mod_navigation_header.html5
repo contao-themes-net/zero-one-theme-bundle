@@ -1,0 +1,22 @@
+
+<!-- indexer::stop -->
+<nav class="navbar bg-sunrise <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+  <section class="navbar-section">
+    <?php if ($this->headline): ?>
+      <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+    <?php endif; ?>
+    {{theme::content::ZeroOne01/04}}
+  </section>  
+
+  <section class="navbar-section">
+    <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+
+    <?= $this->items ?>
+
+    <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
+  </section>  
+
+</nav>
+<!-- indexer::continue -->
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'navbar'; ?>

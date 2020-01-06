@@ -1,0 +1,1 @@
+<div class="columns <?= $this->class ?> ce_wrapper block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>

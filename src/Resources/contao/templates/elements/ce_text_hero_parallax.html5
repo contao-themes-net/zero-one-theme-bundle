@@ -1,0 +1,15 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <div class="column parallax-body"<?php if ($this->addImage): ?> style="background-image: url('<?= $this->singleSRC ?>')"<?php endif; ?>>
+    
+	<?php if (!$this->addBefore): ?>
+	  <?= $this->text ?>
+	<?php endif; ?>
+	
+	<?php if ($this->addBefore): ?>
+	  <?= $this->text ?>
+	<?php endif; ?>
+  </div>
+<?php $this->endblock(); ?>

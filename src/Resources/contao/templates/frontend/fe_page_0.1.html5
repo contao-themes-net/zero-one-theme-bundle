@@ -29,6 +29,9 @@
   $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
   $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
 
+  // add 0.1 to end of array
+  $GLOBALS['ZERO_ONE_STYLES'][] = '0.1';
+
   foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
     $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/_' . $style . '.scss";' . "\n";
   }
@@ -68,6 +71,7 @@
     <footer id="footer" class="page-footer">
   <?= $this->footer ?>
 </footer>
-<pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre>
+<?php /* <pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre> */ ?>
+<div class="text-center debug"><?php echo implode("|",$GLOBALS['ZERO_ONE_STYLES']) ?></div>
 <?php endif; ?>
 <?php $this->endblock(); ?>
