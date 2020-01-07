@@ -23,7 +23,7 @@
   figure > div { display: none; }
 
   figure > div {
-    padding: 20px;
+    padding: 30px 50px;
     width: 100%;
     line-height: 1.5em;
     letter-spacing: 0.3px;
@@ -32,32 +32,6 @@
 
   label {
     border-bottom: 6px solid transparent;
-  }
-
-  nav label {
-    float: left;
-    padding: 15px 15px;
-    border-top: 1px solid silver;
-    border-right: 1px solid silver;
-    background: hsl(210,50%,50%);
-    color: #eee;
-  }
-
-  nav label:nth-child(1) { border-left: 1px solid silver; }
-  nav label:hover { background: hsl(210,50%,40%); }
-  nav label:active { background: #ffffff; }
-
-  #tab1:checked ~ figure .tab1,
-  #tab2:checked ~ figure .tab2,
-  #tab3:checked ~ figure .tab3 { display: block; }
-
-  #tab1:checked ~ .tab label[for="tab1"],
-  #tab2:checked ~ .tab label[for="tab2"],
-  #tab3:checked ~ .tab label[for="tab3"] {
-    background: white;
-    color: #111;
-    position: relative;
-    border-bottom: 6px solid #F6D365;
   }
 }
 
