@@ -1,5 +1,9 @@
 <?php
 
+use ContaoThemesNet\ZeroOneThemeBundle\Element\TabsNavElement;
+use ContaoThemesNet\ZeroOneThemeBundle\Element\TabsStartElement;
+use ContaoThemesNet\ZeroOneThemeBundle\Element\TabsStopElement;
+
 // Insert the zero one theme category
 array_insert($GLOBALS['TL_CTE'], 1, ['zeroOneTheme' => []]);
 
@@ -7,10 +11,14 @@ array_insert($GLOBALS['TL_CTE'], 1, ['zeroOneTheme' => []]);
  * Add content elements
  */
 
+$GLOBALS['TL_CTE']['zeroOneTheme']['tabsNavElement'] = TabsNavElement::class;
+$GLOBALS['TL_CTE']['zeroOneTheme']['tabsStartElement'] = TabsStartElement::class;
+$GLOBALS['TL_CTE']['zeroOneTheme']['tabsStopElement'] = TabsStopElement::class;
 
 /**
  * Available tags for Zero One Theme
  */
+
 $GLOBALS['tl_config']['theme_tags'] = [
     '-',
     'ZeroOne01/01',
@@ -31,8 +39,16 @@ $GLOBALS['tl_config']['theme_tags'] = [
 ];
 
 /**
+ * Wrapper elements
+ */
+
+$GLOBALS['TL_WRAPPERS']['start'][] = 'tabsStartElement';
+$GLOBALS['TL_WRAPPERS']['stop'][] = 'tabsStopElement';
+
+/**
  * Load default styles for every page
  */
+
 if($GLOBALS['ZERO_ONE_STYLES'])
     $GLOBALS['ZERO_ONE_STYLES'] = [];
 

@@ -1,10 +1,22 @@
+.ce_tabsStartElement h3 {
+  color: #000;
+  font-size: 20px;
+}
+
 .tabs {
   width: 100%;
-  padding: 0 50px;
+  padding: 0;
+  margin: 0;
+
+  a:hover label {
+    color: #ff8562;
+  }
+
   figure {
     display: block;
     margin-left: 0;
     clear: both;
+    margin-bottom: 50px;
   }
 
   > input,
@@ -16,6 +28,10 @@
     line-height: 1.5em;
     letter-spacing: 0.3px;
     color: #444;
+  }
+
+  label {
+    border-bottom: 6px solid transparent;
   }
 
   nav label {
@@ -35,57 +51,40 @@
   #tab2:checked ~ figure .tab2,
   #tab3:checked ~ figure .tab3 { display: block; }
 
-  #tab1:checked ~ nav label[for="tab1"],
-  #tab2:checked ~ nav label[for="tab2"],
-  #tab3:checked ~ nav label[for="tab3"] {
+  #tab1:checked ~ .tab label[for="tab1"],
+  #tab2:checked ~ .tab label[for="tab2"],
+  #tab3:checked ~ .tab label[for="tab3"] {
     background: white;
     color: #111;
     position: relative;
-    border-bottom: none;
-  }
-
-  #tab1:checked ~ nav label[for="tab1"]:after,
-  #tab2:checked ~ nav label[for="tab2"]:after,
-  #tab3:checked ~ nav label[for="tab3"]:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: white;
-    left: 0;
-    bottom: -1px;
+    border-bottom: 6px solid #F6D365;
   }
 }
 
 .tab.tab-block {
-  padding: 0;
+  width: 100%;
+  padding: 0 150px;
 
   .tab-item a {
-    pointer-events: none;
-    padding: 0;
-    border-bottom: 6px solid transparent;
-    margin-bottom: -1px;
-
-    &.active {
-      border-color: transparent;
-    }
-
-    &:hover {
-      border-bottom: 6px solid $dark-color;
-    }
-
     label {
-      pointer-events: all;
       cursor: pointer;
       width: 100%;
       display: block;
       padding: 0.4rem 0.2rem 0.3rem 0.2rem;
     }
   }
+}
 
-  .tab-item.active a {
-    border-bottom: 6px solid #F6D365;
-    margin-bottom: -1px;
+.tab .tab-item.active a, .tab .tab-item a.active {
+  border: none;
+  padding: 0;
+}
+
+.tab .tab-item a {
+  border: none;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
   }
 }
