@@ -27,11 +27,10 @@ h3 {
 
 .page-footer {
   color: $light-color;
-  font-size: .7rem;
+  font-size: 18px;
 
   a {
     color: $light-color;
-    text-transform: uppercase;
   }
 
   .icon {
@@ -52,7 +51,7 @@ h3 {
           content: "";
         }
         strong {
-          text-transform: uppercase;
+          font-size: 18px;
           font-weight: normal;
         }
       }
@@ -63,14 +62,12 @@ h3 {
 // zero one styles
 .bg-sunrise {
   background: transparent linear-gradient(99deg, #F6D365 0%, #FF8562 100%) 0% 0% no-repeat padding-box;
-  min-height: 100vh;
 
   .ce_text, .ce_headline {
     color: $dark-color;
   }
 
   em {
-    //color: $light-color;
     font-size: 23px;
     line-height: 1.4;
   }
@@ -98,6 +95,50 @@ h3 {
   border-radius: 4px;
 }
 
+.ce_hyperlink.s-circle {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: #F6D365;
+      border-radius: 100%;
+    }
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ce_toplink a {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-image: url(/files/zeroOne/bubble_up.svg);
+  width: 123px;
+  height: 90px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 em {
   //color: $light-color;
   //background: $dark-color;
@@ -110,6 +151,47 @@ em {
 
 .float_left {
   float: left;
+}
+
+footer {
+  .links {
+    justify-content: center;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      content: "";
+      border-left: 1px solid rgba(255,255,255,.15);
+      height: calc(100% - 30px);
+      top: 15px;
+    }
+  }
+
+  .mod_customnav {
+    width: 100%;
+
+    ul {
+      justify-content: center;
+    }
+  }
+}
+
+.footer-copyright {
+  a {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ce_text {
+    padding: 0;
+  }
+
+  .mod_article {
+    padding: 28px 0;
+    font-size: 12px;
+  }
 }
 
 h2 {

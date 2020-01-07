@@ -93,19 +93,20 @@
           margin: auto;
           font-size: 18px;
           text-transform: initial;
-          padding: 3px 20px;
+          padding: 0 20px;
           width: 100%;
+          font-weight: 300;
         }
       }
     }
 
     .level_2 {
-      margin-left: -55px;
+      margin-left: -75px;
       background-image: url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_2.svg);
       background-size: 100% calc(100% - 40px);
       padding: 90px 0 55px;
       background-position: bottom;
-      width: 200px;
+      width: 240px;
 
       a {
         color: $light-color;
@@ -116,8 +117,8 @@
       background-size: 100% 100%;
       padding: 70px 0;
       left: 190px;
-      width: 200px;
-      min-height: 180px;
+      width: 240px;
+      min-height: 240px;
       margin-top: -18px;
 
       a {
