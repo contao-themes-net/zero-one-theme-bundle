@@ -1,6 +1,6 @@
 
 <!-- indexer::stop -->
-<nav class="navbar bg-sunrise <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
+<nav class="navbar bg-sunrise <?= $this->class ?> block" id="open-nav" <?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
 
   <section class="navbar-section">
     <?php if ($this->headline): ?>
@@ -11,6 +11,14 @@
 
   <section class="navbar-section">
     <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+
+    <a href="#open-nav" class="open-nav">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </a>
+
+    <a href="#close-nav" class="close-nav" id="close-nav"><span>+</span></a>
 
     <?= $this->items ?>
 

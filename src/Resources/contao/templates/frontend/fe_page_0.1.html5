@@ -74,6 +74,6 @@ echo $combiner->getCombinedFile(); ?>"> */ ?>
 </footer>
 
 <?php /* <pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre> */ ?>
-<div class="text-center debug"><?php echo implode("|",$GLOBALS['ZERO_ONE_STYLES']) ?></div>
+<!--<div class="text-center debug"><?php echo implode("|",$GLOBALS['ZERO_ONE_STYLES']) ?></div>-->
 <?php endif; ?>
 <?php $this->endblock(); ?>

@@ -1,5 +1,5 @@
 
-<div class="column col-3 layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+<div class="column col-3 col-sm-12 col-lg-6 layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
 
   <?php if ($this->hasMetaFields): ?>
     <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
@@ -18,5 +18,5 @@
   <?php if ($this->hasText || $this->hasTeaser): ?>
     <p class="more"><a href="<?= $this->link ?>"><i class="icon icon-more"></i></a></p>
   <?php endif; ?>
-  
+
 </div>

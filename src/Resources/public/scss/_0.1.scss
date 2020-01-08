@@ -16,8 +16,13 @@ h3 {
 
 .mod_article {
   max-width: 1200px;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding: 3.5rem 20px;
+  margin: 0 auto;
+
+  &.fullwidth {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .ce_text,
@@ -59,9 +64,14 @@ h3 {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 // zero one styles
 .bg-sunrise {
-  background: transparent linear-gradient(99deg, #F6D365 0%, #FF8562 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(99deg, $primary-color-light 0%, $primary-color-dark 100%) 0% 0% no-repeat padding-box;
 
   .ce_text, .ce_headline {
     color: $dark-color;
@@ -108,7 +118,7 @@ h3 {
     justify-content: center;
 
     &:hover {
-      background: #F6D365;
+      background: $primary-color-light;
       border-radius: 100%;
     }
   }
@@ -128,7 +138,7 @@ h3 {
   height: 90px;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  color: #fff;
+  color: $light-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,3 +276,9 @@ h3 {
 #main {
   padding-bottom: 50px;
 }
+
+#wrapper {
+  overflow-y: hidden;
+}
+
+@import 'contao/newsletter';

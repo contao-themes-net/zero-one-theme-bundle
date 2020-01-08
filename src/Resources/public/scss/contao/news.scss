@@ -3,14 +3,18 @@
     font-size: 0.95em;
   }
 
+  img {
+    width: 100%;
+  }
+
+  .layout_latest .ce_text {
+    padding-bottom: 0;
+  }
+
   .more {
     margin:0;
     .icon {
       width: 34px;
     }
-  }
-
-  .layout_latest .ce_text {
-    padding-bottom: 0;
   }
 }

@@ -1,5 +1,5 @@
 .ce_tabsStartElement h3 {
-  color: #000;
+  color: $dark-color;
   font-size: 20px;
 }
 
@@ -9,7 +9,7 @@
   margin: 0;
 
   a:hover label {
-    color: #ff8562;
+    color: $primary-color-dark;
   }
 
   figure {

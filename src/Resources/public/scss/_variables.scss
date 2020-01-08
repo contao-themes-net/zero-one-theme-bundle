@@ -15,7 +15,7 @@ $secondary-color-light: lighten($secondary-color, 3%) !default;
 
 
 // Gray colors
-$dark-color: #000 !default;
+$dark-color: $primary-color !default;
 $light-color: #fff !default;
 $gray-color: lighten($dark-color, 55%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
@@ -117,3 +117,6 @@ $zindex-1: 100 !default;
 $zindex-2: 200 !default;
 $zindex-3: 300 !default;
 $zindex-4: 400 !default;
+
+@import '../../../../files/zeroOne/_custom_colors.scss';
+@import '../../../../files/zeroOne/_custom_variables.scss';
