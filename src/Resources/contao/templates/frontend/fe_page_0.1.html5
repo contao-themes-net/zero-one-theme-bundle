@@ -22,8 +22,6 @@
 <?php $this->block('body'); ?>
   <?php $this->parent(); ?>
 
-  <?= $this->stylesheets ?>
-
 <?php // @todo write class for this funtions
   $scssStr = '';
   $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
@@ -39,7 +37,7 @@
   \File::putContent($file->path, $scssStr);
 ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?php
+<link rel="stylesheet" type="text/css" media="all" href="<?php
           // add stylesheets
           $combiner = new Combiner();
           $combiner->add($file->path);
@@ -49,7 +47,9 @@
           // add stylesheets
           $combiner = new Combiner();
           $combiner->add('web/bundles/contaothemesnetzeroonetheme/scss/spectre.scss');
-          echo $combiner->getCombinedFile(); ?>"> */ ?>
+echo $combiner->getCombinedFile(); ?>"> */ ?>
+
+  <?= $this->stylesheets ?>
 
   <?= $this->head ?>
 
@@ -72,6 +72,7 @@
     <footer id="footer" class="page-footer">
   <?= $this->footer ?>
 </footer>
+
 <?php /* <pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre> */ ?>
 <div class="text-center debug"><?php echo implode("|",$GLOBALS['ZERO_ONE_STYLES']) ?></div>
 <?php endif; ?>
