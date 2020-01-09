@@ -1,5 +1,9 @@
 .mod_newslist {
-  h2 {
+  .column {
+    margin-bottom: 30px;
+  }
+
+  h2, h3, h4, h5, h6 {
     font-size: 0.95em;
   }
 
@@ -7,8 +11,27 @@
     width: 100%;
   }
 
-  .layout_latest .ce_text {
-    padding-bottom: 0;
+  .info {
+    color: $gray-color;
+    margin: 10px 0 -5px;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .layout_latest, .layout_short {
+    .ce_text {
+      padding-bottom: 0;
+    }
+  }
+
+  .layout_short .inside {
+    background: #f7f7f7;
+    padding: 15px;
+    height: 100%;
+  }
+
+  .layout_simple a {
+    font-weight: 700;
   }
 
   .more {

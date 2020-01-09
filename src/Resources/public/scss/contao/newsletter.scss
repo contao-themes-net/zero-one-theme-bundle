@@ -63,3 +63,31 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: 600px) {
+  .mod_subscribe {
+    .formbody {
+      display: block;
+    }
+
+    .submit {
+      height: 50px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      width: 100%;
+    }
+
+    .text {
+      width: 100%;
+      min-width: 0;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      margin-bottom: 20px;
+      height: 50px;
+    }
+  }
+
+  .newsletter .mod_article {
+    padding: 20px;
+  }
+}

@@ -1,22 +1,22 @@
 
 <div class="column col-3 col-sm-12 col-lg-6 layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
 
-  <?php if ($this->hasMetaFields): ?>
-    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-  <?php endif; ?>
-
   <?php if ($this->addImage): ?>
     <?php $this->insert('image', $this->arrData); ?>
   <?php endif; ?>
 
-  <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->parseDate("d. F Y", $this->timestamp); ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+  <?php endif; ?>
+
+  <h3 itemprop="name"><?= $this->linkHeadline ?></h3>
 
   <div class="ce_text block" itemprop="description">
     <?= $this->teaser ?>
   </div>
 
   <?php if ($this->hasText || $this->hasTeaser): ?>
-    <p class="more"><a href="<?= $this->link ?>"><i class="icon icon-more"></i></a></p>
+  <p class="more"><a href="<?= $this->link ?>" title="<?= $this->headline ?>"><i class="icon icon-more"></i></a></p>
   <?php endif; ?>
 
 </div>

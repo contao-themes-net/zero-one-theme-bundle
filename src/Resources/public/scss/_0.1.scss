@@ -79,7 +79,7 @@ img {
 
   em {
     font-size: 23px;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 }
 
@@ -183,6 +183,7 @@ footer {
 
     ul {
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }
@@ -199,9 +200,19 @@ footer {
   }
 
   .mod_article {
-    padding: 28px 0;
+    padding: 28px 20px;
     font-size: 12px;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.3;
 }
 
 h2 {
@@ -282,3 +293,73 @@ h3 {
 }
 
 @import 'contao/newsletter';
+
+@media (max-width: 1080px) {
+  footer > div:not(.footer-copyright) .ce_text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 960px) {
+  footer {
+    .links {
+      justify-content: flex-start;
+      padding-top: 30px;
+      margin-top: 10px;
+
+      &:before {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .mod_customnav ul {
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-sunrise em {
+    font-size: 20px;
+  }
+
+  .ce_toplink a {
+    right: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  footer {
+    .links {
+      font-size: 16px;
+    }
+
+    .mod_article {
+      padding: 20px;
+    }
+  }
+
+  .footer-copyright .mod_article {
+    padding: 20px 90px 20px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .ce_image img {
+    margin-bottom: 20px;
+  }
+}

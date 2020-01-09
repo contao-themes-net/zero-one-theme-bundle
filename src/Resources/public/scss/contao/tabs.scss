@@ -39,12 +39,22 @@
   width: 100%;
   padding: 0 150px;
 
-  .tab-item a {
-    label {
-      cursor: pointer;
-      width: 100%;
-      display: block;
-      padding: 0.4rem 0.2rem 0.3rem 0.2rem;
+  .tab-item {
+    height: 100%;
+
+    a {
+      height: 100%;
+
+      label {
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        padding: 0.4rem 0.2rem 0.3rem 0.2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }
@@ -60,5 +70,35 @@
 
   &:focus {
     box-shadow: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .tab.tab-block {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    figure {
+      > div {
+        padding: 0;
+      }
+
+      &.float_right {
+        float: left;
+        margin: 0 20px 20px 0 !important;
+      }
+    }
+  }
+
+  .tab.tab-block {
+    padding: 0;
+    display: block;
+
+    .tab-item {
+      height: inherit;
+    }
   }
 }

@@ -5,8 +5,9 @@
     display: flex;
     flex-wrap: wrap;
 
-    a {
+    > a {
       color: inherit;
+      width: 35%;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -16,6 +17,10 @@
       font-size: 36px;
       line-height: 1.3;
       margin-top: 10px;
+    }
+
+    h3 a {
+      color: $primary-color-dark;
     }
 
     .pageLink {
@@ -30,7 +35,7 @@
         min-height: 50px;
         font-weight: 500;
         color: $light-color;
-        width: min-content;
+        width: max-content;
         border: none;
       }
     }
@@ -63,6 +68,57 @@
     .text {
       width: 65%;
       padding-right: 5%;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .ce_ct_teaserBox .inside {
+    > a {
+      width: 45%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 28px;
+      width: 45%;
+    }
+
+    h4 {
+      font-size: 20px;
+      width: 100%;
+    }
+
+    .text {
+      width: 55%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ce_ct_teaserBox {
+    &.image-right img {
+      max-width: 200px;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .inside {
+      > a {
+        width: 100%;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 20px;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+      }
+
+      .text {
+        width: 100%;
+        font-size: 16px;
+      }
     }
   }
 }
