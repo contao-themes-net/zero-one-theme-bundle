@@ -18,7 +18,7 @@
       <span class="line"></span>
     </a>
 
-    <a href="#close-nav" class="close-nav" id="close-nav"><span>+</span></a>
+    <a href="#close-nav" class="close-nav" id="close-nav"><!--<span>+</span>--></a>
 
     <?= $this->items ?>
 

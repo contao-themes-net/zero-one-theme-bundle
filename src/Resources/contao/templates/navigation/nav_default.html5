@@ -8,7 +8,6 @@
 
   <?php if( !empty($item['subitems']) ): ?>
   <a href="#<?= $item['alias'] ?>" onclick="return false" id="open-<?= $item['alias'] ?>" class="open-dropdown"><span>+</span></a>
-  <a href="#<?= $item['alias'] ?>" onclick="return false" id="close-<?= $item['alias'] ?>" class="close-dropdown"><span>-</span></a>
   <?php endif; ?>
 
   <?= $item['subitems'] ?></li>
