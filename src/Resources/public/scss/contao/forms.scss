@@ -1,0 +1,32 @@
+.ce_form {
+  .widget:not(.widget-checkbox):not(.widget-radio) {
+    @extend .form-group;
+  }
+}
+
+.form-group {
+  label:not(.form-checkbox):not(.form-radio) {
+    @extend .form-label;
+  }
+
+  input {
+    @extend .form-input;
+  }
+
+  select {
+    @extend .form-select;
+    -webkit-appearance: none;
+  }
+}
+
+.checkbox_container, .radio_container {
+  > label {
+    display: block;
+    line-height: 1.2rem;
+    padding: 0.3rem 0;
+  }
+}
+
+.submit {
+  margin-top: 20px;
+}

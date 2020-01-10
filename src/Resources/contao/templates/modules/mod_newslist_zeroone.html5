@@ -11,3 +11,4 @@
 
 <?php $this->endblock(); ?>
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/news'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_pagination'; ?>

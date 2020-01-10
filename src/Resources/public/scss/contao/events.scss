@@ -1,0 +1,48 @@
+.mod_eventlist {
+  .ce_text {
+    padding: 0;
+  }
+
+  .event {
+    margin-bottom: 40px;
+
+    &.layout_upcoming {
+      margin-bottom: 0;
+
+      a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 0.95em;
+  }
+
+  .icon {
+    width: 34px;
+  }
+
+  .more {
+    margin: 0;
+  }
+
+  .time, .header {
+    margin-top: 0;
+    color: $gray-color;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.layout_list {
+  h2,h3,h4,h5,h6 {
+    margin-top: 0;
+  }
+
+  .inside {
+    background: #f7f7f7;
+    padding: 25px;
+    height: 100%;
+  }
+}

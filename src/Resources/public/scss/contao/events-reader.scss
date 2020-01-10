@@ -1,4 +1,4 @@
-.mod_newsreader {
+.mod_eventreader {
   > .back {
     display: none;
   }
@@ -19,7 +19,7 @@
     margin: 0;
   }
 
-  .news-image {
+  .event-image {
     figure {
       margin-bottom: 20px;
     }
@@ -27,5 +27,11 @@
     img {
       width: 100%;
     }
+  }
+
+  .recurring {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 3px;
   }
 }

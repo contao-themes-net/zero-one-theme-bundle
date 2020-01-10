@@ -1,0 +1,23 @@
+.mod_search {
+  h2, h3, h4, h5, h6 {
+    font-size: 22px;
+  }
+
+  mark {
+    background-color: $primary-color-light;
+  }
+
+  p.header {
+    margin: 20px 0 50px;
+    border-top: 1px solid $gray-color-light;
+    padding-top: 20px;
+  }
+
+  .relevance {
+    font-size: 16px;
+  }
+
+  .widget-radio {
+    margin-top: 10px;
+  }
+}

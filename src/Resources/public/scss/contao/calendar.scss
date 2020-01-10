@@ -1,0 +1,49 @@
+.calendar, .minicalendar {
+  th, td {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 10px;
+  }
+
+  th {
+    font-weight: 400;
+    background: #efefef;
+
+    &.head {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  td.active {
+    background: $primary-color-light;
+  }
+}
+
+.calendar {
+  td a {
+    font-size: 14px;
+  }
+
+  .event {
+    line-height: 1.3;
+  }
+
+  .header {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.minicalendar td {
+  font-weight: 500;
+
+  &.active {
+    padding: 0;
+
+    a {
+      padding: 10px;
+      display: block;
+    }
+  }
+}

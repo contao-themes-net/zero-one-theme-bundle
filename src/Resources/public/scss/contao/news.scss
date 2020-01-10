@@ -18,26 +18,32 @@
     font-style: italic;
   }
 
-  .layout_latest, .layout_short {
-    .ce_text {
-      padding-bottom: 0;
-    }
-  }
-
-  .layout_short .inside {
-    background: #f7f7f7;
-    padding: 15px;
-    height: 100%;
-  }
-
-  .layout_simple a {
-    font-weight: 700;
-  }
-
   .more {
     margin:0;
     .icon {
       width: 34px;
     }
   }
+}
+
+.layout_latest, .layout_short {
+  .ce_text {
+    padding-bottom: 0;
+  }
+}
+
+.layout_short {
+  .info {
+    margin-top: 0;
+  }
+
+  .inside {
+    background: #f7f7f7;
+    padding: 25px;
+    height: 100%;
+  }
+}
+
+.layout_simple a {
+  font-weight: 700;
 }
