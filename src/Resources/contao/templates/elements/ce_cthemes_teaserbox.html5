@@ -3,7 +3,7 @@
         <?php $this->block('content'); ?>
 
         <?php if ($this->addImage && $this->floating != 'below'): ?>
-            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
             <?php $this->insert('image', $this->arrData); ?>
             <?php if($this->page != ""): ?></a><?php endif; ?>
         <?php endif; ?>
@@ -36,7 +36,7 @@
 
 
         <?php if ($this->addImage && $this->floating == 'below'): ?>
-            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
             <?php $this->insert('image', $this->arrData); ?>
             <?php if($this->page != ""): ?></a><?php endif; ?>
         <?php endif; ?>

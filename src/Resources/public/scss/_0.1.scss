@@ -129,6 +129,10 @@ img {
   }
 }
 
+.ce_text, .ce_headline {
+  padding-bottom: 15px;
+}
+
 .ce_toplink a {
   position: fixed;
   right: 50px;
@@ -178,6 +182,14 @@ em {
 }
 
 footer {
+  .block.last {
+    padding-bottom: 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .links {
     justify-content: center;
     position: relative;
@@ -238,28 +250,37 @@ h2 {
   }
 }
 
-h2.headline-dotted {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .dots {
-    font-size: 60px;
-    line-height: 1;
-    height: 98px;
-
-    &:first-child {
-      padding-right: 10px;
-    }
-
-    &:last-child {
-      padding-left: 10px;
-    }
-  }
-}
-
 h3 {
   line-height: 1.2;
+  color: $body-font-color;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.headline-dotted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dots {
+      font-size: 60px;
+      line-height: 1;
+      height: 98px;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &.headline-35 {
+    font-size: 35px;
+  }
 }
 
 .icon {
@@ -298,6 +319,15 @@ h3 {
   background-image:url(/bundles/contaothemesnetzeroonetheme/img/more.svg);
 }
 
+.invisible {
+  display: block !important;
+  position: absolute;
+  visibility: visible;
+  z-index: -1;
+  opacity: 0;
+  text-indent: -99999px;
+}
+
 .logo-text-white img path {
   fill: $light-color;
   fill-rule: evenodd;
@@ -309,6 +339,18 @@ h3 {
 
 .pagination {
   margin-top: 20px;
+}
+
+.primary-color-dark {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: $primary-color-dark;
+  }
+}
+
+.primary-color-light {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: $primary-color-light;
+  }
 }
 
 #wrapper {
@@ -329,6 +371,12 @@ h3 {
       justify-content: flex-start;
       padding-top: 30px;
       margin-top: 10px;
+
+      &.columns:not(.col-mx-auto) {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 10px;
+      }
 
       &:before {
         border-left: none;
@@ -361,6 +409,10 @@ h3 {
   footer {
     .links {
       font-size: 16px;
+
+      &.columns:not(.col-mx-auto) {
+        padding: 0;
+      }
     }
 
     .mod_article {
@@ -386,3 +438,5 @@ h3 {
     margin-bottom: 20px;
   }
 }
+
+@import '../../../../../../../files/zeroOne/custom';

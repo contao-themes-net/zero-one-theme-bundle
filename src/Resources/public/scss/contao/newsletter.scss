@@ -76,29 +76,30 @@ footer {
 @media (max-width: 600px) {
   footer {
     .mod_subscribe {
-    }
-    .formbody {
-      display: block;
-    }
+      .formbody {
+        display: block;
+      }
 
-    .submit {
-      height: 50px;
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-      width: 100%;
-    }
+      .submit {
+        height: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        width: 100%;
+        justify-content: center;
+      }
 
-    .text {
-      width: 100%;
-      min-width: 0;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      margin-bottom: 20px;
-      height: 50px;
-    }
+      .text {
+        width: 100%;
+        min-width: 0;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-bottom: 20px;
+        height: 50px;
+      }
 
-    .newsletter .mod_article {
-      padding: 20px;
+      .newsletter .mod_article {
+        padding: 20px;
+      }
     }
   }
 }

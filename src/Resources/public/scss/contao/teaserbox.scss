@@ -1,5 +1,6 @@
 .ce_ct_teaserBox {
   padding-bottom: 100px;
+  width: 100%;
 
   .inside {
     display: flex;
@@ -37,6 +38,7 @@
         color: $light-color;
         width: max-content;
         border: none;
+        justify-content: center;
       }
     }
 
@@ -69,6 +71,17 @@
       width: 65%;
       padding-right: 5%;
     }
+  }
+}
+
+.ie11 .ce_ct_teaserBox .inside .pageLink a {
+  width: inherit;
+  height: 50px;
+
+  &:after{
+    content: '';
+    min-height: inherit;
+    font-size: 0;
   }
 }
 

@@ -41,6 +41,7 @@
 
   .tab-item {
     height: 100%;
+    flex: 1;
 
     a {
       height: 100%;
@@ -48,7 +49,6 @@
       label {
         cursor: pointer;
         width: 100%;
-        display: block;
         padding: 0.4rem 0.2rem 0.3rem 0.2rem;
         height: 100%;
         display: flex;
@@ -71,6 +71,12 @@
   &:focus {
     box-shadow: none;
   }
+}
+
+.ie11 .tab.tab-block .tab-item a label:after {
+  content: '';
+  min-height: inherit;
+  font-size: 0;
 }
 
 @media (max-width: 1280px) {

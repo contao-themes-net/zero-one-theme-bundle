@@ -13,6 +13,10 @@
   height: inherit;
 }
 
+.ie11 .btn {
+  height: 50px;
+}
+
 @media (max-width: 600px) {
   .btn {
     padding: 10px 20px;

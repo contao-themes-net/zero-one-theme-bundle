@@ -27,6 +27,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    list-style-type: none !important;
 
     &.level_1 > li > a {
       border-bottom: 1px solid transparent;
@@ -42,6 +43,11 @@
       }
     }
 
+    &.level_1 > li > strong.submenu:after {
+      content: "↓";
+      padding: 0 0 0 5px;
+    }
+
     li {
       display: flex;
       font-size: 1.2em;
@@ -50,6 +56,7 @@
       position: relative;
       z-index: 1;
       flex-wrap: wrap;
+      list-style-type: none !important;
 
       a,strong {
         color: $dark-color;
@@ -85,6 +92,7 @@
       background-size: auto;
       background-repeat: no-repeat;
       z-index: -1;
+      list-style: none !important;
 
       li {
         width: 100%;
@@ -124,6 +132,7 @@
         color: $light-color;
       }
     }
+
     .level_3 {
       background-image:url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_3.svg);
       background-size: 100% 100%;

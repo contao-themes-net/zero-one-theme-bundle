@@ -2,7 +2,21 @@
 
 <?php $this->block('content'); ?>
 
-  <div class="column parallax-body"<?php if ($this->addImage): ?> style="background-image: url('<?= $this->singleSRC ?>')"<?php endif; ?>>
+  <?php
+  if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) {
+    $bgImage = str_replace([".jpg",".png"],".webp",$this->singleSRC);
+    $file = \FilesModel::findByPath($bgImage);
+    if($file === null) $bgImage = $this->singleSRC;
+  } else {
+    $bgImage = $this->singleSRC;
+  }
+  ?>
+
+  <div class="column parallax-body"<?php if ($this->addImage): ?> style="background-image: url('<?= $bgImage ?>')"<?php endif; ?>>
+
+  <?php if ($this->addImage): ?>
+    <?php //$this->insert('image', $this->arrData); ?>
+  <?php endif; ?>
 
 	<?php if (!$this->addBefore): ?>
 	  <?= $this->text ?>
@@ -12,6 +26,7 @@
 	  <?= $this->text ?>
 	<?php endif; ?>
   </div>
+
 <?php $this->endblock(); ?>
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = '_hero'; ?>
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/hero'; ?>

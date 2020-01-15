@@ -55,6 +55,7 @@ echo $combiner->getCombinedFile(); ?>"> */ ?>
 
   <?= $this->mooScripts ?>
   <?= $this->framework ?>
+
 <?php $this->endblock(); ?>
 
 <?php $this->block('container'); ?>

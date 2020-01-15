@@ -1,0 +1,108 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    @extend .color-scheme-dark-mode;
+  }
+
+  .color-scheme-dark-mode {
+    background: #333;
+    color: #fff;
+
+    a, a:visited {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .form-input, .form-group input, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) input,
+    .form-select:not([multiple]):not([size]), .form-group select:not([size]):not([multiple]), .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select:not([size]):not([multiple]),
+    .form-select, .form-group select, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select, textarea {
+      background: #3c3c3c;
+      color: #fff;
+    }
+
+    .form-checkbox .form-icon, .form-radio .form-icon {
+      background: #3c3c3c;
+    }
+
+    .bg-white {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .calendar, .minicalendar {
+      th, td {
+        background: #3c3c3c;
+        color: #fff;
+      }
+
+      td.active {
+        color: #333;
+
+        a {
+          color: #333;
+        }
+      }
+    }
+
+    .ce_tabsStartElement h3 {
+      color: #fff;
+    }
+
+    footer .ce_hyperlink.bg-white {
+      background-color: #fff;
+    }
+
+    .hero.quote {
+      h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+    }
+
+    .icon-more {
+      background-image: url(/bundles/contaothemesnetzeroonetheme/img/more_white.svg);
+    }
+
+    input {
+      background: #3c3c3c;
+      color: #fff;
+    }
+
+    .layout_short, .layout_list {
+      .inside {
+        background: #3c3c3c;
+        color: #fff;
+      }
+    }
+
+    .mod_eventlist {
+      .time, .header {
+        color: #c3c3c3;
+      }
+    }
+
+    .mod_newslist {
+      h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+
+      .info {
+        color: #c3c3c3;
+      }
+    }
+
+    .pagination .page-item a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .tab .tab-item.active a, .tab .tab-item a.active {
+      color: #fff;
+    }
+
+    .tabs figure>div {
+      color: #fff;
+    }
+  }
+}
