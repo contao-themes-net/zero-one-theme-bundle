@@ -1,3 +1,6 @@
+::-moz-selection { background: $primary-color-dark; color: #fff; }
+::selection { background: $primary-color-dark; color: #fff; }
+
 // reset
 figure {
   margin:0;
@@ -115,6 +118,10 @@ img {
 .ce_code {
   display: block;
   width: 100%;
+
+  .code code {
+    background: $bg-color-light;
+  }
 }
 
 .ce_hyperlink.s-circle {
@@ -464,4 +471,4 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@import '../../../../../../../files/zeroOne/custom';
+@import '../../../../../../../files/zeroOne/scss/custom';

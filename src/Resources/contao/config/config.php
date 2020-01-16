@@ -62,3 +62,16 @@ $GLOBALS['ZERO_ONE_STYLES'][] = 'utilities';
 // $GLOBALS['ZERO_ONE_STYLES'][] = '';
 // $GLOBALS['ZERO_ONE_STYLES'][] = '';
 // $GLOBALS['ZERO_ONE_STYLES'][] = '';
+
+/**
+ * Backend Modules
+ */
+array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
+(
+    'zerooneThemeSetup' => array
+    (
+        'callback'          => 'ContaoThemesNet\\ZeroOneThemeBundle\\Module\\ZeroOneThemeSetup',
+        'tables'            => array(),
+        'stylesheet'		=> 'bundles/contaothemesnetzeroonetheme/scss/backend.css'
+    ),
+));

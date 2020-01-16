@@ -1,13 +1,13 @@
 .calendar, .minicalendar {
   th, td {
-    background: #f7f7f7;
+    background: $bg-color-light;
     text-align: center;
     padding: 10px;
   }
 
   th {
     font-weight: 400;
-    background: #efefef;
+    background: $bg-color-light;
 
     &.head {
       font-weight: 700;
