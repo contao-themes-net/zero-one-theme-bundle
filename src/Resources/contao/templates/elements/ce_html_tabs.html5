@@ -1,4 +1,0 @@
-
-<?= $this->html ?>
-<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_tabs'; ?>
-<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/tabs'; ?>

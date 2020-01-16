@@ -17,6 +17,11 @@
 
   h2, h3, h4, h5, h6 {
     font-size: 0.95em;
+    margin-top: 10px;
+  }
+
+  .header {
+    margin-top: 1em;
   }
 
   .icon {
@@ -28,18 +33,17 @@
   }
 
   .time, .header {
-    margin-top: 0;
     color: $gray-color;
     font-size: 14px;
     font-style: italic;
   }
+
+  .time {
+    margin-top: 0;
+  }
 }
 
 .layout_list {
-  h2,h3,h4,h5,h6 {
-    margin-top: 0;
-  }
-
   .inside {
     background: #f7f7f7;
     padding: 25px;

@@ -8,7 +8,7 @@ class TabsStopElement extends \ContentElement
      * Template
      * @var string
      */
-    protected $strTemplate = 'ce_tabs_stop_0dot1';
+    protected $strTemplate = 'ce_tabs_stop_zeroone';
 
     /**
      * Generate the content element

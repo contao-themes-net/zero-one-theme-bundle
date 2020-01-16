@@ -2,7 +2,7 @@
 
 <?php $this->block('content'); ?>
 
-  <table id="<?= $this->id ?>" class="table<?php if ($this->striped): ?> table-striped<?php endif; ?><?php if ($this->hover): ?> table-hover<?php endif; ?><?php if ($this->scroll): ?> table-scroll<?php endif; ?><?php if ($this->sortable): ?> sortable<?php endif; ?>">
+  <table id="<?= $this->id ?>" class="table <?= $this->class ?>">
 
     <?php if ($this->summary != ''): ?>
       <caption><?= $this->summary ?></caption>

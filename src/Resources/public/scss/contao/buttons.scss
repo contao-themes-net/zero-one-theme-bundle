@@ -11,10 +11,36 @@
   white-space: inherit;
   line-height: 1.2;
   height: inherit;
+  width: max-content;
+  background: $bg-color-light;
+
+  &:hover {
+    background: $bg-color;
+  }
+
+  &.btn-sm {
+    padding: 5px 30px;
+  }
+
+  &.btn-lg {
+    padding: 5px 60px;
+  }
+
+  &.btn-block {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .ie11 .btn {
-  height: 50px;
+  min-height: inherit;
+  width: auto;
+  display: table;
+  padding: 15px 60px;
+
+  &.btn-block {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {

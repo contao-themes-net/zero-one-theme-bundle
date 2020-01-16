@@ -8,7 +8,7 @@ class TabsNavElement extends \ContentElement
      * Template
      * @var string
      */
-    protected $strTemplate = 'ce_tabs_nav_0dot1';
+    protected $strTemplate = 'ce_tabs_nav_zeroone';
 
     /**
      * Generate the content element

@@ -70,6 +70,13 @@ img {
 }
 
 // zero one styles
+.block {
+  &:not(.columns):not(.column):not(.navbar) {
+    display: block;
+    width: 100%;
+  }
+}
+
 .bg-sunrise {
   background: transparent linear-gradient(99deg, $primary-color-light 0%, $primary-color-dark 100%) 0% 0% no-repeat padding-box;
 
@@ -88,7 +95,7 @@ img {
 }
 
 .bg-white {
-  background: $bg-color-light 0% 0% no-repeat padding-box;
+  background: $light-color 0% 0% no-repeat padding-box;
 }
 
 #btnScrollTop {
@@ -105,10 +112,19 @@ img {
   border-radius: 4px;
 }
 
+.ce_code {
+  display: block;
+  width: 100%;
+}
+
 .ce_hyperlink.s-circle {
-  width: 50px;
   height: 50px;
   margin: 10px;
+
+  &:not(.columns):not(.column):not(.navbar) {
+    width: 50px;
+    display: inline-block;
+  }
 
   a {
     width: 100%;
@@ -193,6 +209,7 @@ footer {
   .links {
     justify-content: center;
     position: relative;
+    text-align: center;
 
     &:before {
       position: absolute;
@@ -253,7 +270,6 @@ h2 {
 h3 {
   line-height: 1.2;
   color: $body-font-color;
-  margin: 0;
   font-size: 1.4em;
 }
 
@@ -261,7 +277,10 @@ h1, h2, h3, h4, h5, h6 {
   &.headline-dotted {
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    &.text-center {
+      justify-content: center;
+    }
 
     .dots {
       font-size: 60px;
@@ -317,6 +336,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-more {
   background-image:url(/bundles/contaothemesnetzeroonetheme/img/more.svg);
+}
+
+.ie11 {
+  footer .mod_subscribe .submit {
+    display: flex;
+  }
 }
 
 .invisible {

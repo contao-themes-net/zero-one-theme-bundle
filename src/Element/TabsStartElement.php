@@ -8,7 +8,7 @@ class TabsStartElement extends \ContentElement
      * Template
      * @var string
      */
-    protected $strTemplate = 'ce_tabs_start_0dot1';
+    protected $strTemplate = 'ce_tabs_start_zeroone';
 
     /**
      * Generate the content element
