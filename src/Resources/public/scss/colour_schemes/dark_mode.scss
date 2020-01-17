@@ -3,10 +3,6 @@
     @extend .color-scheme-dark-mode;
   }
 
-  a.btn-link:hover {
-    background: #3c3c3c;
-  }
-
   .color-scheme-dark-mode {
     background: #333;
     color: #fff;
@@ -17,6 +13,10 @@
       &:hover {
         color: #fff;
       }
+    }
+
+    a.btn-link:hover {
+      background: #3c3c3c;
     }
 
     .form-input, .form-group input, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) input,
