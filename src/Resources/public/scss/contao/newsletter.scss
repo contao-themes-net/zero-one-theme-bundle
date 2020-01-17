@@ -32,6 +32,8 @@ footer {
       padding: 0 30px;
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       border: none;
       min-width: 370px;
 
@@ -73,6 +75,33 @@ footer {
   }
 }
 
+#main {
+  .mod_subscribe, .mod_unsubscribe {
+    .btn {
+      margin-top: 10px;
+    }
+
+    .checkbox_container {
+      margin-bottom: 5px;
+
+      > div {
+        border: none;
+        padding: 0;
+        min-height: inherit;
+        background: none;
+      }
+    }
+
+    .form-input, .form-group input {
+      border-radius: 30px;
+    }
+
+    .widget-checkbox {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   footer {
     .mod_subscribe {
@@ -82,7 +111,7 @@ footer {
 
       .submit {
         height: 50px;
-        border-top-left-radius: 30px;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 30px;
         width: 100%;
         justify-content: center;
@@ -92,8 +121,7 @@ footer {
         width: 100%;
         min-width: 0;
         border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        margin-bottom: 20px;
+        border-bottom-left-radius: 0;
         height: 50px;
       }
 

@@ -27,7 +27,7 @@
   <?php endif; ?>
 
     <?php if ($option['type'] == 'option'): ?>
-      <label id="lbl_<?= $option['id'] ?>" for="opt_<?= $option['id'] ?>" class="form-radio">
+      <label id="lbl_<?= $option['id'] ?>" for="opt_<?= $option['id'] ?>" class="form-radio form-inline">
         <input type="radio" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="radio" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>>
         <i class="form-icon"></i> <?= $option['label'] ?>
       </label>

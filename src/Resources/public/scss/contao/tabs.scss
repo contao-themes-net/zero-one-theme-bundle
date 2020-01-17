@@ -1,5 +1,5 @@
 .ce_tabsStartElement h3 {
-  color: $dark-color;
+  color: $body-font-color;
   font-size: 20px;
 }
 
@@ -45,6 +45,7 @@
 
     a {
       height: 100%;
+      color: $body-font-color;
 
       label {
         cursor: pointer;
@@ -54,6 +55,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: none;
+        border-color: $zeroOneColor_3 !important;
       }
     }
   }

@@ -1,0 +1,8 @@
+.ce_table {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background: $boxes-background;
+}

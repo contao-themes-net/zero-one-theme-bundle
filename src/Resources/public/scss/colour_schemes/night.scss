@@ -1,0 +1,45 @@
+$zeroOneColor_1: #000;
+$zeroOneColor_2: #3B8D99;
+$zeroOneColor_3: #AA4B6B;
+$zeroOneColor_4: #3B8D99;
+
+$body-bg: #fff;
+$body-font-color: #000;
+
+$link-color: #fff;
+
+$boxes-background: darken($body-bg, 5%);
+
+.mod_newslist .column {
+  &:nth-child(odd) img {
+    filter: invert(0) sepia(0) hue-rotate(298deg) saturate(5) brightness(.7);
+  }
+
+  &:nth-child(even) img {
+    filter: invert(0) sepia(0) hue-rotate(150deg) saturate(1) brightness(0.7);
+  }
+}
+
+.news-image img {
+  filter: invert(0) sepia(0) hue-rotate(298deg) saturate(5) brightness(.7);
+}
+
+.mod_eventlist img, .event-image img {
+  filter: invert(0) sepia(0) hue-rotate(312deg) saturate(3.5) brightness(0.6);
+}
+
+.quote img {
+  filter: invert(1) sepia(0.4) hue-rotate(90deg) saturate(1.5) brightness(1);
+}
+
+.ce_ct_teaserBox img {
+  filter: invert(0) sepia(0) hue-rotate(300deg) saturate(6.5) brightness(.8);
+}
+
+.ce_tabsStartElement img {
+  filter: invert(0) sepia(0) hue-rotate(170deg) saturate(1) brightness(.8);
+}
+
+.parallax-body {
+  filter: invert(0) sepia(0) hue-rotate(203deg) saturate(1) brightness(0.9);
+}

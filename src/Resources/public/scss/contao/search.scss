@@ -1,4 +1,8 @@
 .mod_search {
+  .form-input, .form-group input {
+    border-radius: 30px;
+  }
+
   h2, h3, h4, h5, h6 {
     font-size: 22px;
   }

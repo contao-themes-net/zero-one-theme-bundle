@@ -45,3 +45,5 @@
     </div>
 </div>
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/teaserbox'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_buttons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/buttons'; ?>

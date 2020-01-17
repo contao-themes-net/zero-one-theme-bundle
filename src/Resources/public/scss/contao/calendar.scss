@@ -1,13 +1,17 @@
 .calendar, .minicalendar {
+  a {
+    color: $body-font-color;
+  }
+
   th, td {
-    background: $bg-color-light;
+    background: $boxes-background;
     text-align: center;
     padding: 10px;
   }
 
   th {
     font-weight: 400;
-    background: $bg-color-light;
+    background: $boxes-background;
 
     &.head {
       font-weight: 700;
@@ -46,4 +50,63 @@
       display: block;
     }
   }
+}
+
+@media (max-width: 840px) {
+
+  .mod_calendar {
+    .calendar {
+      border: none;
+      background: none;
+      width: 100%;
+
+      thead:after {
+        display: none;
+      }
+
+      .days.active .events {
+        display: block;
+        position: relative;
+        background: none;
+        width: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+
+        a {
+          text-align: center;
+        }
+      }
+
+      tbody, tr, thead {
+        display: block;
+      }
+
+      th, td.active {
+        display: block;
+        margin: 5px 0;
+      }
+
+      thead tr:nth-of-type(2), td:not(.active) {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .minicalendar {
+    width: 100%;
+
+    th, td {
+      padding: 5px;
+    }
+
+    td.active a {
+      padding: 5px;
+    }
+  }
+
 }

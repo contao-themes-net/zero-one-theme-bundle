@@ -11,13 +11,13 @@
     <section class="navbar-section">
       <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
 
-      <a href="#open-nav" class="open-nav" aria-label="Navigation">
+      <a href="{{env::path}}{{env::request}}#open-nav" class="open-nav" aria-label="Navigation">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </a>
 
-      <a href="#close-nav" class="close-nav" id="close-nav" aria-label="Close Navigation"></a>
+      <a href="{{env::path}}{{env::request}}#close-nav" class="close-nav" id="close-nav" aria-label="Close Navigation"></a>
 
       <?= $this->items ?>
 

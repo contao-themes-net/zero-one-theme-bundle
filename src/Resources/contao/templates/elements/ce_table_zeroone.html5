@@ -46,3 +46,4 @@
 
 <?php $this->endblock(); ?>
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = '_tables'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/tables'; ?>

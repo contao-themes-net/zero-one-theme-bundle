@@ -2,7 +2,13 @@
 <ul class="<?= $this->level ?>">
   <?php foreach ($this->items as $item): ?>
     <?php if ($item['isActive']): ?>
-      <li class="<?= $item['class'] ?>"><strong class="<?= $item['class'] ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></strong><?= $item['subitems'] ?></li>
+      <li class="<?= $item['class'] ?>"><a class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></a>
+
+        <?php if( !empty($item['subitems']) ): ?>
+        <a href="#<?= $item['alias'] ?>" class="open-dropdown"><span>+</span></a>
+        <?php endif; ?>
+
+        <?= $item['subitems'] ?></li>
     <?php else: ?>
       <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span></a>
 

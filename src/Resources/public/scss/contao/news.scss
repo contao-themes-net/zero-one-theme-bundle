@@ -5,6 +5,10 @@
 
   h2, h3, h4, h5, h6 {
     font-size: 0.95em;
+
+    a {
+      color: $body-font-color;
+    }
   }
 
   img {
@@ -12,7 +16,7 @@
   }
 
   .info {
-    color: #595959;
+    color: $body-font-color;
     font-size: 12px;
     font-style: italic;
   }
@@ -37,7 +41,7 @@
   }
 
   .inside {
-    background: $bg-color-light;
+    background: $boxes-background;
     padding: 25px;
     height: 100%;
   }
@@ -45,4 +49,5 @@
 
 .layout_simple a {
   font-weight: 700;
+  color: $body-font-color;
 }

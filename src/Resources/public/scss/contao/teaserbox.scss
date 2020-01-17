@@ -20,8 +20,12 @@
       margin-top: 10px;
     }
 
+    h4 a {
+      color: $body-font-color;
+    }
+
     h3 a {
-      color: $primary-color-dark;
+      color: $zeroOneColor_4;
     }
 
     .pageLink {
@@ -109,6 +113,8 @@
 
 @media (max-width: 600px) {
   .ce_ct_teaserBox {
+    padding-bottom: 50px;
+
     &.image-right img {
       max-width: 200px;
       margin-top: 30px;
@@ -130,7 +136,6 @@
 
       .text {
         width: 100%;
-        font-size: 16px;
       }
     }
   }

@@ -6,10 +6,16 @@ $version: "0.5.8";
 // Core features
 $rtl: false !default;
 
+// Zeroone Variables
+$zeroOneColor_1: #000 !default;
+$zeroOneColor_2: #ff8562 !default;
+$zeroOneColor_3: #f6d365 !default;
+$zeroOneColor_4: #CE4A22 !default;
+
 // Core colors
-$primary-color: #000 !default;
-$primary-color-dark: #ff8562 !default;
-$primary-color-light: #f6d365 !default;
+$primary-color: $zeroOneColor_1 !default;
+$primary-color-dark: $zeroOneColor_2 !default;
+$primary-color-light: $zeroOneColor_3 !default;
 $secondary-color: lighten($primary-color, 37.5%) !default;
 $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;
@@ -39,7 +45,7 @@ $error-color: #e85600 !default;
 // Other colors
 $code-color: #d73e48 !default;
 $highlight-color: #ffe9b3 !default;
-$link-color: $primary-color !default;
+$link-color: darken($primary-color-dark, 10%) !default;
 $link-color-dark: darken($link-color, 10%) !default;
 $link-color-light: lighten($link-color, 10%) !default;
 
@@ -118,5 +124,8 @@ $zindex-1: 100 !default;
 $zindex-2: 200 !default;
 $zindex-3: 300 !default;
 $zindex-4: 400 !default;
+
+// ZeroOne Variables
+$boxes-background: darken($body-bg, 5%) !default;
 
 @import '../../../../files/zeroOne/scss/_custom_variables.scss';
