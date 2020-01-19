@@ -28,8 +28,8 @@ Compatible with Contao >=4.4
 ## dependencies
 
 - [Spectre CSS Framework](https://github.com/picturepan2/spectre)
-- [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden")
-- [Theme Components Bundle](https://github.com/contao-themes-net/theme-components-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden")
+- [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
+- [Theme Components Bundle](https://github.com/contao-themes-net/theme-components-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
 - [Contao Folderpage](https://github.com/terminal42/contao-folderpage)
 
 ## Donation
