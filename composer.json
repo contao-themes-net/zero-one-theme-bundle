@@ -23,7 +23,7 @@
         "email" : "support@pdir.de",
         "issues" : "https://github.com/contao-themes-net/zero-one-theme-bundle/issues",
         "source" : "https://github.com/contao-themes-net/zero-one-theme-bundle",
-        "donation": "https://www.patreon.com/user?u=28241718"
+        "donation": "https://contao-themes.net/sponsoring.html"
     },
     "require": {
         "php": "^5.6 || ^7.0",
