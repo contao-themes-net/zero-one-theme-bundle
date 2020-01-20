@@ -8,6 +8,11 @@
       h2, h3, h4, h5, h6 {
         text-decoration: underline;
       }
+
+      .icon.icon-more {
+        transform: translateX(8px) scaleX(1.5);
+        transition: all 0.2s ease-in;
+      }
     }
   }
 
@@ -37,6 +42,7 @@
     margin:0;
     .icon {
       width: 34px;
+      transition: all 0.5s ease-out;
     }
   }
 }
@@ -62,4 +68,8 @@
 .layout_simple a {
   font-weight: 700;
   color: $body-font-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

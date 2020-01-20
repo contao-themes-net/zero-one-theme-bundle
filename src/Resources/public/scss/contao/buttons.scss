@@ -12,10 +12,15 @@
   line-height: 1.2;
   height: inherit;
   width: max-content;
-  background: $bg-color-light;
+  background: $zeroOneColor_2;
+  color: $zeroOneColor_5;
+
+  &:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error):visited {
+    color: $zeroOneColor_5;
+  }
 
   &:hover {
-    background: $bg-color;
+    background: $zeroOneColor_1;
   }
 
   &.btn-sm {
@@ -32,14 +37,16 @@
   }
 }
 
-.ie11 .btn {
-  min-height: inherit;
-  width: auto;
-  display: table;
-  padding: 15px 60px;
+.ie11, .edge {
+  .btn {
+    min-height: inherit;
+    width: auto;
+    display: table;
+    padding: 15px 60px;
 
-  &.btn-block {
-    width: 100%;
+    &.btn-block {
+      width: 100%;
+    }
   }
 }
 

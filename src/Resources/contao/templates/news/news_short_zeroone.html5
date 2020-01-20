@@ -5,14 +5,18 @@
       <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->parseDate("d. F Y", $this->timestamp); ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
     <?php endif; ?>
 
-    <h3 itemprop="name"><?= $this->linkHeadline ?></h3>
+    <a href="<?= $this->link ?>" aria-label="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>" title="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>">
+
+    <h3 itemprop="name"><?= $this->headline ?></h3>
 
     <div class="ce_text block" itemprop="description">
       <?= $this->teaser ?>
     </div>
 
     <?php if ($this->hasText || $this->hasTeaser): ?>
-    <p class="more"><a href="<?= $this->link ?>" title="<?= $this->headline ?>"><i class="icon icon-more"></i></a></p>
+    <p class="more"><i class="icon icon-more"></i></p>
     <?php endif; ?>
+
+    </a>
   </div>
 </div>

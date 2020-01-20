@@ -96,6 +96,12 @@ img {
 .bg-sunrise {
   background: transparent linear-gradient(99deg, $primary-color-light 0%, $primary-color-dark 100%) 0% 0% no-repeat padding-box;
 
+  &.mod_article {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
   .ce_text, .ce_headline {
     color: $dark-color;
   }
@@ -152,10 +158,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 100%;
 
     &:hover {
       background: $primary-color-light;
-      border-radius: 100%;
     }
   }
 
@@ -173,8 +179,7 @@ img {
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-image: url(/files/zeroOne/img/bubble_up.svg);
-  width: 123px;
+  width: 90px;
   height: 90px;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -183,9 +188,39 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 46px;
+  background: $zeroOneColor_1;
+  border-radius: 100%;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: $zeroOneColor_1;
+    border-radius: 100%;
+    left: -20px;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: $zeroOneColor_1;
+    border-radius: 100%;
+    right: -10px;
+    top: 0;
+    z-index: -1;
+  }
 
   &:hover {
     text-decoration: none;
+
+    &, &:after, &:before {
+      background: lighten($zeroOneColor_2,5%);
+    }
   }
 }
 
@@ -267,6 +302,10 @@ img {
   .widget-submit {
     justify-content: center;
   }
+}
+
+.css-filter img {
+  filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
 }
 
 em {
@@ -559,7 +598,7 @@ h1, h2, h3, h4, h5, h6 {
   .ce_toplink a {
     right: 20px;
     bottom: 20px;
-    width: 65px;
+    width: 50px;
     height: 50px;
     font-size: 28px;
   }

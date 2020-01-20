@@ -68,9 +68,7 @@
   color: $body-font-color;
 
   &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 30px;
     width: 100%;
   }
 }

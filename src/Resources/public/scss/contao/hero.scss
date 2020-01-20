@@ -7,8 +7,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     min-height: 729px;
-    padding: 0;
-    background-size: 100% 100%;
+    padding: 50px 0 0;
+    background-size: auto 90%;
 
     .ce_text {
       padding-bottom: 0;
@@ -116,6 +116,10 @@
         width: 70%;
       }
     }
+
+    .hero-body {
+      background-size: 100%;
+    }
   }
 }
 
@@ -123,7 +127,7 @@
   .hero {
     .hero-body {
       min-height: 0;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
     }
 
     &.parallax .parallax-body {

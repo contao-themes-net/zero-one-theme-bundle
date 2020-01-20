@@ -78,14 +78,16 @@
   }
 }
 
-.ie11 .ce_ct_teaserBox .inside .pageLink a {
-  width: inherit;
-  height: 50px;
+.ie11, .edge {
+  .ce_ct_teaserBox .inside .pageLink a {
+    width: inherit;
+    height: 50px;
 
-  &:after{
-    content: '';
-    min-height: inherit;
-    font-size: 0;
+    &:after{
+      content: '';
+      min-height: inherit;
+      font-size: 0;
+    }
   }
 }
 

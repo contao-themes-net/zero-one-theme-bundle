@@ -46,6 +46,10 @@
   .parallax-body {
     filter: invert(0) sepia(0) hue-rotate(100deg) saturate(.7) brightness(0.9);
   }
+
+  .css-filter img {
+    filter: invert(0) sepia(100%) hue-rotate(40deg) saturate(250%) brightness(85%);
+  }
 }
 
 .night-colour-scheme {
@@ -81,5 +85,9 @@
 
   .parallax-body {
     filter: invert(0) sepia(0) hue-rotate(203deg) saturate(1) brightness(0.9);
+  }
+
+  .css-filter img {
+    filter: invert(0) sepia(80%) hue-rotate(305deg) saturate(750%) brightness(70%);
   }
 }
