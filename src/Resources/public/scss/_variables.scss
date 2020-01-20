@@ -1,7 +1,7 @@
 // Core variables
 $version: "0.5.8";
 
-@import '../../../../files/zeroOne/scss/_custom_colors.scss';
+@import '../../../../files/zeroOne/scss/_custom_variables.scss';
 
 // Core features
 $rtl: false !default;
@@ -11,6 +11,7 @@ $zeroOneColor_1: #000 !default;
 $zeroOneColor_2: #ff8562 !default;
 $zeroOneColor_3: #f6d365 !default;
 $zeroOneColor_4: #CE4A22 !default;
+$zeroOneColor_5: #fff !default;
 
 // Core colors
 $primary-color: $zeroOneColor_1 !default;
@@ -45,7 +46,7 @@ $error-color: #e85600 !default;
 // Other colors
 $code-color: #d73e48 !default;
 $highlight-color: #ffe9b3 !default;
-$link-color: darken($primary-color-dark, 10%) !default;
+$link-color: $zeroOneColor_4 !default;
 $link-color-dark: darken($link-color, 10%) !default;
 $link-color-light: lighten($link-color, 10%) !default;
 
@@ -127,5 +128,7 @@ $zindex-4: 400 !default;
 
 // ZeroOne Variables
 $boxes-background: darken($body-bg, 5%) !default;
-
-@import '../../../../files/zeroOne/scss/_custom_variables.scss';
+$footer-background_1: $zeroOneColor_1 !default;
+$footer-color-1: $zeroOneColor_5 !default;
+$footer-background-2: lighten($footer-background_1, 20%) !default;
+$footer-color-2: $zeroOneColor_5 !default;

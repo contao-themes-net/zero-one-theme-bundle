@@ -1,25 +1,50 @@
-// Gray colors
-//$gray-color: lighten($dark-color, 55%) !default;
-//$gray-color-dark: darken($gray-color, 30%) !default;
-//$gray-color-light: lighten($gray-color, 20%) !default;
+/****
+ **** 0.1 theme files / custom_variables
+ ****
+ */
 
-//$border-color: lighten($dark-color, 65%) !default;
-//$border-color-dark: darken($border-color, 10%) !default;
-//$border-color-light: lighten($border-color, 8%) !default;
-//$bg-color: lighten($dark-color, 90%) !default;
-//$bg-color-dark: darken($bg-color, 3%) !default;
-//$bg-color-light: darken($light-color,5%) !default;
+/*
+ * Entfernen Sie die Schrägstriche um die Theme-Farben zu überschreiben.
+ * Uncomment lines to override theme colors.
+ */
 
-// Control colors
-//$success-color: #32b643 !default;
-//$warning-color: #ffb700 !default;
-//$error-color: #e85600 !default;
+/* ============================= */
+/*        Colour Schemes         */
+/* ============================= */
 
-// Other colors
-//$code-color: #d73e48 !default;
-//$highlight-color: #ffe9b3 !default;
-//$body-bg: $light-color !default;
-//$body-font-color: lighten($dark-color, 5%) !default;
-//$link-color: $primary-color !default;
-//$link-color-dark: darken($link-color, 10%) !default;
-//$link-color-light: lighten($link-color, 10%) !default;
+//@import '/colour_schemes/earth';
+//@import '/colour_schemes/night';
+
+@import '/colour_schemes/dark_mode';
+
+/*
+ * Kommentieren Sie die folgende Zeile aus, wenn die Bilder nicht dem ent-
+ * sprechenden Farbschema angepasst werden sollen.
+ *
+ * Uncomment the following line if the images should not be adjusted to the
+ * colour scheme.
+ */
+@import '/colour_schemes/adjust_images';
+
+/* ============================= */
+/*     0.1 Theme Variables       */
+/* ============================= */
+
+//$body-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+
+//$zeroOneColor_1: #000;
+//$zeroOneColor_2: #ff8562;
+//$zeroOneColor_3: #f6d365;
+//$zeroOneColor_4: #CE4A22;
+//$zeroOneColor_5: #fff;
+
+//$body-bg: #fff;
+//$body-font-color: #000;
+//$link-color: #CE4A22;
+//$boxes-background: #f2f2f2;
+
+//$footer-background_1: #000;
+//$footer-color-1: #fff;
+//$footer-background-2: #333;
+//$footer-color-2: #fff;
+

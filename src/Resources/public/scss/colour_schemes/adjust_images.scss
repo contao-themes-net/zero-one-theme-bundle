@@ -1,0 +1,85 @@
+.mod_newslist .column {
+  &:nth-child(odd) img {
+    filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
+  }
+
+  &:nth-child(even) img {
+    filter: invert(0) sepia(100%) hue-rotate(-26deg) saturate(315%) brightness(95%);
+  }
+}
+
+.news-image img, .mod_eventlist img, .event-image img {
+  filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
+}
+
+.earth-colour-scheme {
+  .mod_newslist .column {
+    &:nth-child(odd) img {
+      filter: invert(0) sepia(100%) hue-rotate(40deg) saturate(250%) brightness(85%);
+    }
+
+    &:nth-child(even) img {
+      filter: invert(0) sepia(85%) hue-rotate(115deg) saturate(200%) brightness(75%);
+    }
+  }
+
+  .news-image img {
+    filter: invert(0) sepia(100%) hue-rotate(40deg) saturate(250%) brightness(85%);
+  }
+
+  .mod_eventlist img, .event-image img {
+    filter: invert(0) sepia(100%) hue-rotate(40deg) saturate(250%) brightness(85%);
+  }
+
+  .quote img {
+    filter: invert(0) sepia(0) hue-rotate(130deg) saturate(1.3) brightness(0.8);
+  }
+
+  .ce_ct_teaserBox img {
+    filter: invert(0) sepia(0) hue-rotate(30deg) saturate(1.2) brightness(90%);
+  }
+
+  .ce_tabsStartElement img {
+    filter: invert(0) sepia(0) hue-rotate(160deg) saturate(1) brightness(1);
+  }
+
+  .parallax-body {
+    filter: invert(0) sepia(0) hue-rotate(100deg) saturate(.7) brightness(0.9);
+  }
+}
+
+.night-colour-scheme {
+  .mod_newslist .column {
+    &:nth-child(odd) img {
+      filter: invert(0) sepia(80%) hue-rotate(305deg) saturate(750%) brightness(70%);
+    }
+
+    &:nth-child(even) img {
+      filter: invert(0) sepia(45%) hue-rotate(145deg) saturate(300%) brightness(80%);
+    }
+  }
+
+  .news-image img {
+    filter: invert(0) sepia(80%) hue-rotate(305deg) saturate(750%) brightness(70%);
+  }
+
+  .mod_eventlist img, .event-image img {
+    filter: invert(0) sepia(80%) hue-rotate(305deg) saturate(750%) brightness(70%);
+  }
+
+  .quote img {
+    filter: invert(1) sepia(0.4) hue-rotate(90deg) saturate(1.5) brightness(1);
+  }
+
+  .ce_ct_teaserBox img {
+    filter: invert(0) sepia(0) hue-rotate(300deg) saturate(6.5) brightness(.8);
+  }
+
+  .ce_tabsStartElement img {
+    filter: invert(0) sepia(0) hue-rotate(170deg) saturate(1) brightness(.8);
+  }
+
+  .parallax-body {
+    filter: invert(0) sepia(0) hue-rotate(203deg) saturate(1) brightness(0.9);
+  }
+}

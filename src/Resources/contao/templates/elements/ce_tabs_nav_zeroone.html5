@@ -11,7 +11,6 @@
 </ul>
 
 <style>
-
 <?php $i = 1; foreach ($this->items as $item): ?>
 #<?= $item['value'] ?> ~ figure .<?= $item['value'] ?><?php if(count($this->items) != $i): ?>,<?php endif; ?>
 <?php $i++; endforeach; ?> { display: none; }

@@ -30,17 +30,46 @@
     flex-wrap: wrap;
     list-style-type: none !important;
 
-    &.level_1 > li > a {
-      border-bottom: 1px solid transparent;
-
-      &:hover {
-        text-decoration: none;
-        border-color: $dark-color;
+    &.level_1 > li {
+      &:after {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: -15px;
+        left: 50%;
+        margin-left: -5px;
+        border-radius: 60px;
+        content: " ";
+        background: $dark-color;
+        transition: transform .8s cubic-bezier(0,.615,.06,.995),opacity .2s,-webkit-transform .8s cubic-bezier(0,.615,.06,.995);
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        opacity: 0;
       }
 
-      &.submenu:after {
-        content: "↓";
-        padding: 0 0 0 5px;
+      &.active, &.trail, &:hover {
+        &:after {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      > a {
+        border-bottom: 1px solid transparent;
+
+        &.active, &.trail {
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.submenu:after {
+          content: "↓";
+          padding: 0 0 0 5px;
+        }
       }
     }
 
@@ -62,20 +91,6 @@
       a,strong {
         color: $dark-color;
         font-weight: bold;
-      }
-
-      &.active, &.trail {
-        &:after {
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          top: -15px;
-          left: 50%;
-          margin-left: -5px;
-          border-radius: 60px;
-          content: " ";
-          background: $dark-color;
-        }
       }
 
       &:hover > ul {
@@ -123,7 +138,7 @@
 
     .level_2 {
       margin-left: -75px;
-      background-image: url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_2.svg);
+      background-image: url(/files/zeroOne/img/navbar_level_2.svg);
       background-size: 100% calc(100% - 40px);
       padding: 90px 0 55px;
       background-position: bottom;
@@ -135,7 +150,7 @@
     }
 
     .level_3 {
-      background-image:url(/bundles/contaothemesnetzeroonetheme/img/navbar_level_3.svg);
+      background-image:url(/files/zeroOne/img/navbar_level_3.svg);
       background-size: 100% 100%;
       padding: 70px 0;
       left: 190px;

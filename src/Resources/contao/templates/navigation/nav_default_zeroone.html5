@@ -2,7 +2,7 @@
 <ul class="<?= $this->level ?>">
   <?php foreach ($this->items as $item): ?>
     <?php if ($item['isActive']): ?>
-      <li class="<?= $item['class'] ?>"><a class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></a>
+      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></a>
 
         <?php if( !empty($item['subitems']) ): ?>
         <a href="#<?= $item['alias'] ?>" class="open-dropdown"><span>+</span></a>

@@ -45,8 +45,8 @@
 }
 
 .form-label {
-  background: #000;
-  color: #fff;
+  background: $zeroOneColor_1;
+  color: $zeroOneColor_5;
   padding: 10px 25px;
   display: flex;
   align-items: center;
@@ -58,7 +58,6 @@
 }
 
 .form-input, .form-select, .checkbox_container > div, .radio_container .form-group > div, textarea {
-  background: #fff;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   min-height: 50px;
@@ -88,7 +87,6 @@ textarea {
 }
 
 select.form-select:not([size]):not([multiple]) {
-  background: #fff;
   height: inherit;
   background: $boxes-background;
 }
@@ -120,8 +118,8 @@ select.form-select[multiple] {
   }
 
   > label {
-    background: #000;
-    color: #fff;
+    background: $zeroOneColor_1;
+    color: $zeroOneColor_5;
     padding: 10px 25px;
     display: flex;
     align-items: center;

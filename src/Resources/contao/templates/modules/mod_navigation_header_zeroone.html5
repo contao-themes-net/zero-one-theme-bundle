@@ -1,14 +1,14 @@
 
 <!-- indexer::stop -->
 <nav class="navbar bg-sunrise <?= $this->class ?> block" id="open-nav" <?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <section class="navbar-section">
+    <div class="navbar-section">
       <?php if ($this->headline): ?>
         <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
       <?php endif; ?>
       {{theme::content::ZeroOne01/04}}
-    </section>
+    </div>
 
-    <section class="navbar-section">
+    <div class="navbar-section">
       <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
 
       <a href="{{env::path}}{{env::request}}#open-nav" class="open-nav" aria-label="Navigation">
@@ -22,7 +22,7 @@
       <?= $this->items ?>
 
       <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
-    </section>
+    </div>
 </nav>
 <!-- indexer::continue -->
 <?php $GLOBALS['ZERO_ONE_STYLES'][] = '_navbar'; ?>
