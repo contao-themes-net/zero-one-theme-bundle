@@ -35,6 +35,7 @@
     $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
   }
   \File::putContent($file->path, $scssStr);
+
 ?>
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php

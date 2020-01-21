@@ -20,7 +20,7 @@ class ZeroOneThemeSetup extends \BackendModule
                     new \Folder("files/zeroOne");
                 }
                 $this->getFiles($path);
-                //$this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
+                $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
                 break;
             case 'truncateTlFiles':
@@ -39,12 +39,12 @@ class ZeroOneThemeSetup extends \BackendModule
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
                 $filesFolder = "files/zeroOne".str_replace("contaothemesnetzeroonetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir == "_custom_colors.scss" || $dir == "_custom_variables.scss" || $dir == "custom.scss") {
+                if($dir == "_custom_variables.scss" || $dir == "custom.scss") {
                     if(!file_exists(TL_ROOT."/".$filesFolder)) {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
-                } else if(strpos($filesFolder,"/img/") !== false) {
+                } else if(strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false) {
                     if(!file_exists(TL_ROOT."/".$filesFolder)) {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
@@ -55,7 +55,7 @@ class ZeroOneThemeSetup extends \BackendModule
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
                 $filesFolder = "files/zeroOne".str_replace("contaothemesnetzeroonetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir == "scss" || $dir == "img") {
+                if($dir == "scss" || $dir == "img" || $dir == "css") {
                     if(!file_exists($filesFolder)) {
                         new \Folder($filesFolder);
                     }

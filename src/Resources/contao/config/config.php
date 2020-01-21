@@ -68,7 +68,7 @@ $GLOBALS['ZERO_ONE_STYLES'][] = 'utilities';
  */
 array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
 (
-    'zerooneThemeSetup' => array
+    'zeroOneThemeSetup' => array
     (
         'callback'          => 'ContaoThemesNet\\ZeroOneThemeBundle\\Module\\ZeroOneThemeSetup',
         'tables'            => array(),

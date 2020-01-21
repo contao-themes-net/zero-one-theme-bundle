@@ -19,4 +19,10 @@
   <?= $item['subitems'] ?></li>
     <?php endif; ?>
   <?php endforeach; ?>
+
+  <?php if($this->level == "level_1"): ?>
+  <div class="show-lg search">
+    {{theme::content::ZeroOne01/03}}
+  </div>
+  <?php endif; ?>
 </ul>

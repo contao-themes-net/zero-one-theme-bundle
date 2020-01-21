@@ -55,6 +55,7 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   min-height: 50px;
+  box-shadow: 0px 1px 2px 0 rgba(99, 99, 99, 0.3);
 }
 
 .form-input, .form-select, .checkbox_container > div, .radio_container .form-group > div, textarea {
@@ -66,6 +67,11 @@
   border: none;
   background: $boxes-background;
   color: $body-font-color;
+  box-shadow: 0px 1px 2px 0 rgba(99, 99, 99, 0.3);
+
+  &:focus {
+    box-shadow: none;
+  }
 
   &:first-child {
     border-radius: 30px;

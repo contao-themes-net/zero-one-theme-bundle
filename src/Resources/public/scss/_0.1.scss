@@ -87,10 +87,7 @@ img {
 
 // zero one styles
 .block {
-  &:not(.columns):not(.column):not(.navbar) {
-    display: block;
-    width: 100%;
-  }
+  display: block;
 }
 
 .bg-sunrise {
@@ -238,12 +235,18 @@ img {
   padding-right: 15px;
 }
 
-.columns:not(.col-mx-auto) {
-  margin-left: -15px;
-  margin-right: -15px;
+.columns {
+  &.block {
+    display: flex;
+  }
 
-  &.mod_article {
-    margin: 0 auto;
+  &:not(.col-mx-auto) {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &.mod_article {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -306,12 +309,6 @@ img {
 
 .css-filter img {
   filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
-}
-
-em {
-  //color: $light-color;
-  //background: $dark-color;
-  //padding: 2px 5px;
 }
 
 .float_right {
