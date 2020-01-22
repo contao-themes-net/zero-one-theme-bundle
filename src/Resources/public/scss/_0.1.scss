@@ -230,6 +230,21 @@ img {
   100% {transform: scale(1);}
 }
 
+.ce_youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .column {
   padding-left: 15px;
   padding-right: 15px;
@@ -627,6 +642,7 @@ h1, h2, h3, h4, h5, h6 {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         top: 0;
         width: 100%;
+        height: inherit;
       }
     }
 
@@ -636,6 +652,14 @@ h1, h2, h3, h4, h5, h6 {
 
     .mod_customnav ul {
       justify-content: center;
+
+      li.last:after {
+        display: none;
+      }
+    }
+
+    &.page-footer nav ul li strong {
+      font-size: 16px;
     }
   }
 

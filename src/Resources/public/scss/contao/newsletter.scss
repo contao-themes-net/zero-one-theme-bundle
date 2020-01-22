@@ -32,6 +32,10 @@ footer {
       }
     }
 
+    span.LV_invalid {
+      display: none;
+    }
+
     .text {
       height: 60px;
       font-size: 16px;
@@ -42,9 +46,15 @@ footer {
       border-bottom-right-radius: 0;
       border: none;
       min-width: 370px;
+      background: $zeroOneColor_5;
 
       &:focus {
         outline: 0;
+      }
+
+      &.mandatory {
+        background: $zeroOneColor_5;
+        border: none;
       }
     }
 
@@ -95,11 +105,17 @@ footer {
         padding: 0;
         min-height: inherit;
         background: none;
+        box-shadow: none;
       }
     }
 
     .form-input, .form-group input {
       border-radius: 30px;
+
+      &.mandatory {
+        background: $boxes-background;
+        border: none;
+      }
     }
 
     .widget-checkbox {
