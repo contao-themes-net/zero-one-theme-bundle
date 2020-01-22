@@ -108,6 +108,27 @@
 
     .tab-item {
       height: inherit;
+
+      &:not(.last) {
+        border-bottom: 0.05rem solid #a6a6a6;
+      }
+
+      a label {
+        padding: 12px 40px 12px 0;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "+";
+          top: 0;
+          right: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          font-size: 50px;
+          line-height: 1;
+        }
+      }
     }
   }
 }

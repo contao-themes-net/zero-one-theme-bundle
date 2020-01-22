@@ -598,6 +598,17 @@ h1, h2, h3, h4, h5, h6 {
     width: 50px;
     height: 50px;
     font-size: 28px;
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      right: -5px;
+    }
+
+    &:before {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   footer {

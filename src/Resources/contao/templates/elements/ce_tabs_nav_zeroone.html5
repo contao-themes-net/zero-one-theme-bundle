@@ -20,6 +20,10 @@
 <?php $i++; endforeach; ?> { display: block; }
 
 <?php $i = 1; foreach ($this->items as $item): ?>
+#<?= $item['value'] ?>:checked ~ .tab label[for="<?= $item['value'] ?>"]:after<?php if(count($this->items) != $i): ?>,<?php endif; ?>
+<?php $i++; endforeach; ?> { display: none; }
+
+<?php $i = 1; foreach ($this->items as $item): ?>
 #<?= $item['value'] ?>:checked ~ .tab label[for="<?= $item['value'] ?>"]<?php if(count($this->items) != $i): ?>,<?php endif; ?>
 <?php $i++; endforeach; ?> { border-bottom: 6px solid #F6D365; }
 </style>

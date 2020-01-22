@@ -10,6 +10,16 @@
 
         {% block style %}
             <style>
+                a {
+                    color: #000;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
                 body {
                     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
                     width: 100%;
@@ -19,6 +29,13 @@
 
                 #content, .wrap {
                     min-height: 100vh;
+                }
+
+                #content {
+                    background-image:url(/bundles/contaothemesnetzeroonetheme/img/bubbles.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 80%;
                 }
 
                 .error {
@@ -46,12 +63,10 @@
                     justify-content: center;
                     height: 100%;
                     min-height: 100vh;
-                    background-image:url(/bundles/contaothemesnetzeroonetheme/img/bubbles.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: auto 80%;
                     padding: 20px;
                     box-sizing: border-box;
+                    max-width: 1200px;
+                    margin: 0 auto;
                 }
 
                 @media (max-width: 600px) {

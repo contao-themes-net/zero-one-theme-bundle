@@ -208,4 +208,10 @@ span.mandatory {
     border-bottom-right-radius: 15px;
   }
 
+  .widget-select:not(.multiselect):after {
+    height: 50px;
+    top: inherit;
+    bottom: 0;
+  }
+
 }

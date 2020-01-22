@@ -68,6 +68,9 @@
 .layout_simple a {
   font-weight: 700;
   color: $body-font-color;
+  display: block;
+  margin-bottom: 1em;
+  line-height: 1em;
 
   &:hover {
     text-decoration: underline;
