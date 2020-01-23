@@ -20,7 +20,7 @@ class ZeroOneThemeSetup extends \BackendModule
                     new \Folder("files/zeroOne");
                 }
                 $this->getFiles($path);
-                $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
+                //$this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
                 break;
             case 'truncateTlFiles':
