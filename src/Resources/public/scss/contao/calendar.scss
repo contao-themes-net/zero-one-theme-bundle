@@ -25,6 +25,8 @@
 }
 
 .calendar {
+  width: 100%;
+
   td a {
     font-size: 14px;
   }
@@ -36,6 +38,10 @@
   .header {
     font-size: 18px;
     font-weight: 500;
+  }
+
+  td, th {
+    width: calc(100% / 7);
   }
 }
 

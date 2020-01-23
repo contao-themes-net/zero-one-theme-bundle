@@ -38,7 +38,7 @@
 
 ?>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php
+<link rel="stylesheet" type="text/css" media="all" async href="<?php
           // add stylesheets
           $combiner = new Combiner();
           $combiner->add($file->path);
@@ -75,7 +75,5 @@ echo $combiner->getCombinedFile(); ?>"> */ ?>
   <?= $this->footer ?>
 </footer>
 
-<?php /* <pre><?php print_r($GLOBALS['ZERO_ONE_STYLES']); ?></pre> */ ?>
-<!--<div class="text-center debug"><?php echo implode("|",$GLOBALS['ZERO_ONE_STYLES']) ?></div>-->
 <?php endif; ?>
 <?php $this->endblock(); ?>

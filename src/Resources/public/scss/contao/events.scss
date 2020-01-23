@@ -3,6 +3,11 @@
     padding: 0;
   }
 
+  .empty {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .event {
     margin-bottom: 40px;
 
@@ -15,12 +20,22 @@
     }
   }
 
-  h2, h3, h4, h5, h6 {
-    font-size: 0.95em;
-    margin-top: 10px;
+  .event {
+    h2, h3, h4, h5, h6 {
+      font-size: 0.95em;
+      margin-top: 10px;
 
-    a {
-      color: $body-font-color;
+      a {
+        color: $body-font-color;
+      }
+    }
+  }
+
+  > {
+    h1, h2, h3, h4, h5, h6 {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
     }
   }
 
@@ -30,6 +45,10 @@
 
   .icon {
     width: 34px;
+  }
+
+  img {
+    width: 100%;
   }
 
   .more {

@@ -1,13 +1,13 @@
 
 <div class="layout_full columns block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
 
+  <?php if ($this->addImage): ?>
   <div class="column col-4 col-xs-12 news-image">
-    <?php if ($this->addImage): ?>
       <?php $this->insert('image', $this->arrData); ?>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
 
-  <div class="column col-8 col-xs-12">
+  <div class="column <?php if ($this->addImage): ?>col-8<?php endif; ?> col-xs-12">
     <?php if ($this->hasMetaFields): ?>
     <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
     <?php endif; ?>
@@ -22,17 +22,7 @@
     <?= $this->text ?>
     <?php else: ?>
     <div class="ce_text block">
-      <?php if (!$this->addBefore): ?>
       <?= $this->teaser ?>
-      <?php endif; ?>
-
-      <?php if ($this->addImage): ?>
-      <?php $this->insert('image', $this->arrData); ?>
-      <?php endif; ?>
-
-      <?php if ($this->addBefore): ?>
-      <?= $this->teaser ?>
-      <?php endif; ?>
     </div>
     <?php endif; ?>
 

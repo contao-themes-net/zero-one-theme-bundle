@@ -14,9 +14,15 @@
   width: max-content;
   background: $zeroOneColor_2;
   color: $zeroOneColor_5;
+  transition: background .2s;
+  -webkit-transition: background .2s;
 
   &:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error):visited {
     color: $zeroOneColor_5;
+
+    &:hover {
+      color: $zeroOneColor_2;
+    }
   }
 
   &:hover {

@@ -2,7 +2,7 @@
 
 <?php $this->block('content'); ?>
 
-<a href="{{env::path}}{{env::request}}#search" class="open-search" id="search"><img src="/files/zeroOne/img/search.svg"></a>
+<a href="{{env::path}}{{env::request}}#search" class="open-search" id="search">{{image::12248a3c-3c2e-11ea-9298-e0d55edd9ad9?width=35&height=35&alt=Suche}}</a>
 <a href="{{env::path}}{{env::request}}#close-search" class="close-search" id="close-search">+</a>
 <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="get">
 <div class="formbody">
