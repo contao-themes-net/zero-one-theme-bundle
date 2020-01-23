@@ -37,6 +37,7 @@
 
     .hero-body {
       min-height: inherit;
+      background-image: none;
     }
 
     p {
@@ -50,7 +51,7 @@
 
     .hero-body {
       min-height: inherit;
-      //background-image: none;
+      background-image: none;
     }
 
     h2,h3,h4,h5 {
@@ -87,6 +88,10 @@
       }
     }
   }
+}
+
+.ios .hero.parallax .parallax-body {
+  background-attachment: inherit;
 }
 
 .mod_article.hero {
@@ -169,7 +174,7 @@
 
     &.quote {
       position: relative;
-      padding: 100px 40px;
+      padding: 50px 40px;
     }
   }
 }

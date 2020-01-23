@@ -1,5 +1,11 @@
 
 <ul class="<?= $this->level ?>">
+  <?php if($this->level == "level_1"): ?>
+  <li class="show-lg search">
+    {{theme::content::ZeroOne01/03}}
+  </li>
+  <?php endif; ?>
+
   <?php foreach ($this->items as $item): ?>
     <?php if ($item['isActive']): ?>
       <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></a>
@@ -19,10 +25,4 @@
   <?= $item['subitems'] ?></li>
     <?php endif; ?>
   <?php endforeach; ?>
-
-  <?php if($this->level == "level_1"): ?>
-  <div class="show-lg search">
-    {{theme::content::ZeroOne01/03}}
-  </div>
-  <?php endif; ?>
 </ul>

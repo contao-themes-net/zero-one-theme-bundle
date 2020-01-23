@@ -1,12 +1,10 @@
 @media (prefers-color-scheme: dark) {
   body {
-    @extend .color-scheme-dark-mode;
+    background: #333 !important;
+    color: #fff !important;
   }
 
-  .color-scheme-dark-mode {
-    background: #333;
-    color: #fff;
-
+  #wrapper {
     a, a:visited {
       color: #fff;
 
@@ -62,6 +60,14 @@
 
     footer .ce_hyperlink.bg-white {
       background-color: #fff;
+    }
+
+    .header-search a {
+      color: #000;
+
+      &:hover, &:visited {
+        color: #000;
+      }
     }
 
     .hero.quote {
@@ -123,4 +129,18 @@
       color: #fff;
     }
   }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 960px) {
+
+  #wrapper {
+    .navbar ul.level_1>li>a {
+      color: #fff;
+    }
+
+    .navbar ul.level_3>li>a {
+      color: #fff;
+    }
+  }
+
 }

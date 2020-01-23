@@ -94,8 +94,8 @@ img {
   background: transparent linear-gradient(99deg, $primary-color-light 0%, $primary-color-dark 100%) 0% 0% no-repeat padding-box;
 
   &.mod_article {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 0;
   }
 
@@ -683,6 +683,25 @@ h1, h2, h3, h4, h5, h6 {
   h1, h2, h3, h4, h5, h6 {
     &.headline-35 {
       font-size: 24px;
+    }
+
+    &.headline-dotted {
+      display: block;
+
+      .dots {
+        width: 100%;
+        display: block;
+        height: 35px;
+        line-height: 1px;
+
+        &:first-child {
+          padding-right: 0;
+        }
+
+        &:last-child {
+          padding-left: 0;
+        }
+      }
     }
   }
 
