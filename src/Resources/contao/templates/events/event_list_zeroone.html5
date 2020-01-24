@@ -1,6 +1,8 @@
 <div class="column col-3 col-sm-12 col-lg-6 event layout_list<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
   <div class="inside">
-    <h3 itemprop="name"><a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?> itemprop="url"><?= $this->link ?></a></h3>
+
+    <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?> itemprop="url">
+    <h3 itemprop="name"><?= $this->title ?></h3>
 
     <?php if ($this->header): ?>
     <div class="header<?= $this->classHeader ?>">
@@ -13,7 +15,8 @@
     <div class="ce_text block" itemprop="description"><?= $this->teaser ?></div>
 
     <?php if ($this->hasDetails): ?>
-    <p class="more"><a href="<?= $this->href ?>" title="<?= $this->readMore ?>"<?= $this->target ?> itemprop="url"><i class="icon icon-more"></i><span class="invisible"> <?= $this->link ?></span></a></p>
+    <p class="more"><i class="icon icon-more"></i></p>
     <?php endif; ?>
+    </a>
   </div>
 </div>

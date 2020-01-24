@@ -4,24 +4,24 @@
     <?php $this->insert('image', $this->arrData); ?>
   <?php endif; ?>
 
-  <?php if ($this->hasDetails): ?>
-  <h3 itemprop="name"><a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?> itemprop="url"><?= $this->link ?></a></h3>
-  <?php else: ?>
-  <h3 itemprop="name"><?= $this->title ?></h3>
-  <?php endif; ?>
+  <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?> itemprop="url">
 
-  <?php if ($this->header): ?>
-  <div class="header<?= $this->classHeader ?>">
-    <?php if ($this->firstDay): ?><span class="day"><?= $this->firstDay ?>, </span><?php endif; ?><span class="date"><?= $this->firstDate ?></span>
-  </div>
-  <?php endif; ?>
+    <h3 itemprop="name"><?= $this->title ?></h3>
 
-  <p class="time"><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
+    <?php if ($this->header): ?>
+    <div class="header<?= $this->classHeader ?>">
+      <?php if ($this->firstDay): ?><span class="day"><?= $this->firstDay ?>, </span><?php endif; ?><span class="date"><?= $this->firstDate ?></span>
+    </div>
+    <?php endif; ?>
 
-  <div class="ce_text block" itemprop="description"><?= $this->teaser ?></div>
+    <p class="time"><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
 
-  <?php if ($this->hasDetails): ?>
-  <p class="more"><a href="<?= $this->href ?>" title="<?= $this->readMore ?>"<?= $this->target ?> itemprop="url"><i class="icon icon-more"></i><span class="invisible"> <?= $this->link ?></span></a></p>
-  <?php endif; ?>
+    <div class="ce_text block" itemprop="description"><?= $this->teaser ?></div>
+
+    <?php if ($this->hasDetails): ?>
+    <p class="more"><i class="icon icon-more"></i></p>
+    <?php endif; ?>
+
+  </a>
 
 </div>

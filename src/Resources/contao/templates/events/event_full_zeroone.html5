@@ -1,6 +1,14 @@
 
 <div class="event layout_full columns block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
 
+  <?php if ($this->addImage) {
+    $url = $this->replaceInsertTags('{{env::path}}');
+    $GLOBALS['og:image'] = $url.$this->arrData['singleSRC'];
+    $GLOBALS['og:image:width'] = "600";
+    $GLOBALS['og:image:height'] = "600";
+  }
+  ?>
+
   <?php if ($this->addImage): ?>
   <div class="column col-4 col-xs-12 event-image">
     <?php $this->insert('image', $this->arrData); ?>

@@ -145,12 +145,13 @@
     }
 
     .level_2 {
-      margin-left: -75px;
+      margin-left: -50px;
       background-image: url(/files/zeroOne/img/navbar_level_2.svg);
       background-size: 100% calc(100% - 40px);
       padding: 90px 0 55px;
       background-position: bottom;
       width: 240px;
+      left: 0;
 
       a, strong {
         color: $light-color;

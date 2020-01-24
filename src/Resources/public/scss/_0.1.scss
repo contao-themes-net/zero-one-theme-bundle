@@ -230,21 +230,6 @@ img {
   100% {transform: scale(1);}
 }
 
-.ce_youtube {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .column {
   padding-left: 15px;
   padding-right: 15px;
@@ -517,6 +502,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
 }
 
+.columns .pagination {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .spectre-pagination {
   width: 100%;
 }
@@ -567,7 +557,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: inherit;
     max-width: 400px;
     margin: 0 auto;
-    padding: 70px 100px;
+    padding: 100px;
 
     .ce_text.block:not(.columns):not(.column):not(.navbar) {
       padding: 0;
