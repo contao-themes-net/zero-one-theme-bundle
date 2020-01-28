@@ -2,12 +2,15 @@
 <div class="column col-3 col-sm-12 col-lg-6 layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
   <div class="inside">
     <?php if ($this->hasMetaFields): ?>
-      <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->parseDate("d. F Y", $this->timestamp); ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+      <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->parseDate("d. F Y", $this->timestamp); ?></time>
+        <span itemprop="author"><?php if($this->author): ?><?= $this->author ?><?php else: ?><span class="invisible">{{page::rootPageTitle}}</span><?php endif; ?></span>
+        <?= $this->commentCount ?>
+        <span class="invisible" itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><span itemprop="name"><?php if($this->author): ?><?= $this->author ?><?php else: ?>{{page::rootPageTitle}}<?php endif; ?></span></span>
     <?php endif; ?>
 
     <a href="<?= $this->link ?>" aria-label="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>" title="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>">
 
-    <h3 itemprop="name"><?= $this->headline ?></h3>
+    <h3 itemprop="name"><span itemprop="headline"><?= $this->headline ?></span></h3>
 
     <div class="ce_text block" itemprop="description">
       <?= $this->teaser ?>

@@ -6,10 +6,12 @@
 
   #wrapper {
     a, a:visited {
-      color: #fff;
-
-      &:hover {
+      &:not(.btn) {
         color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
 
@@ -34,17 +36,13 @@
     }
 
     .calendar, .minicalendar {
-      th, td {
+      th, td:not(.active) {
         background: #3c3c3c;
         color: #fff;
       }
 
-      td.active {
-        color: #fff;
-
-        a {
-          color: #fff;
-        }
+      td.active, td.active a {
+        color: #000;
       }
     }
 
@@ -52,7 +50,7 @@
       color: #fff;
     }
 
-    .checkbox_container>div, .radio_container .form-group>div, .ce_code .code code, .btn:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error),
+    .checkbox_container>div, .radio_container .form-group>div, .ce_code .code code,
     .table.table-striped tbody tr:nth-of-type(odd) {
       background: #3c3c3c;
       color: #fff;
@@ -123,6 +121,10 @@
 
     .tab .tab-item.active a, .tab .tab-item a.active {
       color: #fff;
+    }
+
+    .table.table-hover tbody tr:hover {
+      background: #4c4c4c;
     }
 
     .tabs figure>div {

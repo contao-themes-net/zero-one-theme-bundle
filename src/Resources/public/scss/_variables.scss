@@ -47,8 +47,8 @@ $error-color: #e85600 !default;
 $code-color: #d73e48 !default;
 $highlight-color: #ffe9b3 !default;
 $link-color: $zeroOneColor_4 !default;
-$link-color-dark: darken($link-color, 10%) !default;
-$link-color-light: lighten($link-color, 10%) !default;
+$link-color-dark: #000 !default;
+$link-color-light: $link-color !default;
 
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
