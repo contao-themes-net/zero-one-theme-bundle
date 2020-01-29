@@ -39,7 +39,6 @@ class ZeroOneThemeSetup extends \BackendModule
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
                 $filesFolder = "files/zeroOne".str_replace("contaothemesnetzeroonetheme","",substr($path,$pos))."/".$dir;
 
-                echo $filesFolder."<br>";
                 if($dir == "_custom_variables.scss" || $dir == "custom.scss") {
                     if(!file_exists(TL_ROOT."/".$filesFolder)) {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
