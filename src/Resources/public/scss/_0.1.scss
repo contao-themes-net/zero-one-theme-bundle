@@ -15,6 +15,10 @@ a:focus {
   box-shadow: none;
 }
 
+a:hover {
+  color: $link-color-dark;
+}
+
 .invisible {
   display: block;
   position: absolute;

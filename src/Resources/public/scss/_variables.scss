@@ -26,7 +26,7 @@ $body-font-color: #000 !default;
 
 // Gray colors
 $dark-color: $primary-color !default;
-$light-color: #fff !default;
+$light-color: $zeroOneColor_5 !default;
 $gray-color: lighten($dark-color, 55%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
