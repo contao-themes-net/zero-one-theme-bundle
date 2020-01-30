@@ -1,8 +1,8 @@
-<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<div class="<?= $this->class ?> block<?php if($this->addImage): ?> with-image<?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="inside">
         <?php $this->block('content'); ?>
 
-        <?php if ($this->addImage && $this->floating != 'below'): ?>
+        <?php if ($this->addImage && ($this->floating == 'above' || $this->floating == 'left')): ?>
             <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
             <?php $this->insert('image', $this->arrData); ?>
             <?php if($this->page != ""): ?></a><?php endif; ?>
@@ -35,7 +35,7 @@
         </div>
 
 
-        <?php if ($this->addImage && $this->floating == 'below'): ?>
+        <?php if ($this->addImage && ($this->floating == 'below' || $this->floating == 'right')): ?>
             <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
             <?php $this->insert('image', $this->arrData); ?>
             <?php if($this->page != ""): ?></a><?php endif; ?>

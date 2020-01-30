@@ -52,11 +52,17 @@
     }
   }
 
-  &.image-right {
+  &.with-image {
     h2, h3, h4, h5 {
       text-align: left;
       font-size: 20px;
       width: 100%;
+    }
+
+    .image_container {
+      &.float_below {
+        float: right;
+      }
     }
 
     .inside {
@@ -117,7 +123,7 @@
   .ce_ct_teaserBox {
     padding-bottom: 50px;
 
-    &.image-right img {
+    &.with-image img {
       max-width: 200px;
       margin-top: 30px;
       width: 100%;
