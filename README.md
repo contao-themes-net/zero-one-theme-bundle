@@ -16,7 +16,6 @@ For documentation please visit https://docs.contao-themes.net/#/zero-one_theme/i
 
 ## Tools we use 🛠
 
-- [👀 BrowserShots](https://browsershots.org/) for cross-browser testing
 - [🌊 WAVE](https://wave.webaim.org/extension/) for accessibility testing
 - [🚨 Lighthouse](https://developers.google.com/web/tools/lighthouse/) for testing of performance, accessibility and more
 - [🌍 Website Carbon Calculator](https://www.websitecarbon.com/) for testing carbon impact
@@ -31,6 +30,7 @@ Compatible with Contao >=4.4
 - [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
 - [Theme Components Bundle](https://github.com/contao-themes-net/theme-components-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
 - [Contao Folderpage](https://github.com/terminal42/contao-folderpage)
+- [Contao Advanced Classes](https://github.com/Contao-DD/advanced-classes-bundle)
 
 ## Donation
 
