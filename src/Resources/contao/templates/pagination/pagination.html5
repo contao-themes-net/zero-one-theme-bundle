@@ -1,0 +1,32 @@
+
+<!-- indexer::stop -->
+<div class="spectre-pagination block">
+
+  <ul class="pagination">
+    <?php if ($this->hasFirst): ?>
+    <li class="first page-item"><a href="<?= $this->first['href'] ?>" class="first" title="<?= $this->first['title'] ?>"><?= $this->first['link'] ?></a></li>
+    <?php endif; ?>
+
+    <?php if ($this->hasPrevious): ?>
+    <li class="previous page-item"><a href="<?= $this->previous['href'] ?>" class="previous" title="<?= $this->previous['title'] ?>"><?= $this->previous['link'] ?></a></li>
+    <?php endif; ?>
+
+    <?php foreach ($this->pages as $page): ?>
+    <?php if ($page['href'] === null): ?>
+    <li class="page-item active"><a href="{{env::path}}{{env::request}}" class="link" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
+    <?php else: ?>
+    <li class="page-item"><a href="<?= $page['href'] ?>" class="link" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
+    <?php endif; ?>
+    <?php endforeach; ?>
+
+    <?php if ($this->hasNext): ?>
+    <li class="next page-item"><a href="<?= $this->next['href'] ?>" class="next" title="<?= $this->next['title'] ?>"><?= $this->next['link'] ?></a></li>
+    <?php endif; ?>
+
+    <?php if ($this->hasLast): ?>
+    <li class="last page-item"><a href="<?= $this->last['href'] ?>" class="last" title="<?= $this->last['title'] ?>"><?= $this->last['link'] ?></a></li>
+    <?php endif; ?>
+  </ul>
+
+</div>
+<!-- indexer::continue -->

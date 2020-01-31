@@ -1,0 +1,8 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<div class="video-container"><iframe<?= $this->size ?> src="<?= $this->src ?>" allowfullscreen></iframe></div>
+
+<?php $this->endblock(); ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/video'; ?>

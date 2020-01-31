@@ -1,0 +1,134 @@
+.ce_tabsStartElement h3 {
+  color: $body-font-color;
+  font-size: 20px;
+}
+
+.tabs {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  a:hover label {
+    color: $primary-color-dark;
+  }
+
+  figure {
+    display: block;
+    margin-left: 0;
+    clear: both;
+    margin-bottom: 50px;
+  }
+
+  > input,
+  figure > div { display: none; }
+
+  figure > div {
+    padding: 30px 50px;
+    width: 100%;
+    line-height: 1.5em;
+    letter-spacing: 0.3px;
+    color: $body-font-color;
+  }
+
+  label {
+    border-bottom: 6px solid transparent;
+  }
+}
+
+.tab.tab-block {
+  width: 100%;
+  padding: 0 150px;
+
+  .tab-item {
+    height: 100%;
+    flex: 1;
+
+    a {
+      height: 100%;
+      color: $body-font-color;
+
+      label {
+        cursor: pointer;
+        width: 100%;
+        padding: 0.4rem 0.2rem 0.3rem 0.2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-color: $zeroOneColor_3 !important;
+      }
+    }
+  }
+}
+
+.tab .tab-item.active a, .tab .tab-item a.active {
+  border: none;
+  padding: 0;
+}
+
+.tab .tab-item a {
+  border: none;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.ie11 .tab.tab-block .tab-item a label:after {
+  content: '';
+  min-height: inherit;
+  font-size: 0;
+}
+
+@media (max-width: 1280px) {
+  .tab.tab-block {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    figure {
+      > div {
+        padding: 0;
+      }
+
+      &.float_right {
+        float: left;
+        margin: 0 20px 20px 0 !important;
+      }
+    }
+  }
+
+  .tab.tab-block {
+    padding: 0;
+    display: block;
+
+    .tab-item {
+      height: inherit;
+
+      &:not(.last) {
+        border-bottom: 0.05rem solid #a6a6a6;
+      }
+
+      a label {
+        padding: 12px 40px 12px 0;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "+";
+          top: 0;
+          right: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          font-size: 50px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

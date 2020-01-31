@@ -1,0 +1,11 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<?= $this->events ?>
+
+<?= $this->pagination ?>
+
+<?php $this->endblock(); ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/events'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_pagination'; ?>

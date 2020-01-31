@@ -1,0 +1,119 @@
+{% trans_default_domain 'contao_exception' %}
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>{% block title %}{{ statusCode }} Error{% endblock %}</title>
+        <meta name="generator" content="Contao Open Source CMS">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+
+        {% block style %}
+            <style>
+                a {
+                    color: #000;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                body {
+                    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0;
+                }
+
+                #content, .wrap {
+                    min-height: 100vh;
+                }
+
+                #content {
+                    background-image:url(/bundles/contaothemesnetzeroonetheme/img/bubbles.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 80%;
+                }
+
+                .error {
+                    display: inline-block;
+                }
+
+                h1 {
+                    margin-top: 0;
+                    font-size: 36px;
+                    text-transform: uppercase;
+                }
+
+                .text-error {
+                    margin-left: 50px;
+                }
+
+                .text-error p {
+                    font-style: italic;
+                    font-size: 23px;
+                }
+
+                .wrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    min-height: 100vh;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                @media (max-width: 600px) {
+                    .wrap {
+                        background-size: auto 25%;
+                    }
+                }
+            </style>
+        {% endblock %}
+
+        <link rel="stylesheet" href="{{ asset('files/zeroOne/css/maintenance_mode.css') }}">
+
+    {% endblock %}
+</head>
+<body>
+<div id="content">
+    <div class="wrap">
+        <div class="error">
+            {% block message %}<h1>{{ block('title') }}</h1>{% endblock %}
+            <div class="block-error">
+                <div class="inner">
+                    <div class="text-error">
+                        {% block main %}
+                            {% if block('matter') is defined %}
+                                {% set _block = block('matter') %}
+                                {% if _block|trim is not empty %}
+                                    {{ _block|raw }}
+                                {% endif %}
+                            {% endif %}
+                            {% if block('howToFix') is defined %}
+                                {% set _block = block('howToFix') %}
+                                {% if _block|trim is not empty %}
+                                    {{ _block|raw }}
+                                {% endif %}
+                            {% endif %}
+                            {% if block('explain') is defined %}
+                                {% set _block = block('explain') %}
+                                {% if _block|trim is not empty %}
+                                    {{ _block|raw }}
+                                {% endif %}
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

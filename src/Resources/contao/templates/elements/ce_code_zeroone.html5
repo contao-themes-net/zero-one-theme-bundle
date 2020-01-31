@@ -1,0 +1,8 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <pre class="code" data-lang="<?= $this->cssClass ?>"><code class="<?= $this->cssClass ?>"><?= $this->code ?></code></pre>
+
+<?php $this->endblock(); ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_codes'; ?>

@@ -1,0 +1,15 @@
+body { @extend .earth-colour-scheme; }
+
+$zeroOneColor_1: #000;
+$zeroOneColor_2: #00B09B;
+$zeroOneColor_3: #96C93D;
+$zeroOneColor_4: #006156;
+
+$body-bg: #fff;
+$body-font-color: #000;
+
+$link-color: $zeroOneColor_4;
+
+$boxes-background: darken($body-bg, 5%);
+
+.earth-colour-scheme { display: block; }

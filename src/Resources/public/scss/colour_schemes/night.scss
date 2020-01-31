@@ -1,0 +1,15 @@
+body { @extend .night-colour-scheme; }
+
+$zeroOneColor_1: #000;
+$zeroOneColor_2: #3B8D99;
+$zeroOneColor_3: #AA4B6B;
+$zeroOneColor_4: #286167;
+
+$body-bg: #fff;
+$body-font-color: #000;
+
+$link-color: $zeroOneColor_4;
+
+$boxes-background: darken($body-bg, 5%);
+
+.night-colour-scheme { display: block; }

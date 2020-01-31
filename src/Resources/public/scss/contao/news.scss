@@ -1,0 +1,79 @@
+.mod_newslist {
+  a {
+    color: $body-font-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $body-font-color;
+
+      h2, h3, h4, h5, h6 {
+        text-decoration: underline;
+      }
+
+      .icon.icon-more {
+        transform: translateX(8px) scaleX(1.5);
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+
+  .column {
+    margin-bottom: 30px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 0.95em;
+
+    a {
+      color: $body-font-color;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .info {
+    color: $body-font-color;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .more {
+    margin:0;
+    .icon {
+      width: 34px;
+      transition: all 0.5s ease-out;
+    }
+  }
+}
+
+.layout_latest, .layout_short {
+  .ce_text {
+    padding-bottom: 0;
+  }
+}
+
+.layout_short {
+  .info {
+    margin-top: 0;
+  }
+
+  .inside {
+    background: $boxes-background;
+    padding: 25px;
+    height: 100%;
+  }
+}
+
+.layout_simple a {
+  font-weight: 700;
+  color: $body-font-color;
+  display: block;
+  margin-bottom: 1em;
+  line-height: 1em;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,3 @@
+<a href="<?= $this->href ?>" class="btn <?= $this->class ?>" title="<?= $this->linkTitle ?>"<?php if(strpos($this->target,'target="_blank"') !== false): ?> rel="noreferrer noopener"<?php endif; ?><?php $this->attribute ?><?= $this->target ?><?= $this->rel ?>><?= $this->link ?></a>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_buttons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/buttons'; ?>

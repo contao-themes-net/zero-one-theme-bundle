@@ -1,0 +1,49 @@
+<div class="<?= $this->class ?> block<?php if($this->addImage): ?> with-image<?php endif; ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+    <div class="inside">
+        <?php $this->block('content'); ?>
+
+        <?php if ($this->addImage && ($this->floating == 'above' || $this->floating == 'left')): ?>
+            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
+            <?php $this->insert('image', $this->arrData); ?>
+            <?php if($this->page != ""): ?></a><?php endif; ?>
+        <?php endif; ?>
+
+        <?php if(!$this->addImage && $this->headline): ?>
+          <<?= $this->hl ?>>
+            <?php if($this->page != ""): ?><a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
+              <?= $this->headline ?>
+              <?php if($this->page != ""): ?></a><?php endif; ?>
+          </<?= $this->hl ?>>
+        <?php endif; ?>
+
+        <div class="text">
+          <?php if($this->addImage && $this->headline): ?>
+            <<?= $this->hl ?>>
+              <?php if($this->page != ""): ?><a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
+                <?= $this->headline ?>
+              <?php if($this->page != ""): ?></a><?php endif; ?>
+            </<?= $this->hl ?>>
+          <?php endif; ?>
+
+          <?= $this->text ?>
+
+          <?php if($this->page != ""): ?>
+          <div class="pageLink">
+            <a href="<?= $this->page ?>" class="btn btn-primary" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?= $this->pageText ?></a>
+          </div>
+          <?php endif; ?>
+        </div>
+
+
+        <?php if ($this->addImage && ($this->floating == 'below' || $this->floating == 'right')): ?>
+            <?php if($this->page != ""): ?><a href="<?= $this->page ?>" <?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
+            <?php $this->insert('image', $this->arrData); ?>
+            <?php if($this->page != ""): ?></a><?php endif; ?>
+        <?php endif; ?>
+
+        <?php $this->endblock(); ?>
+    </div>
+</div>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/teaserbox'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_buttons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/buttons'; ?>

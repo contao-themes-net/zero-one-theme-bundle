@@ -1,0 +1,148 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333 !important;
+    color: #fff !important;
+  }
+
+  #wrapper {
+    a, a:visited {
+      &:not(.btn) {
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    a.btn-link:hover {
+      background: #3c3c3c;
+    }
+
+    .form-input, .form-group input, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) input,
+    .form-select:not([multiple]):not([size]), .form-group select:not([size]):not([multiple]), .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select:not([size]):not([multiple]),
+    .form-select, .form-group select, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select, textarea {
+      background: #3c3c3c;
+      color: #fff;
+    }
+
+    .form-checkbox .form-icon, .form-radio .form-icon {
+      background: #3c3c3c;
+    }
+
+    .bg-white {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .calendar, .minicalendar {
+      th, td:not(.active) {
+        background: #3c3c3c;
+        color: #fff;
+      }
+
+      td.active, td.active a {
+        color: #000;
+      }
+    }
+
+    .ce_tabsStartElement h3, h3 {
+      color: #fff;
+    }
+
+    .checkbox_container>div, .radio_container .form-group>div, .ce_code .code code,
+    .table.table-striped tbody tr:nth-of-type(odd) {
+      background: #3c3c3c;
+      color: #fff;
+    }
+
+    footer .ce_hyperlink.bg-white {
+      background-color: #fff;
+    }
+
+    .header-search a {
+      color: #000;
+
+      &:hover, &:visited {
+        color: #000;
+      }
+    }
+
+    .hero.quote {
+      h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+    }
+
+    .icon-more {
+      background-image: url(/bundles/contaothemesnetzeroonetheme/img/more_white.svg);
+    }
+
+    input {
+      background: #3c3c3c;
+      color: #fff;
+    }
+
+    .layout_short, .layout_list {
+      .inside {
+        background: #3c3c3c;
+        color: #fff;
+      }
+    }
+
+    .mod_eventlist {
+      .time, .header {
+        color: #c3c3c3;
+      }
+    }
+
+    .mod_newslist {
+      h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+
+      .info {
+        color: #c3c3c3;
+      }
+    }
+
+    .navbar ul.level_1>li>a {
+      color: #000;
+    }
+
+    .navbar ul.level_3>li>a {
+      color: #000;
+    }
+
+    .pagination .page-item a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .tab .tab-item.active a, .tab .tab-item a.active {
+      color: #fff;
+    }
+
+    .table.table-hover tbody tr:hover {
+      background: #4c4c4c;
+    }
+
+    .tabs figure>div {
+      color: #fff;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 960px) {
+
+  #wrapper {
+    .navbar ul.level_1>li>a {
+      color: #fff;
+    }
+
+    .navbar ul.level_3>li>a {
+      color: #fff;
+    }
+  }
+
+}

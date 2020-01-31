@@ -1,0 +1,81 @@
+<?php $this->extend('fe_page'); ?>
+
+<?php $this->block('head'); ?>
+  <meta charset="<?= $this->charset ?>">
+  <title><?= $this->title ?></title>
+  <base href="<?= $this->base ?>">
+
+  <meta name="robots" content="<?= $this->robots ?>">
+  <meta name="description" content="<?= $this->description ?>">
+  <meta name="generator" content="Contao Open Source CMS">
+
+  <?= $this->viewport ?>
+
+  <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>"/>
+  <meta property="og:description" content="<?php echo $this->description; ?>"/>
+  <meta property="og:url" content="{{env::url}}/{{env::request}}"/>
+  <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <?php if($GLOBALS['og:image:width']) echo '<meta property="og:image:width" content="'.$GLOBALS['og:image:width'].'" />'; ?>
+  <?php if($GLOBALS['og:image:height']) echo '<meta property="og:image:height" content="'.$GLOBALS['og:image:height'].'" />'; ?>
+
+  <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
+<?php $this->endblock(); ?>
+
+<?php $this->block('body'); ?>
+  <?php $this->parent(); ?>
+
+<?php // @todo write class for this funtions
+  $scssStr = '';
+  $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
+  $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
+
+  // add 0.1 to end of array
+  $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
+  $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
+
+  foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
+    $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
+  }
+  \File::putContent($file->path, $scssStr);
+
+?>
+
+<link rel="stylesheet" type="text/css" media="all" async href="<?php
+          // add stylesheets
+          $combiner = new Combiner();
+          $combiner->add($file->path);
+          echo $combiner->getCombinedFile(); ?>">
+
+<?php /* <link rel="stylesheet" type="text/css" media="all" href="<?php
+          // add stylesheets
+          $combiner = new Combiner();
+          $combiner->add('web/bundles/contaothemesnetzeroonetheme/scss/spectre.scss');
+echo $combiner->getCombinedFile(); ?>"> */ ?>
+
+  <?= $this->stylesheets ?>
+
+  <?= $this->head ?>
+
+  <?= $this->mooScripts ?>
+  <?= $this->framework ?>
+
+<?php $this->endblock(); ?>
+
+<?php $this->block('container'); ?>
+  <?php if ($this->left || $this->right): ?>
+  <div class="column-wrapper">
+    <div class="container"><?php endif; ?>
+      <?php $this->parent(); ?>
+      <?php if ($this->left || $this->right): ?>
+    </div>
+  </div><?php endif; ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('footer'); ?>
+  <?php if ($this->footer): ?>
+    <footer id="footer" class="page-footer">
+  <?= $this->footer ?>
+</footer>
+
+<?php endif; ?>
+<?php $this->endblock(); ?>
