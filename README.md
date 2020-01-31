@@ -12,7 +12,7 @@ For demo please visit https://0.1.contao-themes.net
 
 ## Install & documentation
 
-For documentation please visit https://docs.contao-themes.net/#/zero-one_theme/index
+For documentation please visit https://docs.contao-themes.net/#/zeroone_theme/index
 
 ## Tools we use 🛠
 
