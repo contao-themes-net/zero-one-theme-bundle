@@ -8,7 +8,8 @@ The 0.1 Theme is available for free (with copyright notice) or for a fee (withou
 
 buy a licence https://contao-themes.net/theme-detail/zeroone.html
         
---- german
+
+--- german ---
 
 0.1 ist das klimafreundlichste Contao Theme aller Zeiten, welches auf Basis von Contao 4.x und dem leichtgewichtigen CSS-Framework Spectre zur Erstellung energieeffizienter Webseiten entwickelt wurde.
 Es setzt auf viele verschiedene Praktiken und Technologien, die den Energieverbrauch einer Website erheblich optimieren*  und deren Einsatz gleichzeitig auch in SEO Optimierung, Performance Verbesserung und Erhöhung der Nutzerfreundlichkeit resultiert.
