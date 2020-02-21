@@ -22,9 +22,18 @@
         "forum": "https://community.contao.org",
         "email" : "support@pdir.de",
         "issues" : "https://github.com/contao-themes-net/zero-one-theme-bundle/issues",
-        "source" : "https://github.com/contao-themes-net/zero-one-theme-bundle",
-        "donation": "https://contao-themes.net/sponsoring.html"
+        "source" : "https://github.com/contao-themes-net/zero-one-theme-bundle"
     },
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://www.patreon.com/user?u=28241718"
+        },
+        {
+            "type": "corporate",
+            "url": "https://contao-themes.net/sponsoring.html"
+        }
+    ],
     "require": {
         "php": "^5.6 || ^7.0",
         "contao/core-bundle": "^4.4",
@@ -43,7 +52,7 @@
         "php-http/guzzle6-adapter": "^1.1",
         "php-http/message-factory": "^1.0.2",
         "phpunit/phpunit": "^5.7.26",
-        "symfony/phpunit-bridge": "^3.2"
+        "symfony/phpunit-bridge": "^4.1.12"
     },
     "extra": {
         "contao-manager-plugin": "ContaoThemesNet\\ZeroOneThemeBundle\\ContaoManager\\Plugin"
