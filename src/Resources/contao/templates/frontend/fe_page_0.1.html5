@@ -46,12 +46,6 @@
           $combiner->add($file->path);
           echo $combiner->getCombinedFile(); ?>">
 
-<?php /* <link rel="stylesheet" type="text/css" media="all" href="<?php
-          // add stylesheets
-          $combiner = new Combiner();
-          $combiner->add('web/bundles/contaothemesnetzeroonetheme/scss/spectre.scss');
-echo $combiner->getCombinedFile(); ?>"> */ ?>
-
   <?= $this->stylesheets ?>
 
   <?= $this->head ?>
