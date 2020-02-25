@@ -132,7 +132,7 @@
         a, strong {
           margin: auto;
           font-size: 18px;
-          text-transform: initial;
+          text-transform: none;
           padding: 0 20px;
           width: 100%;
           font-weight: 300;
@@ -147,7 +147,7 @@
     .level_2 {
       margin-left: -50px;
       background-image: url(/files/zeroOne/img/navbar_level_2.svg);
-      background-size: 100% calc(100% - 40px);
+      background-size: calc(100% - 40px);
       padding: 90px 0 55px;
       background-position: bottom;
       width: 240px;
@@ -187,6 +187,16 @@
 
 .open-dropdown {
   display: none;
+}
+
+.ie .navbar {
+  ul {
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) !important;
+
+    &.level_2 {
+      background-size: 100%;
+    }
+  }
 }
 
 @media (max-width: 1200px) {

@@ -49,7 +49,7 @@
       font-style: italic;
       color: $body-font-color;
       text-transform: uppercase;
-      margin: 250px auto;
+      margin: 250px 0;
       padding: 0 20px;
     }
 
@@ -126,9 +126,24 @@
   }
 }
 
-.ie11 {
+.ie {
   .hero .hero-body {
     background-size: auto 100%;
+  }
+
+  .hero.quote {
+    figure {
+      height: auto;
+
+      img {
+        width: 55%;
+        height: auto;
+      }
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      margin: 200px 0;
+    }
   }
 }
 

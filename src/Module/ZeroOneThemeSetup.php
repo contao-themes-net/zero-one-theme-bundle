@@ -4,7 +4,7 @@ namespace ContaoThemesNet\ZeroOneThemeBundle\Module;
 
 class ZeroOneThemeSetup extends \BackendModule
 {
-    const VERSION = '1.1.0';
+    const VERSION = '1.1.1';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 
