@@ -255,7 +255,7 @@ img {
 }
 
 .contact-infos {
-  background-image: url(/files/zeroOne/img/navbar_level_2.svg);
+  background-image: url('../../../../files/zeroOne/img/navbar_level_2.svg');
   background-repeat: no-repeat;
   color: $zeroOneColor_5;
   background-size: 70% 80%;
@@ -464,27 +464,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-facebook {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/icon_facebook.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/icon_facebook.svg');
 }
 
 .icon-instagram {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/icon_instagram.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/icon_instagram.svg');
 }
 
 .icon-linkedin {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/icon_linkedin.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/icon_linkedin.svg');
 }
 
 .icon-twitter {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/icon_twitter.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/icon_twitter.svg');
 }
 
 .icon-youtube {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/icon_youtube.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/icon_youtube.svg');
 }
 
 .icon-more {
-  background-image:url(/bundles/contaothemesnetzeroonetheme/img/more.svg);
+  background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/more.svg');
 }
 
 .ie {
@@ -721,4 +721,5 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@import '../../../../../../../files/zeroOne/scss/custom';
+
+@import '../../../../files/zeroOne/scss/custom';

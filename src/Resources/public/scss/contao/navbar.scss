@@ -130,12 +130,12 @@
         }
 
         a, strong {
-          margin: auto;
           font-size: 18px;
           text-transform: none;
-          padding: 0 20px;
-          width: 100%;
+          padding: 2px 15px;
+          width: auto;
           font-weight: 300;
+          border-radius: $border-radius;
         }
 
         strong {
@@ -145,29 +145,41 @@
     }
 
     .level_2 {
-      margin-left: -50px;
-      background-image: url(/files/zeroOne/img/navbar_level_2.svg);
-      padding: 90px 0 55px;
-      background-position: bottom;
+      margin-left: 0;
+      padding: 40px 0;
       width: 240px;
-      left: 0;
+      left: 1em;
 
       a, strong {
         color: $light-color;
+        background: $dark-color;
+        text-decoration: none;
+      }
+
+      a:hover, a.active {
+        text-decoration: none;
+        background: $zeroOneColor_4;
       }
     }
 
     .level_3 {
-      background-image:url(/files/zeroOne/img/navbar_level_3.svg);
-      background-size: 100% 100%;
-      padding: 70px 0;
-      left: 190px;
+      padding: 0 10px 0 0;
+      left: -240px;
       width: 240px;
-      min-height: 240px;
-      margin-top: -30px;
+      margin-top: 0;
+      top: 0;
+
+      li {
+        justify-content: flex-end;
+      }
 
       a, strong {
         color: $dark-color;
+        background: $light-color;
+      }
+
+      a:hover, a.active {
+        background: $primary-color-dark;
       }
     }
 
@@ -270,10 +282,14 @@
         }
       }
 
-      .level_2 li {
-        text-align: left;
-        padding: 0;
-        margin: 0;
+      .level_2 {
+        left: 0;
+
+        li {
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
       }
 
       .level_3 {
@@ -284,6 +300,7 @@
         li a {
           width: 100%;
           color: $light-color;
+          background: none;
           margin-left: 15px;
           font-size: 16px;
         }
@@ -314,6 +331,10 @@
       &.submenu {
         a:first-child {
           width: calc(100% - 48px);
+        }
+
+        .level_3 a:first-child {
+          width: 100%;
         }
 
         &:hover {

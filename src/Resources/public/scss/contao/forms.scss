@@ -38,8 +38,8 @@
 
   .widget.widget-textarea:not(.widget-checkbox):not(.widget-radio) label:not(.form-checkbox):not(.form-radio) {
     width: 100%;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
     border-bottom-left-radius: 0;
   }
 }
@@ -70,15 +70,17 @@
   align-items: center;
   width: 35%;
   line-height: 1;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
   min-height: 50px;
   box-shadow: 0px 1px 2px 0 rgba(99, 99, 99, 0.3);
 }
 
 .form-input, .form-select, .checkbox_container > div, .radio_container .form-group > div, textarea {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   min-height: 50px;
   padding: 10px 20px;
   width: calc(100% - 35%);
@@ -92,7 +94,7 @@
   }
 
   &:first-child {
-    border-radius: 30px;
+    border-radius: $border-radius;
     width: 100%;
   }
 
@@ -104,8 +106,8 @@
 textarea {
   width: 100%;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 
   &:focus {
     outline: 0;
@@ -151,8 +153,8 @@ select.form-select[multiple] {
     align-items: center;
     width: 35%;
     line-height: 1;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
     min-height: 50px;
   }
 }
@@ -214,15 +216,15 @@ span.mandatory {
     }
 
     .widget.widget-textarea:not(.widget-checkbox):not(.widget-radio) label:not(.form-checkbox):not(.form-radio) {
-      border-top-right-radius: 15px;
-      border-top-left-radius: 15px;
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: $border-radius;
     }
   }
 
   .form-label, .checkbox_container > label {
     width: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
     border-bottom-left-radius: 0;
   }
 
@@ -230,14 +232,14 @@ span.mandatory {
     &:not(:first-child) {
       width: 100%;
       border-top-right-radius: 0;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
     }
   }
 
   textarea:not(:first-child) {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   .widget-select:not(.multiselect):after {
