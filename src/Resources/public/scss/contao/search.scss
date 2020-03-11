@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: $mobile-navbar-breakpoint) {
 
   .header-search.block {
     display: none;
