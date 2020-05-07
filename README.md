@@ -57,6 +57,6 @@ You can support [contao-themes.net](https://contao-themes.net) by buying a domai
 
 ## Contao Themes
 
-| [![MATE Theme](https://api.contao-themes.net/files/contao-themes-net/screenshots/mate-theme.jpg)](https://contao-themes.net/theme-detail/mate.html) | [![ODD Theme](https://api.contao-themes.net/files/contao-themes-net/screenshots/odd_theme/ODD_Exploring_Contao_Theme_05.png)](https://contao-themes.net/theme-detail/odd.html) | [![NATURE Theme](https://api.contao-themes.net/files/contao-themes-net/screenshots/nature_theme/00_00_naturetheme.jpg)](https://contao-themes.net/theme-detail/nature.html) |
+| [![MATE Theme](https://contao-themes.net/assets/images/5/mate_theme_green_1-77f20ba3.png)](https://contao-themes.net/theme-detail/mate.html) | [![ODD Theme](https://contao-themes.net/assets/images/c/ODD_Exploring_Contao_Theme_05-9e3a18d8.png)](https://contao-themes.net/theme-detail/odd.html) | [![NATURE Theme](https://contao-themes.net/assets/images/6/00_00_naturetheme-605a9391.jpg)](https://contao-themes.net/theme-detail/nature.html) |
 |:---:|:---:|:---:|
 | **MATE Theme**  | **ODD Theme**  | **NATURE Theme**  |
