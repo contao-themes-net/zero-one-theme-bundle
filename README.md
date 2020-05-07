@@ -55,7 +55,7 @@ Compatible with Contao >=4.4
 You can support [contao-themes.net](https://contao-themes.net) by buying a domain license for one of our themes or by supporting the development of new features or themes. See our 
 [donation page](https://contao-themes.net/sponsoring.html) for more details.
 
-## Contao Themes
+## Other Contao Themes
 
 | [![MATE Theme](https://contao-themes.net/assets/images/5/mate_theme_green_1-77f20ba3.png)](https://contao-themes.net/theme-detail/mate.html) | [![ODD Theme](https://contao-themes.net/assets/images/c/ODD_Exploring_Contao_Theme_05-9e3a18d8.png)](https://contao-themes.net/theme-detail/odd.html) | [![NATURE Theme](https://contao-themes.net/assets/images/6/00_00_naturetheme-605a9391.jpg)](https://contao-themes.net/theme-detail/nature.html) |
 |:---:|:---:|:---:|
