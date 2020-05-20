@@ -23,7 +23,8 @@ class TabsNavElement extends \ContentElement
 			(
 				'class' => (($i == 0) ? 'first' : (($i == $limit) ? 'last' : '')),
 				'content' => $items[$i]['label'],
-				'value' => $items[$i]['value']
+				'value' => $items[$i]['value'],
+                'default' => $items[$i]['default']
 			);
 		}
 		$this->Template->items = $arrItems;
