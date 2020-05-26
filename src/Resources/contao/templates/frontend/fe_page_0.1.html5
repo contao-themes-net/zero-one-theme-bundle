@@ -19,34 +19,34 @@
   <?php if($GLOBALS['og:image:height']) echo '<meta property="og:image:height" content="'.$GLOBALS['og:image:height'].'" />'; ?>
 
   <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
+
+  <?php // @todo write class for this funtions
+    $scssStr = '';
+    $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
+    $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
+
+    // add 0.1 to end of array
+    $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
+    $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
+
+    foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
+      $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
+    }
+    \File::putContent($file->path, $scssStr);
+
+  ?>
+
+  <link rel="stylesheet" type="text/css" media="all" async href="<?php
+            // add stylesheets
+            $combiner = new Combiner();
+            $combiner->add($file->path);
+            echo $combiner->getCombinedFile(); ?>">
+
+  <?= $this->stylesheets ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('body'); ?>
   <?php $this->parent(); ?>
-
-<?php // @todo write class for this funtions
-  $scssStr = '';
-  $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
-  $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
-
-  // add 0.1 to end of array
-  $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
-  $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
-
-  foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-    $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
-  }
-  \File::putContent($file->path, $scssStr);
-
-?>
-
-<link rel="stylesheet" type="text/css" media="all" async href="<?php
-          // add stylesheets
-          $combiner = new Combiner();
-          $combiner->add($file->path);
-          echo $combiner->getCombinedFile(); ?>">
-
-  <?= $this->stylesheets ?>
 
   <?= $this->head ?>
 
