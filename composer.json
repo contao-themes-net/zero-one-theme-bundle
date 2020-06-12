@@ -2,7 +2,7 @@
     "name": "contao-themes-net/zero-one-theme-bundle",
     "type": "contao-bundle",
     "description": "0.1 Theme Bundle for Contao 4",
-    "license": "LGPL-3.0-or-later",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Webdesign für Contao",
