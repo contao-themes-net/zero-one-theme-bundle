@@ -20,27 +20,26 @@
 
   <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
 
-  <?php // @todo write class for this funtions
+  <?php // 0.1 theme css optimization
     $scssStr = '';
     $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
-    $file = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
+	  $objFile  = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
 
-    // add 0.1 to end of array
-    $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
-    $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
+	  if(!$objFile->exists()) {
+      // add 0.1 to end of array
+      $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
+      $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
 
-    foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-      $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
+      foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
+        $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
+      }
+      $objFile->write($scssStr);
+      $objFile->close();
     }
-    \File::putContent($file->path, $scssStr);
 
+    $GLOBALS['TL_CSS'][] = $objFile->path . '|static';
+    // end 0.1 theme css optimization
   ?>
-
-  <link rel="stylesheet" type="text/css" media="all" async href="<?php
-            // add stylesheets
-            $combiner = new Combiner();
-            $combiner->add($file->path);
-            echo $combiner->getCombinedFile(); ?>">
 
   <?= $this->stylesheets ?>
 <?php $this->endblock(); ?>
