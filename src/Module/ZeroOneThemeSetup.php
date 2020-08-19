@@ -22,11 +22,13 @@ class ZeroOneThemeSetup extends \BackendModule
                 $this->getFiles($path);
                 $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
+                $this->Template->version = ZeroOneThemeSetup::VERSION;
                 break;
             case 'truncateTlFiles':
                 $this->import('Database');
                 $this->Database->prepare("TRUNCATE tl_files")->execute();
                 $this->Template->messageTruncate = true;
+                $this->Template->version = ZeroOneThemeSetup::VERSION;
                 break;
             default:
                 $this->Template->version = ZeroOneThemeSetup::VERSION;
