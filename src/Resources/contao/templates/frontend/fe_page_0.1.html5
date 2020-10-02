@@ -20,6 +20,8 @@
 
   <link rel="shortcut icon" href="files/zeroOne/img/favicon.ico" type="image/x-icon"/>
 
+  <?= $this->head ?>
+
   <?php // 0.1 theme css optimization
     $scssStr = '';
     $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
@@ -46,8 +48,6 @@
 
 <?php $this->block('body'); ?>
   <?php $this->parent(); ?>
-
-  <?= $this->head ?>
 
   <?= $this->mooScripts ?>
   <?= $this->framework ?>
