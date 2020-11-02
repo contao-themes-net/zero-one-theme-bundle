@@ -64,3 +64,33 @@ You can support [contao-themes.net](https://contao-themes.net) by buying a domai
 | [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) |
 |:---:|:---:|:---:|
 | [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html) |  |  |
+
+## Bildnachweise
+
+* 0.1 Theme Logo weiß / 0.1-theme-logo-white.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* 0.1 Theme Logo schwarz / 0.1-theme-logo.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Sonnenaufgang an der Elbe in Meißen / 0.1_contao_theme_parallax_image.jpg: [Mario Gast](http://dream-picture-moments.de/)
+* Sonnenaufgang an der Elbe in Meißen / 0.1_contao_theme_parallax_image.webp: [Mario Gast](http://dream-picture-moments.de/)
+* Newsteaser 1 / 0.1_newteaser_1_sw.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Newsteaser 2 / 0.1_newteaser_2_sw.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Newsteaser 3 / 0.1_newteaser_3_sw.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Newsteaser 4 / 0.1_newteaser_4_sw.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Teaserbox Icon 1 / 0.1_teaserbox_1.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Teaserbox Icon 2 / 0.1_teaserbox_2.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bubbles (Platzhalterbild) / bubble.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bubbles als Hintergrundgrafik / bubbles.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bubbles in schwarz-weiß (Platzhalterbild) / bubble_sw.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bubbles als Hintergrundgrafik für Nach-oben-Button / bubble_up.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Facebook Icon / icon_facebook.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Instagram Icon / icon_instagram.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* LinkedIn Icon / icon_linkedin.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Twitter Icon / icon_twitter.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* YouTube Icon / icon_youtube.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Glühlampe Icon / light_bulb.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Pfeil nach rechts in schwarz / more.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Pfeil nach rechts in weiß / more_white.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* schwarze Wolke / Blase / navbar_level_2.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* weiße Wolke / Blase / navbar_level_3.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Zitat-Hintergrundgrafik / quote.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Lupe Icon / search.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Sonnenaufgang an der Elbe in Meißen / think-big.png: [Mario Gast](http://dream-picture-moments.de/)
