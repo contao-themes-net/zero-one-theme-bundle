@@ -1,6 +1,4 @@
-.ce_form {
-  margin-bottom: 50px;
-
+.ce_form, .mod_registration, .mod_login, .mod_lostPassword, .mod_changePassword, .mod_personalData {
   label {
     ~ span.LV_invalid {
       margin-left: 35%;
@@ -9,10 +7,6 @@
 
   span.LV_invalid {
     margin-top: 5px;
-  }
-
-  textarea {
-    background: $boxes-background;
   }
 
   .widget:not(.widget-checkbox):not(.widget-radio) {
@@ -34,6 +28,14 @@
         border: 1px solid #ff2e2e;
       }
     }
+  }
+}
+
+.ce_form {
+  margin-bottom: 50px;
+
+  textarea {
+    background: $boxes-background;
   }
 
   .widget.widget-textarea:not(.widget-checkbox):not(.widget-radio) label:not(.form-checkbox):not(.form-radio) {
@@ -190,8 +192,10 @@ span.mandatory {
 
 @media (max-width: 840px) {
 
-  .ce_form label~span.LV_invalid {
-    margin-left: 200px;
+  .ce_form, .mod_registration, .mod_login, .mod_lostPassword, .mod_changePassword, .mod_personalData {
+    label~span.LV_invalid {
+      margin-left: 200px;
+    }
   }
 
   .form-label, .checkbox_container > label {
@@ -210,7 +214,7 @@ span.mandatory {
 
 @media (max-width: 600px) {
 
-  .ce_form {
+  .ce_form, .mod_registration, .mod_login, .mod_lostPassword, .mod_changePassword, .mod_personalData {
     label~span.LV_invalid {
       margin-left: 0;
     }
