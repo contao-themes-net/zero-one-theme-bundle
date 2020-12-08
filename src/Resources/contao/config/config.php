@@ -19,7 +19,7 @@ $GLOBALS['TL_CTE']['zeroOneTheme']['tabsStopElement'] = TabsStopElement::class;
  * Available tags for Zero One Theme
  */
 
-array_push($GLOBALS['tl_config']['theme_tags'], '-');
+if(!is_array($GLOBALS['tl_config']['theme_tags'])) $GLOBALS['tl_config']['theme_tags'][] = '-';
 $GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/01';
 $GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/02';
 $GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/03';
