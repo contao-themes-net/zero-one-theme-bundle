@@ -19,22 +19,30 @@ $GLOBALS['TL_CTE']['zeroOneTheme']['tabsStopElement'] = TabsStopElement::class;
  * Available tags for Zero One Theme
  */
 
-if(!is_array($GLOBALS['tl_config']['theme_tags'])) $GLOBALS['tl_config']['theme_tags'][] = '-';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne01/05';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne02/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne02/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne02/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne02/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne02/05';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne03/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne03/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne03/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne03/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'ZeroOne03/05';
+if (empty($GLOBALS['tl_config']['theme_tags'])) {
+    $GLOBALS['tl_config']['theme_tags'] = [];
+    $GLOBALS['tl_config']['theme_tags'][] = '-';
+}
+
+if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config']['theme_tags'])) {
+    $GLOBALS['tl_config']['theme_tags'] = array_merge($GLOBALS['tl_config']['theme_tags'], [
+        'ZeroOne01/01',
+        'ZeroOne01/02',
+        'ZeroOne01/03',
+        'ZeroOne01/04',
+        'ZeroOne01/05',
+        'ZeroOne02/01',
+        'ZeroOne02/02',
+        'ZeroOne02/03',
+        'ZeroOne02/04',
+        'ZeroOne02/05',
+        'ZeroOne03/01',
+        'ZeroOne03/02',
+        'ZeroOne03/03',
+        'ZeroOne03/04',
+        'ZeroOne03/05'
+    ]);
+}
 
 /**
  * Wrapper elements
