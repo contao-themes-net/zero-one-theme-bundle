@@ -94,3 +94,5 @@ You can support [contao-themes.net](https://contao-themes.net) by buying a domai
 * Zitat-Hintergrundgrafik / quote.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
 * Lupe Icon / search.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
 * Sonnenaufgang an der Elbe in Meißen / think-big.png: [Mario Gast](http://dream-picture-moments.de/)
+
+Alle Demo-Inhalte dieses Themes, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt bei der pdir Gmbh bzw. den jeweiligen Urhebern der Werke. Bitte fragen Sie uns, falls Sie die Demo-Inhalte dieses Themes verwenden möchten. Ohne schriftliche Genehmigung seitens der Urheber dürfen diese in keiner Form verwendet, vervielfältigt oder verbreitet werden.
