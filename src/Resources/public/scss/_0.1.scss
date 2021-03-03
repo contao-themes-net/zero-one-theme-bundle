@@ -248,6 +248,11 @@ img {
     margin-left: -15px;
     margin-right: -15px;
 
+    &.col-gapless {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     &.mod_article {
       margin: 0 auto;
     }

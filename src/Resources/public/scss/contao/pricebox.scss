@@ -1,0 +1,194 @@
+.ce_ct_priceBox {
+  background: none !important;
+
+  &.bg-primary .inside {
+    @extend .bg-primary;
+  }
+  &.bg-secondary .inside {
+    @extend .bg-secondary;
+  }
+  &.bg-dark .inside {
+    @extend .bg-dark;
+  }
+  &.bg-gray .inside {
+    @extend .bg-gray;
+  }
+  &.bg-light .inside {
+    @extend .bg-light;
+  }
+  &.bg-success .inside {
+    @extend .bg-success;
+  }
+  &.bg-warning .inside {
+    @extend .bg-warning;
+  }
+  &.bg-error .inside {
+    @extend .bg-error;
+  }
+  &.bg-zeroone-2 .inside {
+    background: $zeroOneColor_2;
+  }
+  &.bg-zeroone-3 {
+    .inside {
+      background: $zeroOneColor_3;
+    }
+
+    .popular-label {
+      background: $zeroOneColor_2;
+    }
+  }
+  &.bg-zeroone-4 .inside {
+    background: $zeroOneColor_4;
+  }
+  &.bg-zeroone-2, &.bg-zeroone-4 {
+    .price .amount, .price .label {
+      color: $zeroOneColor_1;
+    }
+  }
+
+  &.text-primary {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $primary-color;
+    }
+  }
+  &.text-secondary {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $secondary-color;
+    }
+  }
+  &.text-dark {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $dark-color;
+    }
+  }
+  &.text-gray {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $gray-color;
+    }
+  }
+  &.text-light {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $light-color;
+    }
+  }
+  &.text-success {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $success-color;
+    }
+  }
+  &.text-warning {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $warning-color;
+    }
+  }
+  &.text-error {
+    p, a, h1, h2, h3, h4, h5, h6 {
+      color: $error-color;
+    }
+  }
+
+  &.btn-primary {
+    .btn {
+      @extend .btn-primary;
+
+      &:hover {
+        color: $light-color !important;
+      }
+    }
+  }
+  &.btn-link {
+    .btn {
+      @extend .btn-link;
+    }
+  }
+  &.btn-success {
+    .btn {
+      @extend .btn-success;
+    }
+  }
+  &.btn-error {
+    .btn {
+      @extend .btn-error;
+    }
+  }
+
+  &.text-center .btn {
+    margin: 0 auto 10px;
+  }
+
+  &.popular-box {
+    z-index: 1;
+  }
+
+  &:not(.popular-box) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+    color: $zeroOneColor_5;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+
+  .inside {
+    background: $boxes-background;
+    border-radius: $border-radius;
+    padding: 30px;
+    box-shadow: 0px 1px 2px 0 rgb(99 99 99 / 30%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  .popular-label {
+    background: $zeroOneColor_3;
+    color: $zeroOneColor_1;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 25px;
+  }
+
+  .price {
+    .amount {
+      color: $zeroOneColor_2;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .label {
+      color: $gray-color;
+      font-size: 14px;
+    }
+  }
+
+  .text {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 840px) {
+
+  .ce_ct_priceBox {
+    &:not(.popular-box) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &.popular-box {
+      margin-bottom: 20px;
+    }
+  }
+
+}
