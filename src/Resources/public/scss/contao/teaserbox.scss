@@ -1,6 +1,9 @@
 .ce_ct_teaserBox {
   padding-bottom: 100px;
-  width: 100%;
+
+  &:not(.column) {
+    width: 100%;
+  }
 
   .inside {
     display: flex;

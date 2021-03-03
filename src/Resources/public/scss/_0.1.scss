@@ -40,8 +40,8 @@ h3 {
   margin: 0 auto;
 
   &.fullwidth {
-    padding-left: 0;
-    padding-right: 0;
+    max-width: none;
+    padding: 0;
   }
 }
 

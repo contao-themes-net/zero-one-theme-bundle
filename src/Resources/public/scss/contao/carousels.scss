@@ -1,0 +1,187 @@
+.carousel .carousel-nav .nav-item {
+  color: $zeroOneColor_5;
+}
+
+.carousel-nav-checked {
+  color: $zeroOneColor_2;
+}
+
+.carousel {
+  height: $carouselHeight;
+
+  .carousel-item {
+    &:first-child .item-prev {
+      display: none;
+    }
+
+    &:last-child .item-next {
+      display: none;
+    }
+  }
+
+  .carousel-container, .carousel .carousel-container  {
+    .item-prev, .item-next {
+      background: rgba($zeroOneColor_5, .5);
+      padding: 10px;
+      display: flex;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    top: 100px;
+    left: 200px;
+    width: 600px;
+    max-width: calc(100% - 400px);
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 38px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+  .icon {
+    color: $zeroOneColor_1;
+    font-size: 24px;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .image_container {
+    height: 100%;
+  }
+}
+
+.carousel-item {
+  &.text-primary {
+    a {
+      color: $primary-color;
+    }
+  }
+  &.text-secondary {
+    a {
+      color: $secondary-color;
+    }
+  }
+  &.text-dark {
+    a {
+      color: $dark-color;
+    }
+  }
+  &.text-gray {
+    a {
+      color: $gray-color;
+    }
+  }
+  &.text-light {
+    a {
+      color: $light-color;
+    }
+  }
+  &.text-success {
+    a {
+      color: $success-color;
+    }
+  }
+  &.text-warning {
+    a {
+      color: $warning-color;
+    }
+  }
+  &.text-error {
+    a {
+      color: $error-color;
+    }
+  }
+
+  &.btn-primary {
+    .btn {
+      @extend .btn-primary;
+    }
+  }
+  &.btn-link {
+    .btn {
+      @extend .btn-link;
+    }
+  }
+  &.btn-success {
+    .btn {
+      @extend .btn-success;
+    }
+  }
+  &.btn-error {
+    .btn {
+      @extend .btn-error;
+    }
+  }
+
+  &.text-center .content {
+    left: 50%;
+    margin-left: -300px;
+
+    .btn {
+      margin: 0 auto;
+    }
+  }
+
+  &.text-right .content {
+    right: 200px;
+    left: auto;
+
+    .btn {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+
+  .carousel .content {
+    left: 100px;
+    max-width: 100%;
+    width: calc(100% - 200px);
+  }
+
+  .carousel-item {
+    &.text-center .content {
+      left: 100px;
+      margin-left: 0;
+    }
+
+    &.text-right .content {
+      right: 100px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .carousel .content {
+    left: 20px;
+    top: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .carousel-item {
+    &.text-center .content {
+      left: 20px;
+    }
+
+    &.text-right .content {
+      right: 20px;
+    }
+  }
+
+}

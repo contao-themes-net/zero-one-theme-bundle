@@ -1,0 +1,19 @@
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_carousels'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_icons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/carousels'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_buttons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/buttons'; ?>
+<?php $GLOBALS['SLIDER_ID'] = 1; ?>
+
+<div class="carousel <?= $this->class ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <!-- carousel locator -->
+  <input class="carousel-locator" id="slide-1" type="radio" name="carousel-radio" hidden="" checked="">
+  <input class="carousel-locator" id="slide-2" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-3" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-4" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-5" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-6" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-7" type="radio" name="carousel-radio" hidden="">
+  <input class="carousel-locator" id="slide-8" type="radio" name="carousel-radio" hidden="">
+
+  <div class="carousel-container">
