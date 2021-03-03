@@ -191,6 +191,7 @@ img {
   font-size: 46px;
   background: $zeroOneColor_1;
   border-radius: 100%;
+  z-index: 1;
 
   &:before {
     position: absolute;
