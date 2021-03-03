@@ -47,43 +47,43 @@
   }
 
   &.text-primary {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $primary-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $primary-color !important;
     }
   }
   &.text-secondary {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $secondary-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $secondary-color !important;
     }
   }
   &.text-dark {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $dark-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $dark-color !important;
     }
   }
   &.text-gray {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $gray-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $gray-color !important;
     }
   }
   &.text-light {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $light-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $light-color !important;
     }
   }
   &.text-success {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $success-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $success-color !important;
     }
   }
   &.text-warning {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $warning-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $warning-color !important;
     }
   }
   &.text-error {
-    p, a, h1, h2, h3, h4, h5, h6 {
-      color: $error-color;
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $error-color !important;
     }
   }
 

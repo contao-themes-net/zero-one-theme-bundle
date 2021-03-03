@@ -50,6 +50,22 @@
       color: #fff;
     }
 
+    .ce_ct_contentBox, .ce_ct_priceBox {
+      &:not([class*="bg-"]) .inside {
+        background: #3c3c3c;
+      }
+    }
+
+    .carousel-item:not([class*="text-"]) {
+      color: #000;
+
+      h1, h2, h3, h4, h5, h6 {
+        a {
+          color: #000;
+        }
+      }
+    }
+
     .checkbox_container>div, .radio_container .form-group>div, .ce_code .code code,
     .table.table-striped tbody tr:nth-of-type(odd) {
       background: #3c3c3c;

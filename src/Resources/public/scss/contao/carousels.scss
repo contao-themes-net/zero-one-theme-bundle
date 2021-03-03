@@ -66,42 +66,42 @@
 .carousel-item {
   &.text-primary {
     a {
-      color: $primary-color;
+      color: $primary-color !important;
     }
   }
   &.text-secondary {
     a {
-      color: $secondary-color;
+      color: $secondary-color !important;
     }
   }
   &.text-dark {
     a {
-      color: $dark-color;
+      color: $dark-color !important;
     }
   }
   &.text-gray {
     a {
-      color: $gray-color;
+      color: $gray-color !important;
     }
   }
   &.text-light {
     a {
-      color: $light-color;
+      color: $light-color !important;
     }
   }
   &.text-success {
     a {
-      color: $success-color;
+      color: $success-color !important;
     }
   }
   &.text-warning {
     a {
-      color: $warning-color;
+      color: $warning-color !important;
     }
   }
   &.text-error {
     a {
-      color: $error-color;
+      color: $error-color !important;
     }
   }
 
