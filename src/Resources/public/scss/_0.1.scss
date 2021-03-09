@@ -40,8 +40,8 @@ h3 {
   margin: 0 auto;
 
   &.fullwidth {
-    padding-left: 0;
-    padding-right: 0;
+    max-width: none;
+    padding: 0;
   }
 }
 
@@ -191,6 +191,7 @@ img {
   font-size: 46px;
   background: $zeroOneColor_1;
   border-radius: 100%;
+  z-index: 1;
 
   &:before {
     position: absolute;
@@ -247,6 +248,11 @@ img {
   &:not(.col-mx-auto) {
     margin-left: -15px;
     margin-right: -15px;
+
+    &.col-gapless {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &.mod_article {
       margin: 0 auto;
@@ -525,10 +531,6 @@ h1, h2, h3, h4, h5, h6 {
   &, h1, h2, h3, h4, h5, h6 {
     color: $primary-color-light;
   }
-}
-
-#wrapper {
-  overflow-y: hidden;
 }
 
 @import 'contao/newsletter';

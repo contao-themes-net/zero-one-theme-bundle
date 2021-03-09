@@ -17,6 +17,7 @@
   position: relative;
   width: 100%;
   padding: 0 95px;
+  z-index: 10;
 
   &.block {
     display: flex;
@@ -252,10 +253,10 @@
       transition: all 0.3s ease-in-out;
       left: calc(0px - ( 100% - 100px));
       width: calc(100% - 100px);
-      height: 100vh;
+      height: calc(100% + 20px);
       position: fixed;
       background: $dark-color;
-      top: -16px;
+      top: -20px;
       display: block;
       padding: 30px 10px;
       overflow: auto;

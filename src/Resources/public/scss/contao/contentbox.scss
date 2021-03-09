@@ -1,0 +1,127 @@
+.ce_ct_contentBox {
+  margin-bottom: 30px;
+  background: none !important;
+
+  &.bg-primary .inside {
+    @extend .bg-primary;
+  }
+  &.bg-secondary .inside {
+    @extend .bg-secondary;
+  }
+  &.bg-dark .inside {
+    @extend .bg-dark;
+  }
+  &.bg-gray .inside {
+    @extend .bg-gray;
+  }
+  &.bg-light .inside {
+    @extend .bg-light;
+  }
+  &.bg-success .inside {
+    @extend .bg-success;
+  }
+  &.bg-warning .inside {
+    @extend .bg-warning;
+  }
+  &.bg-error .inside {
+    @extend .bg-error;
+  }
+  &.bg-zeroone-2 .inside {
+    background: $zeroOneColor_2;
+  }
+  &.bg-zeroone-3 .inside {
+    background: $zeroOneColor_3;
+  }
+  &.bg-zeroone-4 .inside {
+    background: $zeroOneColor_4;
+  }
+
+  &.text-primary {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $primary-color !important;
+    }
+  }
+  &.text-secondary {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $secondary-color !important;
+    }
+  }
+  &.text-dark {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $dark-color !important;
+    }
+  }
+  &.text-gray {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $gray-color !important;
+    }
+  }
+  &.text-light {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $light-color !important;
+    }
+  }
+  &.text-success {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $success-color !important;
+    }
+  }
+  &.text-warning {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $warning-color !important;
+    }
+  }
+  &.text-error {
+    p, a:not(.btn), h1, h2, h3, h4, h5, h6 {
+      color: $error-color !important;
+    }
+  }
+
+  &.btn-primary {
+    .btn {
+      @extend .btn-primary;
+
+      &:hover {
+        color: $light-color !important;
+      }
+    }
+  }
+  &.btn-link {
+    .btn {
+      @extend .btn-link;
+    }
+  }
+  &.btn-success {
+    .btn {
+      @extend .btn-success;
+    }
+  }
+  &.btn-error {
+    .btn {
+      @extend .btn-error;
+    }
+  }
+
+  &.with-button .inside {
+    padding: 30px 30px 90px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+
+  .inside {
+    background: $boxes-background;
+    height: 100%;
+    padding: 30px;
+    position: relative;
+    border-radius: $border-radius;
+  }
+
+  .pageLink {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+  }
+}

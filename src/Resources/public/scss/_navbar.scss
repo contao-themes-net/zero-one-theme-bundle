@@ -6,10 +6,6 @@
   justify-content: space-between;
 
   .navbar-section {
-    a2lign-items: center;
-    d2isplay: flex;
-    f2lex: 1 0 0;
-
     &:not(:first-child):last-child {
       justify-content: flex-end;
     }
