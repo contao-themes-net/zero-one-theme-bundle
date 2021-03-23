@@ -126,10 +126,16 @@
   .ce_ct_teaserBox {
     padding-bottom: 50px;
 
-    &.with-image img {
-      max-width: 200px;
-      margin-top: 30px;
-      width: 100%;
+    &.with-image {
+      img {
+        max-width: 200px;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .image_container.float_below {
+        float: none;
+      }
     }
 
     .inside {
