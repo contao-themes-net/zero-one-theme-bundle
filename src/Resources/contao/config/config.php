@@ -19,12 +19,14 @@ $GLOBALS['TL_CTE']['zeroOneTheme']['tabsStopElement'] = TabsStopElement::class;
  * Available tags for Zero One Theme
  */
 
-if (empty($GLOBALS['tl_config']['theme_tags'])) {
+if (empty($GLOBALS['tl_config']['theme_tags']))
+{
     $GLOBALS['tl_config']['theme_tags'] = [];
     $GLOBALS['tl_config']['theme_tags'][] = '-';
 }
 
-if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config']['theme_tags'])) {
+if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config']['theme_tags']))
+{
     $GLOBALS['tl_config']['theme_tags'] = array_merge($GLOBALS['tl_config']['theme_tags'], [
         'ZeroOne01/01',
         'ZeroOne01/02',
@@ -55,8 +57,10 @@ $GLOBALS['TL_WRAPPERS']['stop'][] = 'tabsStopElement';
  * Load default styles for every page
  */
 
-if($GLOBALS['ZERO_ONE_STYLES'])
+if (!isset($GLOBALS['ZERO_ONE_STYLES']))
+{
     $GLOBALS['ZERO_ONE_STYLES'] = [];
+}
 
 $GLOBALS['ZERO_ONE_STYLES'][] = 'variables';
 $GLOBALS['ZERO_ONE_STYLES'][] = 'mixins';
@@ -64,20 +68,14 @@ $GLOBALS['ZERO_ONE_STYLES'][] = 'normalize';
 $GLOBALS['ZERO_ONE_STYLES'][] = 'base';
 $GLOBALS['ZERO_ONE_STYLES'][] = 'layout';
 $GLOBALS['ZERO_ONE_STYLES'][] = 'utilities';
-// $GLOBALS['ZERO_ONE_STYLES'][] = '0.1';
-// $GLOBALS['ZERO_ONE_STYLES'][] = '';
-// $GLOBALS['ZERO_ONE_STYLES'][] = '';
-// $GLOBALS['ZERO_ONE_STYLES'][] = '';
 
 /**
  * Backend Modules
  */
-array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, array
-(
-    'zeroOneThemeSetup' => array
-    (
+array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, [
+    'zeroOneThemeSetup' => [
         'callback'          => 'ContaoThemesNet\\ZeroOneThemeBundle\\Module\\ZeroOneThemeSetup',
-        'tables'            => array(),
+        'tables'            => [],
         'stylesheet'		=> 'bundles/contaothemesnetzeroonetheme/scss/backend.css'
-    ),
-));
+    ],
+]);

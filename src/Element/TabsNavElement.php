@@ -17,16 +17,22 @@ class TabsNavElement extends \ContentElement
     {
         $items = \StringUtil::deserialize($this->tabs_navigation, true);
 		$limit = \count($items) - 1;
+        
 		for ($i=0, $c=\count($items); $i<$c; $i++)
 		{
-			$arrItems[] = array
-			(
+		    if (!isset($items[$i]['default']))
+            {
+                $items[$i]['default'] = '';
+            }
+            
+			$arrItems[] = [
 				'class' => (($i == 0) ? 'first' : (($i == $limit) ? 'last' : '')),
 				'content' => $items[$i]['label'],
 				'value' => $items[$i]['value'],
                 'default' => $items[$i]['default']
-			);
+			];
 		}
+        
 		$this->Template->items = $arrItems;
     }
 }
