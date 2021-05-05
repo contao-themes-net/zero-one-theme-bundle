@@ -4,7 +4,7 @@ namespace ContaoThemesNet\ZeroOneThemeBundle\Module;
 
 class ZeroOneThemeSetup extends \BackendModule
 {
-    const VERSION = '1.6.0';
+    const VERSION = '1.6.1';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 
@@ -13,12 +13,15 @@ class ZeroOneThemeSetup extends \BackendModule
      */
     protected function compile()
     {
-        switch (\Input::get('act')) {
+        switch (\Input::get('act'))
+        {
             case 'syncFolder':
                 $path = TL_ROOT . '/web/bundles/contaothemesnetzeroonetheme';
-                if(!file_exists("files/zeroOne")) {
+                if (!file_exists("files/zeroOne"))
+                {
                     new \Folder("files/zeroOne");
                 }
+                
                 $this->getFiles($path);
                 $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
@@ -35,41 +38,57 @@ class ZeroOneThemeSetup extends \BackendModule
         }
     }
 
-    protected function getFiles($path) {
-        foreach (scan($path) as $dir) {
-            if(!is_dir($path."/".$dir)) {
+    protected function getFiles($path)
+    {
+        foreach (scan($path) as $dir)
+        {
+            if (!is_dir($path."/".$dir))
+            {
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
                 $filesFolder = "files/zeroOne".str_replace("contaothemesnetzeroonetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir == "_custom_variables.scss" || $dir == "custom.scss") {
-                    if(!file_exists(TL_ROOT."/".$filesFolder)) {
+                if ($dir == "_custom_variables.scss" || $dir == "custom.scss")
+                {
+                    if (!file_exists(TL_ROOT."/".$filesFolder))
+                    {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
-                } else if(strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false || strpos($filesFolder,".public") !== false) {
-                    if(!file_exists(TL_ROOT."/".$filesFolder)) {
+                } 
+                else if (strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false || strpos($filesFolder,".public") !== false)
+                {
+                    if (!file_exists(TL_ROOT."/".$filesFolder))
+                    {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
-            } else {
+            }
+            else 
+            {
                 $folder = $path."/".$dir;
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
                 $filesFolder = "files/zeroOne".str_replace("contaothemesnetzeroonetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir == "scss" || $dir == "img" || $dir == "css") {
-                    if(!file_exists($filesFolder)) {
+                if ($dir == "scss" || $dir == "img" || $dir == "css")
+                {
+                    if (!file_exists($filesFolder))
+                    {
                         new \Folder($filesFolder);
                     }
+                    
                     $this->getFiles($folder);
                 }
             }
         }
     }
 
-    protected function getSqlFiles($path) {
-        foreach (scan($path) as $dir) {
-            if(!is_dir($path."/".$dir)) {
+    protected function getSqlFiles($path)
+    {
+        foreach (scan($path) as $dir)
+        {
+            if (!is_dir($path."/".$dir))
+            {
                 $pos = strpos($path,"/vendor");
                 $filesFolder = "templates/" . $dir;
                 $objFile = new \File(substr($path,$pos)."/".$dir, true);
