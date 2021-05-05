@@ -55,7 +55,7 @@ $GLOBALS['TL_WRAPPERS']['stop'][] = 'tabsStopElement';
  * Load default styles for every page
  */
 
-if($GLOBALS['ZERO_ONE_STYLES'])
+if(!isset($GLOBALS['ZERO_ONE_STYLES']))
     $GLOBALS['ZERO_ONE_STYLES'] = [];
 
 $GLOBALS['ZERO_ONE_STYLES'][] = 'variables';
