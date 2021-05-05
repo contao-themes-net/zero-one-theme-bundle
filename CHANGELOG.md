@@ -15,7 +15,7 @@
 - [feature] add pure css carousel ([docs](https://pdir.de/docs/de/contao/themes/zeroone/elements/carousel/))
 - update demo sql files
 
-## [1.4.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.4.0) – 2019-02-12
+## [1.4.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.4.0) – 2020-02-12
 
 - [feature] add sql files for contao 4.11
 
@@ -23,6 +23,6 @@
 .
 .
 
-## [1.0.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.0.0) – 2019-10-10
+## [1.0.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.0.0) – 2020-02-03
 
 - first stable release
