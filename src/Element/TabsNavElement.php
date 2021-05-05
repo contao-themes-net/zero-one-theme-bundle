@@ -17,6 +17,7 @@ class TabsNavElement extends \ContentElement
     {
         $items = \StringUtil::deserialize($this->tabs_navigation, true);
 		$limit = \count($items) - 1;
+        
 		for ($i=0, $c=\count($items); $i<$c; $i++)
 		{
 		    if (!isset($items[$i]['default']))
@@ -31,6 +32,7 @@ class TabsNavElement extends \ContentElement
                 'default' => $items[$i]['default']
 			];
 		}
+        
 		$this->Template->items = $arrItems;
     }
 }
