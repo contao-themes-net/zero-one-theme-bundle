@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.6.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.6.12) – 2021-05-07
+## [1.6.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.6.2) – 2021-05-07
 
 - [fix] add the highlight style sheet for ce_code ([docs](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/15))
 
