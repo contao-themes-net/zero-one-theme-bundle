@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.6.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.6.12) – 2021-05-07
+
+- [fix] add the highlight style sheet for ce_code ([docs](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/15))
+
 ## [1.6.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.6.1) – 2021-05-05
 
 - [fix] php 8 support and fix undefined array index errors
