@@ -22,9 +22,13 @@
     .form-input, .form-group input, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) input,
     .form-select:not([multiple]):not([size]), .form-group select:not([size]):not([multiple]), .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select:not([size]):not([multiple]),
     .form-select, .form-group select, .ce_form .widget:not(.widget-checkbox):not(.widget-radio) select, textarea,
-    #main .mod_subscribe .form-input, #main .mod_unsubscribe .form-input {
+    #main .mod_subscribe .form-input, #main .mod_unsubscribe .form-input, .accordion .accordion-header {
       background: #3c3c3c;
       color: #fff;
+    }
+
+    .accordion .accordion-header:hover {
+      background: darken(#3c3c3c, 5%);
     }
 
     .form-checkbox .form-icon, .form-radio .form-icon {
