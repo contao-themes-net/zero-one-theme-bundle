@@ -1,0 +1,26 @@
+<div class="<?= $this->class ?> ce_accordion accordion"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <input type="radio" id="accordion-<?= $this->id ?>" name="accordion-radio" hidden>
+  <label class="accordion-header" for="accordion-<?= $this->id ?>">
+    <?= $this->headline ?>
+    <i class="icon icon-arrow-right"></i>
+  </label>
+  <div class="accordion-body">
+    <div>
+      <?php if (!$this->addBefore): ?>
+      <?= $this->text ?>
+      <?php endif; ?>
+
+      <?php if ($this->addImage): ?>
+      <?php $this->insert('image', $this->arrData); ?>
+      <?php endif; ?>
+
+      <?php if ($this->addBefore): ?>
+      <?= $this->text ?>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
+
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_accordions'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_icons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/accordions'; ?>

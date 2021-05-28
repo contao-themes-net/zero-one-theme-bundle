@@ -4,7 +4,7 @@ namespace ContaoThemesNet\ZeroOneThemeBundle\Module;
 
 class ZeroOneThemeSetup extends \BackendModule
 {
-    const VERSION = '1.6.1';
+    const VERSION = '1.7.0';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 
@@ -21,7 +21,7 @@ class ZeroOneThemeSetup extends \BackendModule
                 {
                     new \Folder("files/zeroOne");
                 }
-                
+
                 $this->getFiles($path);
                 $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
@@ -54,7 +54,7 @@ class ZeroOneThemeSetup extends \BackendModule
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
-                } 
+                }
                 else if (strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false || strpos($filesFolder,".public") !== false)
                 {
                     if (!file_exists(TL_ROOT."/".$filesFolder))
@@ -64,7 +64,7 @@ class ZeroOneThemeSetup extends \BackendModule
                     }
                 }
             }
-            else 
+            else
             {
                 $folder = $path."/".$dir;
                 $pos = strpos($path,"contaothemesnetzeroonetheme");
@@ -76,7 +76,7 @@ class ZeroOneThemeSetup extends \BackendModule
                     {
                         new \Folder($filesFolder);
                     }
-                    
+
                     $this->getFiles($folder);
                 }
             }

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.7.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.7.0) – 2021-05-28
+
+- [feature] add accordion template and styling (pure css)
+- [fix] add the highlight style sheet for ce_code ([#15](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/15))
+
 ## [1.6.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.6.1) – 2021-05-05
 
 - [fix] php 8 support and fix undefined array index errors

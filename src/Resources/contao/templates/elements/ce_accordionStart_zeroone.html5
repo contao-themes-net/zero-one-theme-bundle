@@ -1,0 +1,15 @@
+
+<section class="<?= $this->class ?> ce_accordion accordion block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <input type="radio" id="accordion-<?= $this->id ?>" name="accordion-radio" hidden>
+  <label class="accordion-header" for="accordion-<?= $this->id ?>">
+    <?= $this->headline ?>
+    <i class="icon icon-arrow-right"></i>
+  </label>
+
+  <div class="accordion-body">
+    <div>
+
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_accordions'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = '_icons'; ?>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/accordions'; ?>
