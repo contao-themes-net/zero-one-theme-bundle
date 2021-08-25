@@ -1,0 +1,26 @@
+.accordion {
+  .accordion-header {
+    background: $boxes-background;
+    border-radius: $border-radius;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+
+    &:hover {
+      background: darken($boxes-background, 5%);
+    }
+  }
+
+  .accordion-body {
+    padding: 0 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.accordion input:checked~.accordion-body, .accordion[open] .accordion-body {
+  max-height: 500rem;
+}
