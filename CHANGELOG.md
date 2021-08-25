@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.8.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.8.0) – 2021-08-25
+
+- [feature] add sql files for contao 4.12
+
 ## [1.7.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.7.0) – 2021-05-28
 
 - [feature] add accordion template and styling (pure css)
