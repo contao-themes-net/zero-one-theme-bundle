@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.9.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.0) – 2022-xx-xx
+
+- [feature] add sql files for contao 4.13
+
 ## [1.8.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.8.0) – 2021-08-25
 
 - [feature] add sql files for contao 4.12
