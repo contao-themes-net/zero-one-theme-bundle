@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.9.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.1) – 2022-02-18
+
+- [fix] update fe_page template
+
 ## [1.9.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.0) – 2022-02-17
 
 - [feature] add sql files for contao 4.13
