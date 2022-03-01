@@ -2,6 +2,12 @@
 
 namespace ContaoThemesNet\ZeroOneThemeBundle\Module;
 
+use Contao\File;
+use Contao\Folder;
+use Contao\StringUtil;
+use Contao\System;
+use ContaoThemesNet\ZeroOneThemeBundle\ThemeUtils;
+
 class ZeroOneThemeSetup extends \BackendModule
 {
     const VERSION = '1.9.0';
@@ -13,29 +19,31 @@ class ZeroOneThemeSetup extends \BackendModule
      */
     protected function compile()
     {
+        ThemeUtils::$strRootDir = System::getContainer()->getParameter('kernel.project_dir');
+        ThemeUtils::$strWebDir = StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
+
         switch (\Input::get('act'))
         {
             case 'syncFolder':
-                $path = TL_ROOT . '/web/bundles/contaothemesnetzeroonetheme';
+                $path = sprintf('%s/%s/bundles/contaothemesnetzeroonetheme',
+                    ThemeUtils::$strRootDir,
+                    ThemeUtils::$strWebDir);
                 if (!file_exists("files/zeroOne"))
                 {
-                    new \Folder("files/zeroOne");
+                    new Folder("files/zeroOne");
                 }
 
                 $this->getFiles($path);
-                $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
+                $this->getSqlFiles(ThemeUtils::$strRootDir . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
-                $this->Template->version = ZeroOneThemeSetup::VERSION;
                 break;
             case 'truncateTlFiles':
                 $this->import('Database');
                 $this->Database->prepare("TRUNCATE tl_files")->execute();
                 $this->Template->messageTruncate = true;
-                $this->Template->version = ZeroOneThemeSetup::VERSION;
                 break;
-            default:
-                $this->Template->version = ZeroOneThemeSetup::VERSION;
         }
+        $this->Template->version = ZeroOneThemeSetup::VERSION;
     }
 
     protected function getFiles($path)
@@ -49,17 +57,17 @@ class ZeroOneThemeSetup extends \BackendModule
 
                 if ($dir == "_custom_variables.scss" || $dir == "custom.scss")
                 {
-                    if (!file_exists(TL_ROOT."/".$filesFolder))
+                    if (!file_exists(ThemeUtils::$strRootDir."/".$filesFolder))
                     {
-                        $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
+                        $objFile = new File(ThemeUtils::$strWebDir."/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
                 else if (strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false || strpos($filesFolder,".public") !== false)
                 {
-                    if (!file_exists(TL_ROOT."/".$filesFolder))
+                    if (!file_exists(ThemeUtils::$strRootDir."/".$filesFolder))
                     {
-                        $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
+                        $objFile = new File(ThemeUtils::$strWebDir."/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
@@ -74,7 +82,7 @@ class ZeroOneThemeSetup extends \BackendModule
                 {
                     if (!file_exists($filesFolder))
                     {
-                        new \Folder($filesFolder);
+                        new Folder($filesFolder);
                     }
 
                     $this->getFiles($folder);
@@ -91,7 +99,7 @@ class ZeroOneThemeSetup extends \BackendModule
             {
                 $pos = strpos($path,"/vendor");
                 $filesFolder = "templates/" . $dir;
-                $objFile = new \File(substr($path,$pos)."/".$dir, true);
+                $objFile = new File(substr($path,$pos)."/".$dir, true);
                 $objFile->copyTo($filesFolder);
             }
         }
