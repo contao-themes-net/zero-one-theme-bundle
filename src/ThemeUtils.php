@@ -4,23 +4,19 @@ namespace ContaoThemesNet\ZeroOneThemeBundle;
 
 use Contao\File;
 use Contao\System;
+use Contao\StringUtil;
 
 class ThemeUtils
 {
-    public static $strRootDir;
-    public static $strWebDir;
+    public static function getRootDir() {
+        return System::getContainer()->getParameter('kernel.project_dir');
+    }
 
-    /**
-     * public pseudo constructor.
-     */
-    public static function construct()
-    {
-        self::$strRootDir = System::getContainer()->getParameter('kernel.project_dir');
-        self::$strWebDir = StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
+    public static function getWebDir() {
+        return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
     public static function getCombinedStylesheet() {
-
         $scssStr = '';
         $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
         $objFile  = new File('var/cache/zeroOne/scss/' . $hash . '.scss');
@@ -31,8 +27,8 @@ class ThemeUtils
             $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
 
             foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-                $scssStr .= sprintf('@import "../../../../%s/bundles/contaothemesnetzeroonetheme/scss/%s.scss;%s',
-                    self::$strWebDir,
+                $scssStr .= sprintf('@import "../../../../%s/bundles/contaothemesnetzeroonetheme/scss/%s.scss";%s',
+                    self::getWebDir(),
                     $style,
                     "\n"
                 );

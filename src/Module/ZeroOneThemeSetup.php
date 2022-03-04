@@ -19,22 +19,19 @@ class ZeroOneThemeSetup extends \BackendModule
      */
     protected function compile()
     {
-        ThemeUtils::$strRootDir = System::getContainer()->getParameter('kernel.project_dir');
-        ThemeUtils::$strWebDir = StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
-
         switch (\Input::get('act'))
         {
             case 'syncFolder':
                 $path = sprintf('%s/%s/bundles/contaothemesnetzeroonetheme',
-                    ThemeUtils::$strRootDir,
-                    ThemeUtils::$strWebDir);
+                    ThemeUtils::getRootDir(),
+                    ThemeUtils::getWebDir());
                 if (!file_exists("files/zeroOne"))
                 {
                     new Folder("files/zeroOne");
                 }
 
                 $this->getFiles($path);
-                $this->getSqlFiles(ThemeUtils::$strRootDir . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
+                $this->getSqlFiles(ThemeUtils::getRootDir() . "/vendor/contao-themes-net/zero-one-theme-bundle/src/templates");
                 $this->Template->message = true;
                 break;
             case 'truncateTlFiles':
@@ -57,17 +54,17 @@ class ZeroOneThemeSetup extends \BackendModule
 
                 if ($dir == "_custom_variables.scss" || $dir == "custom.scss")
                 {
-                    if (!file_exists(ThemeUtils::$strRootDir."/".$filesFolder))
+                    if (!file_exists(ThemeUtils::getRootDir()."/".$filesFolder))
                     {
-                        $objFile = new File(ThemeUtils::$strWebDir."/bundles/".substr($path,$pos)."/".$dir, true);
+                        $objFile = new File(ThemeUtils::getWebDir()."/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
                 else if (strpos($filesFolder,"/img/") !== false || strpos($filesFolder,"/css/") !== false || strpos($filesFolder,".public") !== false)
                 {
-                    if (!file_exists(ThemeUtils::$strRootDir."/".$filesFolder))
+                    if (!file_exists(ThemeUtils::getRootDir()."/".$filesFolder))
                     {
-                        $objFile = new File(ThemeUtils::$strWebDir."/bundles/".substr($path,$pos)."/".$dir, true);
+                        $objFile = new File(ThemeUtils::getWebDir()."/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
