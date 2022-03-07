@@ -1,8 +1,9 @@
 # Changelog
 
-## [1.9.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.1) – 2022-03-04
+## [1.9.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.1) – 2022-03-07
 
 - [feature] add support for Symfony 5 public entry point
+- [fix] update fe_page template
 
 ## [1.9.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.0) – 2022-02-17
 
