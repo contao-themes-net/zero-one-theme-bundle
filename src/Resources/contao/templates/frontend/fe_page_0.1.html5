@@ -26,26 +26,7 @@
 
   <?= $this->head ?>
 
-  <?php // 0.1 theme css optimization
-    $scssStr = '';
-    $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
-	  $objFile  = new \File('var/cache/zeroOne/scss/' . $hash . '.scss');
-
-	  if(!$objFile->exists()) {
-      // add 0.1 to end of array
-      $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
-      $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
-
-      foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-        $scssStr .= '@import "../../../../web/bundles/contaothemesnetzeroonetheme/scss/' . $style . '.scss";' . "\n";
-      }
-      $objFile->write($scssStr);
-      $objFile->close();
-    }
-
-    $GLOBALS['TL_CSS'][] = $objFile->path . '|static';
-    // end 0.1 theme css optimization
-  ?>
+  <?php ContaoThemesNet\ZeroOneThemeBundle\ThemeUtils::getCombinedStylesheet() // 0.1 theme css optimization ?>
 
   <?= $this->stylesheets ?>
 <?php $this->endblock(); ?>
