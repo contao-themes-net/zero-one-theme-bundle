@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.9.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.2) – 2022-09-08
+## [1.9.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.2) – 2022-09-09
 
 - [Fixed] fix bug in demo data
 
