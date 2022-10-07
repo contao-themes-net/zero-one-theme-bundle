@@ -32,8 +32,21 @@ class ThemeUtils
                     $style,
                     "\n"
                 );
-
             }
+
+            if (!isset($GLOBALS['CUSTOM_STYLES'])) {
+                $GLOBALS['CUSTOM_STYLES'] = [];
+            }
+
+            $GLOBALS['CUSTOM_STYLES'] = array_unique($GLOBALS['CUSTOM_STYLES']);
+
+            foreach($GLOBALS['CUSTOM_STYLES'] as $style) {
+                $scssStr .= sprintf('@import "../../../../%s.scss";%s',
+                    $style,
+                    "\n"
+                );
+            }
+
             $objFile->write($scssStr);
             $objFile->close();
         }
