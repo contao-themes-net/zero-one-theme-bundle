@@ -7,7 +7,7 @@ Of course, this theme also has a dark mode, which saves battery power and is eas
 The 0.1 Theme is available for free (with copyright notice) or for a fee (without copyright notice).
 
 buy a licence https://contao-themes.net/theme-detail/zeroone.html
-        
+
 
 --- german ---
 
@@ -32,6 +32,17 @@ For demo please visit https://0.1.contao-themes.net
 
 For documentation please visit https://docs.contao-themes.net/#/zeroone_theme/index
 
+## Add custom styles
+
+You can add custom stylesheets (e.g. in templates). Thy will be included via @import in the theme stylesheet.
+Only paths starting from the Contao root are supported.
+
+    # example
+    $GLOBALS['CUSTOM_STYLES'][] = 'files/slider/slider.scss';
+    or
+    $GLOBALS['CUSTOM_STYLES'][] = 'vendor/heimrichhannot/contao-slick-bundlesrc/src/Resources/public/assets/contao-slick-bundle.css';
+
+
 ## Tools we use 🛠
 
 - [🌊 WAVE](https://wave.webaim.org/extension/) for accessibility testing
@@ -52,7 +63,7 @@ Compatible with Contao >=4.4
 
 ## Donation
 
-You can support [contao-themes.net](https://contao-themes.net) by buying a domain license for one of our themes or by supporting the development of new features or themes. See our 
+You can support [contao-themes.net](https://contao-themes.net) by buying a domain license for one of our themes or by supporting the development of new features or themes. See our
 [donation page](https://contao-themes.net/sponsoring.html) for more details.
 
 ## Other Contao Themes
