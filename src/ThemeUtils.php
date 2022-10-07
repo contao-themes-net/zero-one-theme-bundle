@@ -41,7 +41,7 @@ class ThemeUtils
             $GLOBALS['CUSTOM_STYLES'] = array_unique($GLOBALS['CUSTOM_STYLES']);
 
             foreach($GLOBALS['CUSTOM_STYLES'] as $style) {
-                $scssStr .= sprintf('@import "../../../../files/zeroOne/scss/%s.scss";%s',
+                $scssStr .= sprintf('@import "../../../../%s.scss";%s',
                     $style,
                     "\n"
                 );
