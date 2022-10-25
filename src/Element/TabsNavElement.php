@@ -2,7 +2,10 @@
 
 namespace ContaoThemesNet\ZeroOneThemeBundle\Element;
 
-class TabsNavElement extends \ContentElement
+use Contao\ContentElement;
+use Contao\StringUtil;
+
+class TabsNavElement extends ContentElement
 {
     /**
      * Template
@@ -15,24 +18,24 @@ class TabsNavElement extends \ContentElement
      */
     protected function compile()
     {
-        $items = \StringUtil::deserialize($this->tabs_navigation, true);
-		$limit = \count($items) - 1;
-        
-		for ($i=0, $c=\count($items); $i<$c; $i++)
-		{
-		    if (!isset($items[$i]['default']))
+        $items = StringUtil::deserialize($this->tabs_navigation, true);
+        $limit = \count($items) - 1;
+
+        for ($i=0, $c=\count($items); $i<$c; $i++)
+        {
+            if (!isset($items[$i]['default']))
             {
                 $items[$i]['default'] = '';
             }
-            
-			$arrItems[] = [
-				'class' => (($i == 0) ? 'first' : (($i == $limit) ? 'last' : '')),
-				'content' => $items[$i]['label'],
-				'value' => $items[$i]['value'],
+
+            $arrItems[] = [
+                'class' => (($i == 0) ? 'first' : (($i == $limit) ? 'last' : '')),
+                'content' => $items[$i]['label'],
+                'value' => $items[$i]['value'],
                 'default' => $items[$i]['default']
-			];
-		}
-        
-		$this->Template->items = $arrItems;
+            ];
+        }
+
+        $this->Template->items = $arrItems;
     }
 }

@@ -2,7 +2,12 @@
 
 namespace ContaoThemesNet\ZeroOneThemeBundle\Element;
 
-class TabsStartElement extends \ContentElement
+use Contao\BackendTemplate;
+use Contao\ContentElement;
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
+class TabsStartElement extends ContentElement
 {
     /**
      * Template
@@ -15,10 +20,10 @@ class TabsStartElement extends \ContentElement
      */
     protected function compile()
     {
-		if (TL_MODE == 'BE')
+		if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
         {
             $this->strTemplate = 'be_wildcard';
-            $this->Template = new \BackendTemplate($this->strTemplate);
+            $this->Template = new BackendTemplate($this->strTemplate);
         }
 
         $this->Template->tabsElement = $this->tabs_element;

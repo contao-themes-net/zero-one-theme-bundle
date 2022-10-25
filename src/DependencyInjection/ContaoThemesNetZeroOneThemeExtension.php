@@ -17,7 +17,7 @@ class ContaoThemesNetZeroOneThemeExtension extends Extension implements PrependE
     {
         $loader = new YamlFileLoader(
             $container,
-            new FileLocator(__DIR__ . '/../Resources/config')
+            new FileLocator(__DIR__ . '/../../config')
         );
 
         $loader->load('services.yml');
@@ -27,7 +27,7 @@ class ContaoThemesNetZeroOneThemeExtension extends Extension implements PrependE
     {
         $container->loadFromExtension('twig', array(
             'paths' => array(
-                '%kernel.project_dir%/vendor/contao-themes-net/zero-one-theme-bundle/src/Resources/ContaoCoreBundle/views/' => 'ContaoCore',
+                '%kernel.project_dir%/vendor/contao-themes-net/zero-one-theme-bundle/templates/bundles/ContaoCoreBundle/views/' => 'ContaoCore',
             ),
         ));
     }

@@ -1,0 +1,28 @@
+
+<ul class="<?= $this->level ?>">
+  <?php if($this->level == "level_1"): ?>
+  <li class="show-lg search">
+    {{theme::content::ZeroOne01/03}}
+  </li>
+  <?php endif; ?>
+
+  <?php foreach ($this->items as $item): ?>
+    <?php if ($item['isActive']): ?>
+      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?></a>
+
+        <?php if( !empty($item['subitems']) ): ?>
+        <a href="#<?= $item['alias'] ?>" class="open-dropdown"><span>+</span></a>
+        <?php endif; ?>
+
+        <?= $item['subitems'] ?></li>
+    <?php else: ?>
+      <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span></a>
+
+  <?php if( !empty($item['subitems']) ): ?>
+  <a href="#<?= $item['alias'] ?>" class="open-dropdown"><span>+</span></a>
+  <?php endif; ?>
+
+  <?= $item['subitems'] ?></li>
+    <?php endif; ?>
+  <?php endforeach; ?>
+</ul>

@@ -8,15 +8,28 @@ use Contao\StringUtil;
 
 class ThemeUtils
 {
-    public static function getRootDir() {
+    public static string $themeFolder = 'bundles/contaothemesnetzeroonetheme/';
+    public static string $scssFolder = 'scss/';
+
+    public static function getRootDir()
+    {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
 
-    public static function getWebDir() {
+    public static function getWebDir()
+    {
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet() {
+    public static function getCombinedStylesheet($theme = null): void
+    {
+        self::$scssFolder = self::$themeFolder.self::$scssFolder;
+
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$scssFolder = 'files/zeroOne/scss/'.$theme.'/';
+        }
+
         $scssStr = '';
         $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
         $objFile  = new File('var/cache/zeroOne/scss/' . $hash . '.scss');
@@ -27,7 +40,7 @@ class ThemeUtils
             $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
 
             foreach($GLOBALS['ZERO_ONE_STYLES'] as $style) {
-                $scssStr .= sprintf('@import "../../../../%s/bundles/contaothemesnetzeroonetheme/scss/%s.scss";%s',
+                $scssStr .= sprintf('@import "../../%s/bundles/contaothemesnetzeroonetheme/scss/%s.scss";%s',
                     self::getWebDir(),
                     $style,
                     "\n"
