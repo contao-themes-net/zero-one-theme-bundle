@@ -36,7 +36,10 @@
         "contao/manager-plugin": "^2.0",
         "contao/easy-coding-standard": "^3.0",
         "phpunit/phpunit": "^7.1 || ^8.4 || ^9.5",
-        "symfony/phpunit-bridge": "^4.4 || ^5.1"
+        "symfony/phpunit-bridge": "^4.4 || ^5.1",
+        "phpstan/phpstan": "^1.8",
+        "phpstan/phpstan-phpunit": "^1.1",
+        "phpstan/phpstan-symfony": "^1.2"
     },
     "extra": {
         "contao-manager-plugin": "ContaoThemesNet\\ZeroOneThemeBundle\\ContaoManager\\Plugin"

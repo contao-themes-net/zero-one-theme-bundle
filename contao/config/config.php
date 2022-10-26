@@ -63,12 +63,12 @@ if (!isset($GLOBALS['ZERO_ONE_STYLES']))
     $GLOBALS['ZERO_ONE_STYLES'] = [];
 }
 
-$GLOBALS['ZERO_ONE_STYLES'][] = 'variables';
-$GLOBALS['ZERO_ONE_STYLES'][] = 'mixins';
-$GLOBALS['ZERO_ONE_STYLES'][] = 'normalize';
-$GLOBALS['ZERO_ONE_STYLES'][] = 'base';
-$GLOBALS['ZERO_ONE_STYLES'][] = 'layout';
-$GLOBALS['ZERO_ONE_STYLES'][] = 'utilities';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_variables';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_mixins';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_normalize';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_base';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_layout';
+$GLOBALS['ZERO_ONE_STYLES'][] = '_utilities';
 
 /**
  * Backend Modules

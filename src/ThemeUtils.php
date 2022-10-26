@@ -21,30 +21,27 @@ namespace ContaoThemesNet\ZeroOneThemeBundle;
 use Contao\File;
 use Contao\StringUtil;
 use Contao\System;
+use ScssPhp\ScssPhp\Compiler;
+use Symfony\Component\Filesystem\Path;
 
 class ThemeUtils
 {
     public static string $themeFolder = 'bundles/contaothemesnetzeroonetheme/';
     public static string $scssFolder = 'scss/';
 
-    public static function getRootDir()
+    public static function getRootDir(): string
     {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
 
-    public static function getWebDir()
+    public static function getWebDir(): string
     {
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet($theme = null): void
+    public static function getCombinedStylesheet(null|bool|string $theme = null): void
     {
-        self::$scssFolder = self::$themeFolder.self::$scssFolder;
-
-        // for multi domain setup
-        if (null !== $theme) {
-            self::$scssFolder = 'files/zeroOne/scss/'.$theme.'/';
-        }
+        self::$scssFolder = Path::join(self::getWebDir(), 'bundles', self::$themeFolder, self::$scssFolder);
 
         $scssStr = '';
         $hash = hash('ripemd160', implode(' ,', $GLOBALS['ZERO_ONE_STYLES']));
@@ -57,8 +54,7 @@ class ThemeUtils
 
             foreach ($GLOBALS['ZERO_ONE_STYLES'] as $style) {
                 $scssStr .= sprintf(
-                    '@import "../../%s/bundles/contaothemesnetzeroonetheme/scss/%s.scss";%s',
-                    self::getWebDir(),
+                    '@import "%s.scss";%s',
                     $style,
                     "\n"
                 );
@@ -78,9 +74,27 @@ class ThemeUtils
                 );
             }
 
+            // add custom
+            $scssStr .= "@import \"custom.scss\";\n";
+            $scssStr .= "@import \"_custom_variables.scss\";\n";
+
             $objFile->write($scssStr);
             $objFile->close();
         }
+
+        if ($objFile->exists()) {
+            $scssStr = $objFile->getContent();
+        }
+
+        $compiler = new Compiler();
+        $compiler->setImportPaths([
+            self::getRootDir().'/'.self::$scssFolder,
+            self::getRootDir().'/files/zeroOne/scss/',
+        ]);
+
+        $objFile = new File('assets/css/zeroOne.'.$hash.'.css');
+        $objFile->write($compiler->compileString($scssStr)->getCss());
+        $objFile->close();
 
         $GLOBALS['TL_CSS'][] = $objFile->path.'|static';
     }

@@ -3,11 +3,9 @@
  ****
  */
 
-// Die folgende Zeile nicht entfernen oder auskommentieren!
-$scssPath: "../../../vendor/contao-themes-net/zero-one-theme-bundle/src/Resources/public/scss";
-
 /*
  * Entfernen Sie die Schrägstriche um die Theme-Farben zu überschreiben.
+
  * Uncomment lines to override theme colors.
  */
 
@@ -18,7 +16,7 @@ $scssPath: "../../../vendor/contao-themes-net/zero-one-theme-bundle/src/Resource
 //@import '#{$scssPath}/colour_schemes/earth';
 //@import '#{$scssPath}/colour_schemes/night';
 
-@import '#{$scssPath}/colour_schemes/dark_mode';
+@import 'colour_schemes/dark_mode';
 
 /*
  * Kommentieren Sie die folgende Zeile aus, wenn die Bilder nicht dem ent-
@@ -27,7 +25,7 @@ $scssPath: "../../../vendor/contao-themes-net/zero-one-theme-bundle/src/Resource
  * Uncomment the following line if the images should not be adjusted to the
  * colour scheme.
  */
-@import '#{$scssPath}/colour_schemes/adjust_images';
+@import 'colour_schemes/adjust_images';
 
 /* ============================= */
 /*     0.1 Theme Variables       */

@@ -35,6 +35,7 @@ class TabsNavElement extends ContentElement
      */
     protected function compile(): void
     {
+        $arrItems = [];
         $items = StringUtil::deserialize($this->tabs_navigation, true);
         $limit = \count($items) - 1;
 

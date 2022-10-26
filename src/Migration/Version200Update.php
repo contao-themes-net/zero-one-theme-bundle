@@ -42,8 +42,6 @@ class Version200Update extends AbstractMigration
      */
     public function shouldRun(): bool
     {
-        return false;
-
         $schemaManager = $this->connection->createSchemaManager();
 
         // If the database table itself does not exist we should do nothing
@@ -62,11 +60,11 @@ class Version200Update extends AbstractMigration
     public function run(): MigrationResult
     {
         // change templates
+        $rowCount = 1;
 
-/*
         return $this->createResult(
             true,
             'Change grid to wrapper elements and added css class row to '.$rowCount.' elements.'
-        );*/
+        );
     }
 }
