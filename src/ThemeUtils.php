@@ -18,14 +18,17 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\ZeroOneThemeBundle;
 
+use Contao\CoreBundle\Exception\InvalidResourceException;
 use Contao\File;
 use Contao\StringUtil;
 use Contao\System;
 use ScssPhp\ScssPhp\Compiler;
+use ScssPhp\ScssPhp\Exception\SassException;
 use Symfony\Component\Filesystem\Path;
 
 class ThemeUtils
 {
+    public static string $filesFolder = 'files/zeroOne';
     public static string $themeFolder = 'contaothemesnetzeroonetheme';
     public static string $scssFolder = 'scss/';
 
@@ -39,8 +42,16 @@ class ThemeUtils
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
+    /**
+     * @throws SassException
+     */
     public static function getCombinedStylesheet(null|bool|string $theme = null): void
     {
+        if (!file_exists(Path::join(self::getRootDir(), self::$filesFolder)))
+        {
+            throw new InvalidResourceException('Theme folder does not exists - Please run migrations first!');
+        }
+
         self::$scssFolder = Path::join(self::getWebDir(), 'bundles', self::$themeFolder, self::$scssFolder);
 
         $scssStr = '';
@@ -68,7 +79,7 @@ class ThemeUtils
 
             foreach ($GLOBALS['CUSTOM_STYLES'] as $style) {
                 $scssStr .= sprintf(
-                    '@import "../../../../%s.scss";%s',
+                    '@import "%s.scss";%s',
                     $style,
                     "\n"
                 );
@@ -84,6 +95,11 @@ class ThemeUtils
 
         if ($objFile->exists()) {
             $scssStr = $objFile->getContent();
+        }
+
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$scssFolder .= 'files/odd/scss/'.$theme.'/';
         }
 
         $compiler = new Compiler();
