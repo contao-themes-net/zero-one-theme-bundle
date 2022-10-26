@@ -10,7 +10,7 @@
   </div>
   <div class="widget widget-submit">
     <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit btn btn-primary">
-      {{image::12248a3c-3c2e-11ea-9298-e0d55edd9ad9?width=30&height=30}}
+      {{image::e69b100c-5450-11ed-b6e9-39e08dae77b0?width=30&height=30}}
       <span class="invisible"><?= $this->search ?></span>
     </button>
   </div>
