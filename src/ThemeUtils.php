@@ -26,7 +26,7 @@ use Symfony\Component\Filesystem\Path;
 
 class ThemeUtils
 {
-    public static string $themeFolder = 'bundles/contaothemesnetzeroonetheme/';
+    public static string $themeFolder = 'contaothemesnetzeroonetheme';
     public static string $scssFolder = 'scss/';
 
     public static function getRootDir(): string
