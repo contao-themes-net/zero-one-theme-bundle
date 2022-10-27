@@ -43,12 +43,11 @@ class ThemeUtils
     }
 
     /**
-     * @throws SassException
+     * @throws InvalidResourceException
      */
     public static function getCombinedStylesheet(null|bool|string $theme = null): void
     {
-        if (!file_exists(Path::join(self::getRootDir(), self::$filesFolder)))
-        {
+        if (!file_exists(Path::join(self::getRootDir(), self::$filesFolder))) {
             throw new InvalidResourceException('Theme folder does not exists - Please run migrations first!');
         }
 
