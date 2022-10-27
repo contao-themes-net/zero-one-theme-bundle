@@ -78,7 +78,7 @@ class ThemeUtils
 
             foreach ($GLOBALS['CUSTOM_STYLES'] as $style) {
                 $scssStr .= sprintf(
-                    '@import "%s.scss";%s',
+                    '@import "%s";%s',
                     $style,
                     "\n"
                 );

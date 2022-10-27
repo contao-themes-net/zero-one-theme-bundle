@@ -45,11 +45,6 @@ h3 {
   }
 }
 
-.ce_text,
-.ce_headline {
-  padding-bottom: 1em;
-}
-
 .page-footer {
   color: $light-color;
   font-size: 18px;
@@ -103,7 +98,7 @@ img {
     padding-bottom: 0;
   }
 
-  .ce_text, .ce_headline {
+  .content-text, .content-headline {
     color: $dark-color;
   }
 
@@ -144,7 +139,7 @@ img {
   }
 }
 
-.ce_hyperlink.s-circle {
+.content-hyperlink.s-circle {
   height: 50px;
   margin: 10px;
 
@@ -172,7 +167,7 @@ img {
   }
 }
 
-.ce_text, .ce_headline {
+.content-text, .content-headline {
   padding-bottom: 15px;
 }
 
@@ -272,7 +267,7 @@ img {
     color: $zeroOneColor_5;
   }
 
-  .ce_hyperlink.s-circle {
+  .content-hyperlink.s-circle {
     margin: 0 10px 0 0;
   }
 
@@ -282,12 +277,12 @@ img {
     padding: 100px 24% 0 33%;
   }
 
-  .ce_hyperlink.s-circle:not(.columns):not(.column):not(.navbar) {
+  .content-hyperlink.s-circle:not(.columns):not(.column):not(.navbar) {
     width: 24px;
     height: 24px;
   }
 
-  .ce_hyperlink.s-circle {
+  .content-hyperlink.s-circle {
     a {
       padding: 5px;
       background: $zeroOneColor_5;
@@ -611,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
   }
 
-  .ce_hyperlink.s-circle {
+  .content-hyperlink.s-circle {
     margin: 2px;
   }
 
