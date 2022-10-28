@@ -65,6 +65,7 @@ class Version200Update extends AbstractMigration
                 customTpl = 'ce_download_zeroone' OR 
                 customTpl = 'ce_downloads_zeroone' OR 
                 customTpl = 'ce_youtube_zeroone' OR 
+                customTpl = 'ce_text_hero_parallax_zeroone' OR 
                 cssID LIKE '%headline-dotted%'
         ");
 
@@ -165,6 +166,15 @@ class Version200Update extends AbstractMigration
                 customTpl = 'content_element/youtube/youtube_zeroone'
             WHERE
                 customTpl = 'ce_youtube_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/text/parallax_zeroone'
+            WHERE
+                customTpl = 'ce_text_hero_parallax_zeroone'
         ");
 
         $this->connection->executeStatement("
