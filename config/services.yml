@@ -11,3 +11,8 @@ services:
         resource: "../src/Migration/*"
         tags:
             - { name: contao.migration, priority: 99 }
+
+    # Twig extension
+    ContaoThemesNet\ZeroOneThemeBundle\Twig\FileExtension:
+        arguments:
+            - '@contao.filesystem.virtual.files'
