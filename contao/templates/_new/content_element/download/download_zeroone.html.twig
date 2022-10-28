@@ -1,0 +1,8 @@
+{% extends "@Contao/content_element/download.html.twig" %}
+
+{% block wrapper %}
+  {{ parent() }}
+
+  {% set elementStyles = ['contao/downloads'] %}
+  {{ elementStyles|addToThemeStyles}}
+{% endblock %}

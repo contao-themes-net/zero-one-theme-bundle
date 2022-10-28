@@ -130,12 +130,23 @@ img {
   border-radius: 4px;
 }
 
-.ce_code {
+.content-image figure {
+  margin-bottom: 15px;
+}
+
+.content-code {
   display: block;
   width: 100%;
+  margin: 40px 0;
 
-  .code code {
+  .code, .hljs {
     background: $boxes-background;
+    color: inherit;
+    display: block;
+    line-height: 1.5;
+    overflow-x: auto;
+    padding: 1rem;
+    width: 100%;
   }
 }
 
@@ -498,6 +509,45 @@ h1, h2, h3, h4, h5, h6 {
 
 #main {
   padding-bottom: 50px;
+}
+
+.media.content-text {
+  display: block;
+  overflow: hidden;
+  border: none;
+
+  &.media--left figure {
+    margin: 0 50px 50px 0;
+  }
+
+  &.media--right figure {
+    margin: 0 0 50px 50px;
+  }
+
+  &.media--below {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      order: 2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 10px;
+    }
+
+    .rte {
+      order: 1;
+    }
+  }
+}
+
+.media--right > figure {
+  float: right;
+}
+
+.media--left > figure {
+  float: right;
 }
 
 .mt-large {

@@ -2,7 +2,7 @@
 <input id="<?= $item['value'] ?>" type="radio" name="tabs<?= $this->id ?>"<?php if($i == 0 || $item['default'] == 1): ?> checked="checked"<?php endif; ?> />
 <?php $i++; endforeach; ?>
 
-<ul class="<?= $this->class ?>tab tab-block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<ul class="<?= $this->class ?> tab tab-block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 	<?php $i = 0; foreach ($this->items as $item): ?>
   <li class="tab-item<?php if($i == 0): ?> active<?php endif; ?><?php if ($item['class']): ?> <?= $item['class'] ?><?php endif; ?>">
     <a href="#"<?php if($i == 0): ?> class="active"<?php endif; ?>><label for="<?= $item['value'] ?>"><?= $item['content'] ?></label></a>

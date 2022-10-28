@@ -57,7 +57,15 @@ class Version200Update extends AbstractMigration
             WHERE
                 customTpl = 'ce_hyperlink_button_zeroone' OR 
                 customTpl = 'ce_hyperlink_zeroone' OR 
-                customTpl = 'ce_toplink_zeroone'
+                customTpl = 'ce_toplink_zeroone' OR 
+                customTpl = 'ce_headline_zeroone' OR 
+                customTpl = 'ce_code_zeroone' OR 
+                customTpl = 'ce_table_zeroone' OR 
+                customTpl = 'ce_gallery_zeroone' OR 
+                customTpl = 'ce_download_zeroone' OR 
+                customTpl = 'ce_downloads_zeroone' OR 
+                customTpl = 'ce_youtube_zeroone' OR 
+                cssID LIKE '%headline-dotted%'
         ");
 
         return false !== $test;
@@ -94,6 +102,79 @@ class Version200Update extends AbstractMigration
                 customTpl = ''
             WHERE
                 customTpl = 'ce_toplink_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = ''
+            WHERE
+                customTpl = 'ce_headline_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/code/code_zeroone'
+            WHERE
+                customTpl = 'ce_code_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/table/table_zeroone'
+            WHERE
+                customTpl = 'ce_table_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/gallery/gallery_zeroone'
+            WHERE
+                customTpl = 'ce_gallery_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/download/download_zeroone'
+            WHERE
+                customTpl = 'ce_download_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/downloads/downloads_zeroone'
+            WHERE
+                customTpl = 'ce_downloads_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/youtube/youtube_zeroone'
+            WHERE
+                customTpl = 'ce_youtube_zeroone'
+        ");
+
+        $this->connection->executeStatement("
+            UPDATE
+                tl_content
+            SET
+                customTpl = 'content_element/headline/dotted_zeroone',
+                cssID = REPLACE(cssID, 's:15:\"headline-dotted\";', 's:0:\"\";')
+            WHERE
+                cssID LIKE '%headline-dotted%'
         ");
 
         return $this->createResult(
