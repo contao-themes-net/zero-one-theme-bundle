@@ -14,4 +14,7 @@
       {{ link_text }}
     {% endblock -%}
   </{{ block('wrapper_tag') }}>
+
+  {% set elementStyles = ['_buttons', 'contao/buttons'] %}
+  {{ elementStyles|addToThemeStyles}}
 {% endblock %}
