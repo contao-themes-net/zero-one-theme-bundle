@@ -62,6 +62,8 @@ class ThemeUtils
             $GLOBALS['ZERO_ONE_STYLES'][] = '_0.1';
             $GLOBALS['ZERO_ONE_STYLES'] = array_unique($GLOBALS['ZERO_ONE_STYLES']);
 
+            $scssStr .= "@import \"_custom_variables.scss\";\n";
+
             foreach ($GLOBALS['ZERO_ONE_STYLES'] as $style) {
                 $scssStr .= sprintf(
                     '@import "%s.scss";%s',
@@ -86,7 +88,6 @@ class ThemeUtils
 
             // add custom
             $scssStr .= "@import \"custom.scss\";\n";
-            $scssStr .= "@import \"_custom_variables.scss\";\n";
 
             $objFile->write($scssStr);
             $objFile->close();
