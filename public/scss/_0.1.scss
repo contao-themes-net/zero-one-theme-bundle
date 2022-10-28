@@ -279,7 +279,7 @@ img {
     margin: 0 10px 0 0;
   }
 
-  .content-text.block:not(.columns):not(.column):not(.navbar) {
+  .content-text {
     display: inline-block;
     width: 100%;
     padding: 100px 24% 0 33%;
@@ -473,27 +473,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-facebook {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/icon_facebook.svg');
+  background-image:url('/files/zeroOne/img/icon_facebook.svg');
 }
 
 .icon-instagram {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/icon_instagram.svg');
+  background-image:url('/files/zeroOne/img/icon_instagram.svg');
 }
 
 .icon-linkedin {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/icon_linkedin.svg');
+  background-image:url('/files/zeroOne/img/icon_linkedin.svg');
 }
 
 .icon-twitter {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/icon_twitter.svg');
+  background-image:url('/files/zeroOne/img/icon_twitter.svg');
 }
 
 .icon-youtube {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/icon_youtube.svg');
+  background-image:url('/files/zeroOne/img/icon_youtube.svg');
 }
 
 .icon-more {
-  background-image:url('/bundles/contaothemesnetzeroonetheme/img/more.svg');
+  background-image:url('/files/zeroOne/img/more.svg');
 }
 
 .ie {
@@ -590,7 +590,7 @@ h1, h2, h3, h4, h5, h6 {
   .contact-infos {
     background-size: 90% 90%;
 
-    .content-text.block:not(.columns):not(.column):not(.navbar) {
+    .content-text {
       padding: 100px 15% 0 30%;
     }
 
@@ -615,7 +615,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 100px;
 
-    .content-text.block:not(.columns):not(.column):not(.navbar) {
+    .content-text {
       padding: 0;
     }
 
@@ -762,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .contact-infos {
-    padding: 70px 25%;
+    padding: 100px 25%;
     font-size: 14px;
   }
 
