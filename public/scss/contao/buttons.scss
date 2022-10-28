@@ -21,7 +21,7 @@
     color: $zeroOneColor_5;
 
     &:hover {
-      color: $zeroOneColor_2;
+      color: $zeroOneColor_5;
     }
   }
 
@@ -40,6 +40,10 @@
   &.btn-block {
     display: flex;
     justify-content: center;
+  }
+
+  &.btn-link:hover {
+    color: $zeroOneColor_5;
   }
 }
 
