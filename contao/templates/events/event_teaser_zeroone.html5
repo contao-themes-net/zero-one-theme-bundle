@@ -1,27 +1,29 @@
-<div class="column col-3 col-sm-12 col-lg-6 event layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
+<div class="column col-3 col-sm-12 col-lg-6 event layout_teaser<?= $this->classList ?>">
 
   <?php if ($this->addImage): ?>
     <?php $this->insert('image', $this->arrData); ?>
   <?php endif; ?>
 
-  <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?> itemprop="url">
+  <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?>>
 
     <h3 itemprop="name"><?= $this->title ?></h3>
 
-    <?php if ($this->header): ?>
-    <div class="header<?= $this->classHeader ?>">
-      <?php if ($this->firstDay): ?><span class="day"><?= $this->firstDay ?>, </span><?php endif; ?><span class="date"><?= $this->firstDate ?></span>
-    </div>
-    <?php endif; ?>
+    <p class="time"><time datetime="<?= $this->datetime ?>"><?= $this->date ?><?php if ($this->time): ?> <?= $this->time ?><?php endif; ?></time></p>
 
-    <p class="time"><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time): ?>, <?= $this->time ?><?php endif; ?></time></p>
-
-    <div class="ce_text block" itemprop="description"><?= $this->teaser ?></div>
+    <div class="ce_text block"><?= $this->teaser ?></div>
 
     <?php if ($this->hasDetails): ?>
-    <p class="more"><i class="icon icon-more"></i></p>
+      <p class="more"><i class="icon icon-more"></i></p>
     <?php endif; ?>
 
   </a>
 
 </div>
+
+<?php
+
+// This template is used as an event list template by default, so we only add
+// JSON-LD data in case this is an event without a reader
+if (!$this->hasReader) {
+$this->addSchemaOrg($this->getSchemaOrgData());
+}

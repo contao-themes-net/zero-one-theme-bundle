@@ -1,18 +1,14 @@
 
-<div class="column col-3 col-sm-12 col-lg-6 layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+<div class="column col-3 col-sm-12 col-lg-6 layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>">
   <div class="inside">
-    <?php if ($this->hasMetaFields): ?>
-      <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->parseDate("d. F Y", $this->timestamp); ?></time>
-        <span itemprop="author"><?php if($this->author): ?><?= $this->author ?><?php else: ?><span class="invisible">{{page::rootPageTitle}}</span><?php endif; ?></span>
-        <?= $this->commentCount ?>
-        <span class="invisible" itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><span itemprop="name"><?php if($this->author): ?><?= $this->author ?><?php else: ?>{{page::rootPageTitle}}<?php endif; ?></span></span>
-    <?php endif; ?>
+
+    <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time></p>
 
     <a href="<?= $this->link ?>" aria-label="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>" title="<?= str_replace('%s', $this->headline, $GLOBALS['TL_LANG']['MSC']['readMore']) ?>">
 
-    <h3 itemprop="name"><span itemprop="headline"><?= $this->headline ?></span></h3>
+    <h3 itemprop="name"><span><?= $this->headline ?></span></h3>
 
-    <div class="ce_text block" itemprop="description">
+    <div class="ce_text block">
       <?= $this->teaser ?>
     </div>
 
@@ -23,3 +19,11 @@
     </a>
   </div>
 </div>
+
+<?php
+
+// This template is used as a news list template by default, so we only add
+// JSON-LD data in case this is a news article without a reader
+if (!$this->hasReader) {
+  $this->addSchemaOrg($this->getSchemaOrgData());
+}
