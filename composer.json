@@ -29,7 +29,7 @@
         "contao/core-bundle": "^5.0",
         "contao-themes-net/theme-components-bundle": "^1.4",
         "pdir/contao-theme-helper-bundle": "^1.4",
-        "symfony/twig-bundle": "^6.2",
+        "symfony/twig-bundle": "^5.4 || ^6.0",
         "terminal42/contao-folderpage": "^3.0"
     },
     "require-dev": {
