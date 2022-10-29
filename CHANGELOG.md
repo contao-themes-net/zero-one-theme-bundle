@@ -19,6 +19,7 @@ Types of changes
 ## [1.10.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.10.0) – 2022-10-07
 
 - [Added] now you can use `$GLOBALS['CUSTOM_STYLES']` in templates to add scss files from files/zeroOne/scss
+- [Changed] now require terminal42/contao-folderpage version 2.* or 3.*
 
 ## [1.9.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.9.2) – 2022-09-09
 
