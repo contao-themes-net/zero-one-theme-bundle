@@ -30,6 +30,9 @@ class ThemeStyleExtension extends AbstractExtension
         ];
     }
 
+    /**
+     * @param array<int, string> $styles
+     */
     public function addStylesToGlobal(array $styles): void
     {
         $GLOBALS['ZERO_ONE_STYLES'] = array_merge($GLOBALS['ZERO_ONE_STYLES'], $styles);

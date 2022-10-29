@@ -36,7 +36,10 @@ class FileExtension extends AbstractExtension
         ];
     }
 
-    public function getFile(string $uuid, $attribute = null): string|int|array|float
+    /**
+     * @return string|int|array<int, string>|float
+     */
+    public function getFile(string $uuid, string|null $attribute = null): string|int|array|float
     {
         $filesAdapter = $this->framework->getAdapter(FilesModel::class);
         $filesModel = $filesAdapter->findByUuid($uuid);
@@ -59,8 +62,8 @@ class FileExtension extends AbstractExtension
             'importantPartWidth' => $filesModel->importantPartWidth,
             'importantPartHeight' => $filesModel->importantPartHeight,
             'absolutePath' => $filesModel->getAbsolutePath(),
-            'metaFields' => $filesModel->getMetaFields() ?? [],
-            'metadata' => $filesModel->getMetadata() ?? [],
+            'metaFields' => $filesModel->getMetaFields(),
+            'metadata' => $filesModel->getMetadata(),
             default => $filesModel->id,
         };
     }

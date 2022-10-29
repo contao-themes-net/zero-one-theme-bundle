@@ -23,7 +23,6 @@ use Contao\File;
 use Contao\StringUtil;
 use Contao\System;
 use ScssPhp\ScssPhp\Compiler;
-use ScssPhp\ScssPhp\Exception\SassException;
 use Symfony\Component\Filesystem\Path;
 
 class ThemeUtils
