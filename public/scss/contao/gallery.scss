@@ -1,0 +1,28 @@
+.content-gallery {
+  @for $i from 1 through 12 {
+    &[class*="cols-#{$i}"] li {
+      width: calc(100% / #{$i});
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    li {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "@Contao/content_element/headline.html.twig" %}
+
+{% block wrapper %}
+  {% set attributes = attrs(attributes|default).addClass(['headline-dotted']) %}
+  {{ parent() }}
+{% endblock %}
+
+{% block inner %}
+  <span class="dots">...</span>
+  {{- block('headline_inner') -}}
+  <span class="dots">...</span>
+{% endblock %}

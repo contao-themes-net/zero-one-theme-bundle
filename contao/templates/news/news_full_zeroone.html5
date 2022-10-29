@@ -1,0 +1,58 @@
+<div class="layout_full columns block<?= $this->class ?>">
+
+  <?php if ($this->addImage) {
+    $url = Contao\Environment::get('url').'/';
+    $GLOBALS['og:image'] = $url.$this->arrData['singleSRC'];
+    $GLOBALS['og:image:width'] = "600";
+    $GLOBALS['og:image:height'] = "600";
+  }
+  ?>
+
+  <?php if ($this->addImage): ?>
+    <div class="column col-4 col-xs-12 news-image">
+        <?php $this->insert('image', $this->arrData); ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="column <?php if ($this->addImage): ?>col-8<?php endif; ?> col-xs-12">
+    <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time></p>
+
+    <h1><?= $this->newsHeadline ?></h1>
+
+    <?php if ($this->hasSubHeadline): ?>
+      <h2><?= $this->subHeadline ?></h2>
+    <?php endif; ?>
+
+    <?php if ($this->hasText): ?>
+      <?= $this->text ?>
+    <?php else: ?>
+      <div class="ce_text block">
+        <?= $this->teaser ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($this->enclosure): ?>
+      <ul class="enclosure">
+        <?php foreach ($this->enclosure as $enclosure): ?>
+          <li class="download-element ext-<?= $enclosure['extension'] ?>">
+            <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    <?php endif; ?>
+
+    <p class="back"><a href="javascript:history.go(-1)" title="<?= $this->back ?>"><i class="icon icon-more"></i></a></p>
+  </div>
+
+</div>
+<?php $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/news-reader'; ?>
+
+<?php
+
+$schemaOrg = $this->getSchemaOrgData();
+
+if ($this->hasText) {
+  $schemaOrg['text'] = $this->rawHtmlToPlainText($this->text);
+}
+
+$this->addSchemaOrg($schemaOrg);

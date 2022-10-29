@@ -1,0 +1,9 @@
+{% extends "@Contao/content_element/table.html.twig" %}
+
+{% block wrapper %}
+  {% set table_attributes = attrs(table_attributes|default).addClass(['table', element_css_classes]) %}
+  {{ parent() }}
+
+  {% set elementStyles = ['_tables', 'contao/tables'] %}
+  {{ elementStyles|addToThemeStyles}}
+{% endblock %}

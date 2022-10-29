@@ -1,0 +1,8 @@
+{% extends "@Contao/content_element/gallery.html.twig" %}
+
+{% block wrapper %}
+  {{ parent() }}
+
+  {% set elementStyles = ['contao/gallery'] %}
+  {{ elementStyles|addToThemeStyles}}
+{% endblock %}

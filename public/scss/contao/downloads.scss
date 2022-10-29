@@ -1,0 +1,40 @@
+.content-download a {
+  position: relative;
+
+  &:before {
+    color: $zeroOneColor_1;
+  }
+}
+
+.content-download a:before, li.download-element:before {
+  content: "↓";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 24px;
+}
+
+.content-download, li.download-element {
+  a {
+    padding: 10px 0 10px 25px;
+    display: block;
+    word-break: break-word;
+  }
+}
+
+.content-downloads ul {
+  padding: 0;
+}
+
+li.download-element {
+  position: relative;
+  list-style: none;
+
+  &:before {
+    content: "↓";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 24px;
+  }
+}

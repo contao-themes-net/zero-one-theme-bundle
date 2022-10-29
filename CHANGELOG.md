@@ -10,6 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.0.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.0) – 2022-10-28
+
+- [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
+- [Changed] Increase Contao version to 5 and increase PHP version to 8.1
+- [Removed] Cleanup older Contao SQL files
+
 ## [1.10.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.10.0) – 2022-10-07
 
 - [Added] now you can use `$GLOBALS['CUSTOM_STYLES']` in templates to add scss files from files/zeroOne/scss

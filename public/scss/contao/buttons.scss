@@ -1,0 +1,67 @@
+.btn {
+  border-radius: $border-radius;
+  padding: 5px 60px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  font-weight: 500;
+  border: none;
+  max-width: 100%;
+  flex-wrap: wrap;
+  white-space: inherit;
+  line-height: 1.2;
+  height: inherit;
+  width: max-content;
+  background: $zeroOneColor_2;
+  color: $zeroOneColor_5;
+  transition: background .2s;
+  -webkit-transition: background .2s;
+
+  &:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error):visited {
+    color: $zeroOneColor_5;
+
+    &:hover {
+      color: $zeroOneColor_5;
+    }
+  }
+
+  &:hover {
+    background: $zeroOneColor_1;
+  }
+
+  &.btn-sm {
+    padding: 5px 30px;
+  }
+
+  &.btn-lg {
+    padding: 5px 60px;
+  }
+
+  &.btn-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.btn-link:hover {
+    color: $zeroOneColor_5;
+  }
+}
+
+.ie, .edge, .ios {
+  .btn {
+    min-height: inherit;
+    width: auto;
+    display: table;
+    padding: 15px 60px;
+
+    &.btn-block {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 10px 20px;
+  }
+}
