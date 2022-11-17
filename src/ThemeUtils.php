@@ -53,10 +53,10 @@ class ThemeUtils
         self::$scssFolder = Path::join(self::getWebDir(), 'bundles', self::$themeFolder, self::$scssFolder);
 
         $scssStr = '';
-        $styles = implode(" ,", array_unique($GLOBALS['ZERO_ONE_STYLES']));
+        $styles = implode(' ,', array_unique($GLOBALS['ZERO_ONE_STYLES']));
 
         if (isset($GLOBALS['CUSTOM_STYLES'])) {
-            $styles .= ','.implode(" ,", array_unique($GLOBALS['CUSTOM_STYLES']));
+            $styles .= ','.implode(' ,', array_unique($GLOBALS['CUSTOM_STYLES']));
         }
 
         $hash = hash('ripemd160', $styles);
