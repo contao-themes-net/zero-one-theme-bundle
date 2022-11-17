@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.0.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.1) – 2022-11-17
+
+- [Fixed] fix for using `$GLOBALS['CUSTOM_STYLES']`
+
 ## [2.0.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.0) – 2022-10-28
 
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
