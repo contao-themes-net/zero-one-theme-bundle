@@ -87,7 +87,6 @@ class InitialDemoDataMigration extends AbstractMigration
     {
         $this->contaoFramework->initialize();
 
-        $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
         $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
 
         foreach (explode("\n", file_get_contents($this->projectDir.'/'.$this->contaoFolder.'/'.$this->sqlFile)) as $sql) {
