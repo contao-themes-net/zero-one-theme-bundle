@@ -18,8 +18,14 @@ class ThemeUtils
 
     public static function getCombinedStylesheet() {
         $scssStr = '';
-        $hash = hash('ripemd160', implode(" ,",$GLOBALS['ZERO_ONE_STYLES']));
-        $objFile  = new File('var/cache/zeroOne/scss/' . $hash . '.scss');
+        $styles = implode(" ,",array_unique($GLOBALS['ZERO_ONE_STYLES']));
+
+        if (isset($GLOBALS['CUSTOM_STYLES'])) {
+            $styles .= ','.implode(" ,",array_unique($GLOBALS['CUSTOM_STYLES']));
+        }
+
+        $hash = hash('ripemd160', $styles);
+        $objFile = new File('var/cache/zeroOne/scss/' . $hash . '.scss');
 
         if(!$objFile->exists()) {
             // add 0.1 to end of array
