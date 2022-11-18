@@ -13,6 +13,7 @@ Types of changes
 ## [2.0.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.1) – 2022-11-04
 
 - [Changed] Change migration order
+- [Fixed] fix for using `$GLOBALS['CUSTOM_STYLES']`
 
 ## [2.0.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.0) – 2022-10-28
 
