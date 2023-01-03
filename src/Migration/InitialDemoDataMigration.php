@@ -44,6 +44,10 @@ class InitialDemoDataMigration extends AbstractMigration
      */
     public function shouldRun(): bool
     {
+        if (version_compare(VERSION, '5.0', '<')) {
+            return false;
+        }
+
         $schemaManager = $this->connection->createSchemaManager();
 
         // If the database tables itself does not exist we should do nothing
