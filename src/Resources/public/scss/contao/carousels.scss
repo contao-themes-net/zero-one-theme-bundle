@@ -6,6 +6,12 @@
   color: $zeroOneColor_2;
 }
 
+#wrapper .carousel.fade .carousel-container .carousel-item,
+#wrapper .carousel.fade .carousel-image-checked {
+  animation: none;
+  transition: opacity 0.6s ease-out;
+}
+
 .carousel {
   height: $carouselHeight;
 
@@ -60,6 +66,10 @@
 
   .image_container {
     height: 100%;
+  }
+
+  img {
+    width: 100%;
   }
 }
 

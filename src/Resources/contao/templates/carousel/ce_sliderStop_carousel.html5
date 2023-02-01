@@ -2,7 +2,7 @@
   <!-- carousel navigation -->
   <div class="carousel-nav">
     <?php for($i = 1; $i < $GLOBALS['SLIDER_ID']; $i++): ?>
-      <label class="nav-item text-hide c-hand" for="slide-<?= $i ?>"><?= $i ?></label>
+      <label class="nav-item text-hide c-hand" for="carousel<?= $GLOBALS['CAROUSEL_ID'] ?>-slide-<?= $i ?>"><?= $i ?></label>
     <?php endfor; ?>
   </div>
 </div>
