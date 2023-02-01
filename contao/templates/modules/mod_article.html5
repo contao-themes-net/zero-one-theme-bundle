@@ -67,4 +67,7 @@ if(strpos($this->class,"hero")!==false):
   $GLOBALS['ZERO_ONE_STYLES'][] = '_hero';
   $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/hero';
 endif;
+if(strpos($this->class,"bg-")!==false):
+  $GLOBALS['ZERO_ONE_STYLES'][] = 'contao/article-bg';
+endif;
 ?>

@@ -10,9 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.0.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.2) – 2023-01-31
+## [2.1.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.1.0) – 2023-02-01
 
+- [Added] Use css classes to add a background color to an article
 - [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
+- [Fixed] Optimize dark mode
 
 ## [2.0.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.1) – 2022-11-04
 
