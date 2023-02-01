@@ -13,6 +13,7 @@ Types of changes
 ## [2.1.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.1.0) – 2023-02-01
 
 - [Added] Use css classes to add a background color to an article
+- [Added] Add fade effect to carousel
 - [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
 - [Fixed] Optimize dark mode
 
