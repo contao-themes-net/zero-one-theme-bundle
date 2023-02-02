@@ -17,6 +17,7 @@ Types of changes
 - [Added] Add sql files for Contao 5.1
 - [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
 - [Fixed] Optimize dark mode
+- [Fixed] Optimize backend setup page in dark mode (>= Contao 5.1)
 
 ## [2.0.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.1) – 2022-11-04
 

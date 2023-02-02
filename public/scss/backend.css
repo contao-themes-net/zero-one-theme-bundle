@@ -50,3 +50,11 @@
 .be_zeroonetheme_setup .button a:hover {
     background: #ff8562 ;
 }
+
+html[data-color-scheme=dark] .be_zeroonetheme_setup a {
+    color: #fff;
+}
+
+html[data-color-scheme=dark] .be_zeroonetheme_setup img {
+    filter: invert(1);
+}
