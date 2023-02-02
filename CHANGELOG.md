@@ -15,6 +15,7 @@ Types of changes
 - [Added] Use css classes to add a background color to an article
 - [Added] Add fade effect to carousel
 - [Fixed] Optimize dark mode
+- [Changed] Update sql files for contao 4.13
 
 ## [1.10.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.10.1) – 2022-11-17
 
