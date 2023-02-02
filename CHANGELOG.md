@@ -14,6 +14,7 @@ Types of changes
 
 - [Added] Use css classes to add a background color to an article
 - [Added] Add fade effect to carousel
+- [Added] Add sql files for Contao 5.1
 - [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
 - [Fixed] Optimize dark mode
 
