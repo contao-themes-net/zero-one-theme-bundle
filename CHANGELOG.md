@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-01
+## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-15
 
 - [Added] Use css classes to add a background color to an article
 - [Added] Add fade effect to carousel
