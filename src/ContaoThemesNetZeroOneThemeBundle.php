@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * 0.1 theme for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur // pdir GmbH
+ * Copyright (C) 2023 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-themes-net/zero-one-theme-bundle
  * @link       https://github.com/contao-themes-net/zero-one-theme-bundle

@@ -5,8 +5,8 @@ $GLOBALS['SLIDER_ID']++;
 ?>
 
 <figure class="carousel-item <?= $this->class ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-  <label class="item-prev" for="slide-<?= $prev ?>"><i class="icon icon-arrow-left"></i></label>
-  <label class="item-next" for="slide-<?= $next ?>"><i class="icon icon-arrow-right"></i></label>
+  <label class="item-prev" for="carousel<?= $GLOBALS['CAROUSEL_ID'] ?>-slide-<?= $prev ?>"><i class="icon icon-arrow-left"></i></label>
+  <label class="item-next" for="carousel<?= $GLOBALS['CAROUSEL_ID'] ?>-slide-<?= $next ?>"><i class="icon icon-arrow-right"></i></label>
 
   <div class="content">
     <?php if ($this->headline): ?>

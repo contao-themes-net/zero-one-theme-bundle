@@ -7,8 +7,6 @@
   #wrapper {
     a, a:visited {
       &:not(.btn) {
-        color: #fff;
-
         &:hover {
           color: #fff;
         }
@@ -41,6 +39,10 @@
     }
 
     .calendar, .minicalendar {
+      a {
+        color: #fff;
+      }
+
       th, td:not(.active) {
         background: #3c3c3c;
         color: #fff;
@@ -59,6 +61,10 @@
       &:not([class*="bg-"]) .inside {
         background: #3c3c3c;
       }
+    }
+
+    .ce_ct_teaserBox .inside h4 a {
+      color: #fff;
     }
 
     .carousel-item:not([class*="text-"]) {
@@ -112,12 +118,20 @@
     }
 
     .mod_eventlist {
+      .event a {
+        color: #fff;
+      }
+
       .time, .header {
         color: #c3c3c3;
       }
     }
 
     .mod_newslist {
+      a {
+        color: #fff;
+      }
+
       h2, h3, h4, h5, h6 {
         color: #fff;
       }
@@ -149,6 +163,10 @@
     }
 
     .tabs figure>div {
+      color: #fff;
+    }
+
+    .tab.tab-block .tab-item a {
       color: #fff;
     }
   }

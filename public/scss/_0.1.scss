@@ -15,6 +15,10 @@ a:focus {
   box-shadow: none;
 }
 
+a {
+  transition: all .3s;
+}
+
 a:hover {
   color: $link-color-dark;
 }
@@ -505,10 +509,6 @@ h1, h2, h3, h4, h5, h6 {
 .logo-text-white img path {
   fill: $light-color;
   fill-rule: evenodd;
-}
-
-#main {
-  padding-bottom: 50px;
 }
 
 .media.content-text {

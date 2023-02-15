@@ -10,6 +10,15 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.1.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.1.0) – 2023-02-01
+
+- [Added] Use css classes to add a background color to an article
+- [Added] Add fade effect to carousel
+- [Added] Add sql files for Contao 5.1
+- [Fixed] Replace InsertTag `{{request_token}}` with `<?= $this->requestToken ?>`
+- [Fixed] Optimize dark mode
+- [Fixed] Optimize backend setup page in dark mode (>= Contao 5.1)
+
 ## [2.0.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.0.1) – 2022-11-04
 
 - [Changed] Change migration order
@@ -20,6 +29,13 @@ Types of changes
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
 - [Removed] Cleanup older Contao SQL files
+
+## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-15
+
+- [Added] Use css classes to add a background color to an article
+- [Added] Add fade effect to carousel
+- [Fixed] Optimize dark mode
+- [Changed] Update sql files for contao 4.13
 
 ## [1.10.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.10.0) – 2022-10-07
 

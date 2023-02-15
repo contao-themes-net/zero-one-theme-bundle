@@ -11,9 +11,9 @@
             / digital agentur</a></p>
           <h2>Interessante Links</h2>
           <ul class="link-list">
-            <li><a href="https://docs.contao-themes.net/#/zeroone_theme/index" target="_blank"
+            <li><a href="https://pdir.de/docs/de/contao/themes/zeroone/" target="_blank"
                    style="text-decoration: underline;">Dokumentation</a></li>
-            <li><a href="https://zeroone.contao-themes.net/" target="_blank"
+            <li><a href="https://0.1.contao-themes.net/" target="_blank"
                    style="text-decoration: underline;">Demo</a></li>
             <li><a href="https://contao-themes.net/theme-detail/zeroone.html" target="_blank"
                    style="text-decoration: underline;">Lizenz erwerben</a></li>
