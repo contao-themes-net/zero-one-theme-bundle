@@ -30,6 +30,13 @@ Types of changes
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
 - [Removed] Cleanup older Contao SQL files
 
+## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-15
+
+- [Added] Use css classes to add a background color to an article
+- [Added] Add fade effect to carousel
+- [Fixed] Optimize dark mode
+- [Changed] Update sql files for contao 4.13
+
 ## [1.10.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.10.0) – 2022-10-07
 
 - [Added] now you can use `$GLOBALS['CUSTOM_STYLES']` in templates to add scss files from files/zeroOne/scss
