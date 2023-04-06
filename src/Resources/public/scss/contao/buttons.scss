@@ -16,6 +16,7 @@
   color: $zeroOneColor_5;
   transition: background .2s;
   -webkit-transition: background .2s;
+  font-size: 1em;
 
   &:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error):visited {
     color: $zeroOneColor_5;
@@ -31,10 +32,12 @@
 
   &.btn-sm {
     padding: 5px 30px;
+    font-size: 0.875em;
   }
 
   &.btn-lg {
     padding: 5px 60px;
+    font-size: 1.125em;
   }
 
   &.btn-block {
