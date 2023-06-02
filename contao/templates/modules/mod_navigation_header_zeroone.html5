@@ -23,7 +23,7 @@
 
     {{theme::content::ZeroOne01/02}}
 
-    <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
+    <span id="<?= $this->skipId ?>" class="invisible"></span>
   </div>
 </nav>
 <!-- indexer::continue -->
