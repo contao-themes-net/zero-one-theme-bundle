@@ -102,8 +102,10 @@
         font-weight: bold;
       }
 
-      &:hover > ul {
-        display: block;
+      @media (min-width: $mobile-navbar-breakpoint + 1) {
+        &:hover > ul {
+          display: block;
+        }
       }
     }
 
@@ -204,6 +206,24 @@
     &.level_2 {
       background-size: 100%;
     }
+  }
+}
+
+.minus-icon {
+  display: none;
+}
+
+.submenu.open {
+  .minus-icon {
+    display: flex;
+  }
+
+  > ul {
+    display: block;
+  }
+
+  .plus-icon {
+    display: none;
   }
 }
 
@@ -334,9 +354,11 @@
           width: 100%;
         }
 
-        &:hover {
-          > .open-dropdown {
-            display: none;
+        @media (min-width: $mobile-navbar-breakpoint + 1) {
+          &:hover {
+            > .open-dropdown {
+              display: none;
+            }
           }
         }
       }

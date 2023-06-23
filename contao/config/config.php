@@ -71,6 +71,12 @@ $GLOBALS['ZERO_ONE_STYLES'][] = '_layout';
 $GLOBALS['ZERO_ONE_STYLES'][] = '_utilities';
 
 /**
+ * Load javascript
+ */
+
+$GLOBALS['TL_JAVASCRIPT']['zeroOneNavigation'] = 'bundles/contaothemesnetzeroonetheme/js/navigation.js|static';
+
+/**
  * Backend Modules
  */
 ArrayUtil::arrayInsert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, [
