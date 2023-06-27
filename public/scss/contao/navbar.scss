@@ -87,9 +87,12 @@
       padding: 0 0 0 5px;
     }
 
+    &.level_1 > li > a {
+      font-size: 1.2em;
+    }
+
     li {
       display: flex;
-      font-size: 1.2em;
       text-transform: uppercase;
       padding: 0 1em;
       position: relative;
@@ -129,7 +132,7 @@
         }
 
         a, strong {
-          font-size: 18px;
+          font-size: 1.125em;
           text-transform: none;
           padding: 2px 15px;
           width: auto;
@@ -158,6 +161,10 @@
       a:hover, a.active {
         text-decoration: none;
         background: $zeroOneColor_4;
+      }
+
+      .open-dropdown:hover {
+        background: none;
       }
     }
 
@@ -214,16 +221,19 @@
 }
 
 .submenu.open {
-  .minus-icon {
-    display: flex;
+  > .open-dropdown {
+    .minus-icon {
+      display: flex;
+    }
+
+    .plus-icon {
+      display: none;
+    }
   }
+
 
   > ul {
     display: block;
-  }
-
-  .plus-icon {
-    display: none;
   }
 }
 
@@ -319,7 +329,7 @@
           color: $light-color;
           background: none;
           margin-left: 15px;
-          font-size: 16px;
+          font-size: 0.889em;
         }
       }
     }

@@ -1,4 +1,4 @@
-div[class*=' bg-'] {
+div.mod_article[class*=' bg-'] {
   position: relative;
 
   &:before {
@@ -20,46 +20,46 @@ div[class*=' bg-'] {
   }
 }
 
-.bg-primary:before {
+.mod_article.bg-primary:before {
   @extend .bg-primary;
 }
 
-.bg-secondary:before {
+.mod_article.bg-secondary:before {
   @extend .bg-secondary;
 }
 
-.bg-dark:before {
+.mod_article.bg-dark:before {
   @extend .bg-dark;
 }
 
-.bg-gray:before {
+.mod_article.bg-gray:before {
   @extend .bg-gray;
 }
 
-.bg-light:before {
+.mod_article.bg-light:before {
   @extend .bg-light;
 }
 
-.bg-success:before {
+.mod_article.bg-success:before {
   @extend .bg-success;
 }
 
-.bg-warning:before {
+.mod_article.bg-warning:before {
   @extend .bg-warning;
 }
 
-.bg-error:before {
+.mod_article.bg-error:before {
   @extend .bg-error;
 }
 
-.bg-zeroone-2:before {
+.mod_article.bg-zeroone-2:before {
   background-color: $zeroOneColor_2;
 }
 
-.bg-zeroone-3:before {
+.mod_article.bg-zeroone-3:before {
   background-color: $zeroOneColor_3;
 }
 
-.bg-zeroone-4:before {
+.mod_article.bg-zeroone-4:before {
   background-color: $zeroOneColor_4;
 }

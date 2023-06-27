@@ -56,11 +56,13 @@
 
   input {
     @extend .form-input;
+    font-size: 1em;
   }
 
   select {
     @extend .form-select;
     -webkit-appearance: none;
+    font-size: 1em;
   }
 }
 
@@ -180,7 +182,7 @@ span.mandatory {
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 2em;
     padding-bottom: 5px;
     pointer-events: none;
   }
@@ -188,6 +190,10 @@ span.mandatory {
 
 .widget-checkbox {
   margin-bottom: 15px;
+}
+
+legend {
+  font-size: 1.125em;
 }
 
 @media (max-width: 840px) {
