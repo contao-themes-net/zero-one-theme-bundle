@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-04-06
+## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-06-27
 
 - [Changed] Change font sizes from px/rem to em
 - [Changed] Change mobile dropdown menu
