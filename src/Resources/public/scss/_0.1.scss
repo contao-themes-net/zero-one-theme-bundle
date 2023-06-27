@@ -58,6 +58,10 @@ h3 {
   color: $light-color;
   font-size: 1.125em;
 
+  @media (max-width: 600px) {
+    font-size: .9em;
+  }
+
   a {
     color: $light-color;
   }
@@ -355,6 +359,7 @@ footer {
     justify-content: center;
     position: relative;
     text-align: center;
+    overflow: hidden;
 
     &:before {
       position: absolute;

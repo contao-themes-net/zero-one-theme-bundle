@@ -51,7 +51,14 @@
 
     .text {
       width: 65%;
-      font-size: 1.125em;
+
+      p {
+        font-size: 1.125em;
+
+        @media (max-width: 600px) {
+          font-size: 1em;
+        }
+      }
     }
   }
 

@@ -18,6 +18,10 @@
   -webkit-transition: background .2s;
   font-size: 1em;
 
+  @media (max-width: 600px) {
+    font-size: 0.889em;
+  }
+
   &:not(.btn-primary):not(.btn-link):not(.btn-success):not(.btn-error):visited {
     color: $zeroOneColor_5;
 

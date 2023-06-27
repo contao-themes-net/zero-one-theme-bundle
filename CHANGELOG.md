@@ -13,6 +13,7 @@ Types of changes
 ## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-04-06
 
 - [Changed] Change font sizes from px/rem to em
+- [Changed] Change mobile dropdown menu
 
 ## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-15
 
