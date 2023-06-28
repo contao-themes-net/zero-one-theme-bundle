@@ -56,7 +56,11 @@ h3 {
 
 .page-footer {
   color: $light-color;
-  font-size: 18px;
+  font-size: 1.125em;
+
+  @media (max-width: 600px) {
+    font-size: .9em;
+  }
 
   a {
     color: $light-color;
@@ -80,7 +84,7 @@ h3 {
           content: "";
         }
         strong {
-          font-size: 18px;
+          font-size: 1.125em;
           font-weight: normal;
         }
       }
@@ -112,7 +116,7 @@ img {
   }
 
   em {
-    font-size: 23px;
+    font-size: 1.438em;
     line-height: 1.3;
   }
 }
@@ -192,7 +196,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 46px;
+  font-size: 2.875em;
   background: $zeroOneColor_1;
   border-radius: 100%;
   z-index: 1;
@@ -355,6 +359,7 @@ footer {
     justify-content: center;
     position: relative;
     text-align: center;
+    overflow: hidden;
 
     &:before {
       position: absolute;
@@ -403,7 +408,7 @@ footer {
 
   .mod_article {
     padding: 28px 20px;
-    font-size: 12px;
+    font-size: .75em;
   }
 }
 
@@ -413,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2.25em;
   line-height: 1.3;
 }
 
@@ -457,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &.headline-35 {
-    font-size: 35px;
+    font-size: 2.188em;
   }
 }
 
@@ -495,6 +500,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-more {
   background-image:url('../../../../bundles/contaothemesnetzeroonetheme/img/more.svg');
+  background-repeat: no-repeat;
 }
 
 .ie {
@@ -561,7 +567,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1080px) {
   footer > div:not(.footer-copyright) .ce_text {
-    font-size: 16px;
+    font-size: 1em;
   }
 }
 
@@ -608,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .bg-sunrise em {
-    font-size: 20px;
+    font-size: 1.111em;
   }
 
   .ce_hyperlink.s-circle {
@@ -620,7 +626,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 20px;
     width: 50px;
     height: 50px;
-    font-size: 28px;
+    font-size: 1.556em;
 
     &:after {
       width: 20px;
@@ -638,7 +644,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 
     .links {
-      font-size: 16px;
+      font-size: 0.889em;
       text-align: center;
 
       &.columns:not(.col-mx-auto) {
@@ -667,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     &.page-footer nav ul li strong {
-      font-size: 16px;
+      font-size: 0.889em;
     }
   }
 
@@ -676,21 +682,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 1.556em;
   }
 
   h2 {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 1.333em;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 1.222em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     &.headline-35 {
-      font-size: 24px;
+      font-size: 1.333em;
     }
 
     &.headline-dotted {
@@ -721,7 +727,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .contact-infos {
     padding: 70px 25%;
-    font-size: 14px;
+    font-size: 0.778em;
   }
 
   footer {
