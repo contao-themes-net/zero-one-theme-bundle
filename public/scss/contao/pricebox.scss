@@ -154,7 +154,7 @@
     color: $zeroOneColor_1;
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 0.75em;
     text-transform: uppercase;
     padding: 5px 10px;
     border-radius: 25px;
@@ -163,13 +163,13 @@
   .price {
     .amount {
       color: $zeroOneColor_2;
-      font-size: 32px;
+      font-size: 2em;
       font-weight: 700;
     }
 
     .label {
       color: $gray-color;
-      font-size: 14px;
+      font-size: 0.875em;
     }
   }
 

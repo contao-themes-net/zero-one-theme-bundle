@@ -16,7 +16,7 @@ footer {
       background: $dark-color;
       color: $light-color;
       text-transform: lowercase;
-      font-size: 16px;
+      font-size: 1em;
       font-weight: 500;
       padding: 0 60px 0 50px;
       border-top-right-radius: $border-radius;
@@ -38,7 +38,7 @@ footer {
 
     .text {
       height: 60px;
-      font-size: 16px;
+      font-size: 1em;
       padding: 0 30px;
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
@@ -80,12 +80,12 @@ footer {
     }
 
     + .ce_text {
-      font-size: 16px;
+      font-size: 1em;
     }
   }
 
   .newsletter h2 {
-    font-size: 20px;
+    font-size: 1.25em;
     margin-top: 0;
   }
 }

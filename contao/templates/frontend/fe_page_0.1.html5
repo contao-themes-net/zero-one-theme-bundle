@@ -26,7 +26,7 @@
 
   <?= $this->head ?>
 
-  <link rel="stylesheet" type="text/css" media="all" href="<?php ContaoThemesNet\ZeroOneThemeBundle\ThemeUtils::getCombinedStylesheet() // 0.1 theme css optimization ?>">
+  <?php ContaoThemesNet\ZeroOneThemeBundle\ThemeUtils::getCombinedStylesheet() ?>
 
   <?= $this->stylesheets ?>
 <?php $this->endblock(); ?>
