@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.2.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.2.1) – 2023-08-01
+
+- [Fixed] Fix mobile dropdown menu
+
 ## [2.2.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.2.0) – 2023-06-27
 
 - [Changed] Change mobile dropdown menu
@@ -34,6 +38,15 @@ Types of changes
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
 - [Removed] Cleanup older Contao SQL files
+
+## [1.12.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.1) – 2023-08-01
+
+- [Fixed] Fix mobile dropdown menu
+
+## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-06-27
+
+- [Changed] Change font sizes from px/rem to em
+- [Changed] Change mobile dropdown menu
 
 ## [1.11.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.11.0) – 2023-02-15
 
