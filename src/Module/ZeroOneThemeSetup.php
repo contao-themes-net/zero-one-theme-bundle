@@ -10,7 +10,7 @@ use ContaoThemesNet\ZeroOneThemeBundle\ThemeUtils;
 
 class ZeroOneThemeSetup extends \BackendModule
 {
-    const VERSION = '1.12.0';
+    const VERSION = '1.12.1';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 
