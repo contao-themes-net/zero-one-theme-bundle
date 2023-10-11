@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.2.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.2.2) – 2023-10-11
+
+- [Fixed] Replace InsertTag for request token in form_wrapper template
+
 ## [2.2.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.2.1) – 2023-08-01
 
 - [Fixed] Fix mobile dropdown menu
