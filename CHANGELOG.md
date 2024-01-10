@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.13.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2024-01-10
+
+- [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
+
 ## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-06-27
 
 - [Changed] Change font sizes from px/rem to em
