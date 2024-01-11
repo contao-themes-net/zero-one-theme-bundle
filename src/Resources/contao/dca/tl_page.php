@@ -9,6 +9,8 @@ PaletteManipulator::create()
     ->addField('megamenuImage', 'megamenu_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('megamenuImageSize', 'megamenu_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('regular', 'tl_page')
+    ->applyToPalette('forward', 'tl_page')
+    ->applyToPalette('redirect', 'tl_page')
 ;
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['megamenuImage'] = [

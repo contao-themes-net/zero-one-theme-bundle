@@ -1,12 +1,16 @@
 .megamenu-image {
   display: none;
+  margin: 10px 0 0;
+  transition: opacity .3s;
+
+  img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 961px) {
   .megamenu-image {
-    margin: 10px 0 0;
     display: block;
-    transition: opacity .3s;
   }
 
   .homepage .navbar.megamenu {
