@@ -7,11 +7,18 @@
   <?php endif; ?>
 
   <?php foreach ($this->items as $item): ?>
+    <?php
+      if($item['megamenuImage']) {
+        $imagePath = \Contao\FilesModel::findByUuid($item['megamenuImage'])->path;
+        $picture = \Contao\Picture::create($imagePath, unserialize($item['megamenuImageSize']))->getTemplateData();
+      }
+    ?>
+
     <?php if ($item['isActive']): ?>
       <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?>
 
-          <?php if($item['megamenuImage']): ?>
-            <div class="megamenu-image">{{picture::<?= \Contao\FilesModel::findByUuid($item['megamenuImage'])->path ?>?size=20}}</div>
+          <?php if(isset($picture)): ?>
+            <div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div>
           <?php endif; ?>
 
         </a>
@@ -24,8 +31,8 @@
     <?php else: ?>
       <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span>
 
-    <?php if($item['megamenuImage']): ?>
-      <div class="megamenu-image">{{picture::<?= \Contao\FilesModel::findByUuid($item['megamenuImage'])->path ?>?size=20}}</div>
+    <?php if(isset($picture)): ?>
+      <div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div>
     <?php endif; ?>
 
   </a>
