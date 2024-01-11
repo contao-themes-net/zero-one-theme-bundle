@@ -13,6 +13,7 @@ Types of changes
 ## [1.13.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2024-01-10
 
 - [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
+- [Changed] Update sql files for contao 4.13
 
 ## [1.12.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2023-06-27
 
