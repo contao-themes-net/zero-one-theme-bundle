@@ -149,20 +149,6 @@
       color: #000;
     }
 
-    .navbar.megamenu ul {
-      .level_2 {
-        background: #3c3c3c;
-      }
-
-      &.level_2>li>a, &.level_3>li>a, &.level_4>li>a {
-        color: #fff;
-
-        &:hover {
-          opacity: .8;
-        }
-      }
-    }
-
     .pagination .page-item a:hover {
       color: #fff;
       text-decoration: underline;
@@ -182,6 +168,25 @@
 
     .tab.tab-block .tab-item a {
       color: #fff;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 961px) {
+  #wrapper {
+    .navbar.megamenu ul {
+      .level_2 {
+        box-shadow: 0 0.3rem 0.3rem rgb(25 25 25 / 40%);
+        background: #3c3c3c;
+      }
+
+      &.level_2>li>a, &.level_3>li>a, &.level_4>li>a {
+        color: #fff;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
     }
   }
 }
