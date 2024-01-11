@@ -11,6 +11,10 @@
   .logo img {
     width: inherit;
   }
+
+  .navbar-section {
+    padding: 0 15px;
+  }
 }
 
 .navbar {
@@ -21,6 +25,7 @@
 
   &.block {
     display: flex;
+    flex-wrap: inherit;
   }
 
   .mod_article {
@@ -38,6 +43,11 @@
     align-items: center;
     flex-wrap: wrap;
     list-style-type: none !important;
+
+    &.level_1 {
+      max-width: calc(100% - 100px);
+      justify-content: flex-start;
+    }
 
     &.level_1 > li {
       &:after {
@@ -237,6 +247,12 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
 @media (max-width: 1200px) {
   .homepage .navbar .logo img {
     max-width: 200px;
@@ -297,7 +313,6 @@
       .level_2, .level_3 {
         position: relative;
         padding: 0;
-        margin: 15px 0 0;
         width: 100%;
         background: none;
 
