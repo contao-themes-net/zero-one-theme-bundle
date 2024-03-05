@@ -1,5 +1,6 @@
 <?php
 
+use Contao\BackendUser;
 use Contao\Config;
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\System;
@@ -25,6 +26,6 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['megamenuImageSize'] = [
 	'exclude' => true,
 	'inputType' => 'imageSize',
 	'eval' => ['rgxp' => 'natural', 'includeBlankOption' => true, 'nospace' => true, 'helpwizard' => true, 'tl_class' => 'w50'],
-	'options_callback' => static fn () => System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(BackendUser::getInstance()),
+	'options_callback' => static fn () => System::getContainer()->get('contao.image.sizes')->getOptionsForUser(BackendUser::getInstance()),
 	'sql' => 'TEXT null',
 ];

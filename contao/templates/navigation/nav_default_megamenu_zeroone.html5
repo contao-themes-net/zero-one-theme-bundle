@@ -1,3 +1,4 @@
+
 <ul class="<?= $this->level ?>">
   <?php if($this->level == "level_1"): ?>
     <li class="show-lg search">
@@ -8,13 +9,12 @@
   <?php foreach ($this->items as $item): ?>
     <?php
         if($item['megamenuImage']) {
-          $imagePath = \Contao\FilesModel::findByUuid($item['megamenuImage'])->path;
-          $picture = \Contao\Picture::create($imagePath, unserialize($item['megamenuImageSize']))->getTemplateData();
+          $imagePath = Contao\FilesModel::findByUuid($item['megamenuImage'])->path;
         }
     ?>
 
     <?php if ($item['isActive']): ?>
-      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div><?php endif; ?></a>
+      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?= $this->figure($imagePath, unserialize($item['megamenuImageSize'])) ?></div><?php endif; ?></a>
 
         <?php if( !empty($item['subitems']) ): ?>
           <a href="#open-nav" class="open-dropdown"><span class="plus-icon">+</span><span class="minus-icon">-</span></a>
@@ -23,7 +23,7 @@
         <?= $item['subitems'] ?>
       </li>
     <?php else: ?>
-      <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div><?php endif; ?></a>
+      <li<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?>><a href="<?= $item['href'] ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?><?php if ('' !== $item['accesskey']): ?> accesskey="<?= $item['accesskey'] ?>"<?php endif; ?><?= $item['target'] ?><?= $item['rel'] ?? '' ?><?php if (!empty($item['subitems'])): ?> aria-haspopup="true"<?php endif; ?>><span itemprop="name"><?= $item['link'] ?></span><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?= $this->figure($imagePath, unserialize($item['megamenuImageSize'])) ?></div><?php endif; ?></a>
 
       <?php if( !empty($item['subitems']) ): ?>
         <a href="#open-nav" class="open-dropdown"><span class="plus-icon">+</span><span class="minus-icon">-</span></a>
