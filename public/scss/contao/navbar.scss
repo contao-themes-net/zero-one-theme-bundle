@@ -11,6 +11,10 @@
   .logo img {
     width: inherit;
   }
+
+  .navbar-section {
+    padding: 0 15px;
+  }
 }
 
 .navbar {
@@ -21,10 +25,15 @@
 
   &.block {
     display: flex;
+    flex-wrap: inherit;
   }
 
   .mod_article {
     padding: 0;
+
+    &.level_1 {
+      justify-content: flex-start;
+    }
   }
 
   .navbar-section {
@@ -237,6 +246,12 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
 @media (max-width: 1200px) {
   .homepage .navbar .logo img {
     max-width: 200px;
@@ -297,7 +312,6 @@
       .level_2, .level_3 {
         position: relative;
         padding: 0;
-        margin: 15px 0 0;
         width: 100%;
         background: none;
 

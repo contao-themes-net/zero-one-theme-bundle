@@ -22,7 +22,7 @@ use Contao\BackendModule;
 
 class ZeroOneThemeSetup extends BackendModule
 {
-    public const VERSION = '2.2.2';
+    public const VERSION = '2.3.0';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 
