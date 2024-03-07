@@ -131,7 +131,6 @@
 
       li {
         width: 100%;
-        text-align: center;
         padding: 3px 0;
 
         &.active, &.trail {
@@ -172,6 +171,10 @@
         background: $zeroOneColor_4;
       }
 
+      li {
+        text-align: left;
+      }
+
       .open-dropdown:hover {
         background: none;
       }
@@ -186,6 +189,7 @@
 
       li {
         justify-content: flex-end;
+        text-align: right;
       }
 
       a, strong {
