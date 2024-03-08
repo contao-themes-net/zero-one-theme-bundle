@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.3.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.3.0) – 2024-03-08
+
+- [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
+- [Changed] Update sql files for contao 5.3
+
 ## [2.2.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.2.2) – 2023-10-11
 
 - [Fixed] Replace InsertTag for request token in form_wrapper template
@@ -42,6 +47,11 @@ Types of changes
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Changed] Increase Contao version to 5 and increase PHP version to 8.1
 - [Removed] Cleanup older Contao SQL files
+
+## [1.13.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2024-03-08
+
+- [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
+- [Changed] Update sql files for contao 4.13
 
 ## [1.12.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.1) – 2023-08-01
 

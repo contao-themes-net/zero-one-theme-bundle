@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * 0.1 theme for Contao Open Source CMS
  *
- * Copyright (C) 2023 pdir / digital agentur // pdir GmbH
+ * Copyright (C) 2024 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-themes-net/zero-one-theme-bundle
  * @link       https://github.com/contao-themes-net/zero-one-theme-bundle
@@ -22,7 +22,7 @@ use Contao\BackendModule;
 
 class ZeroOneThemeSetup extends BackendModule
 {
-    public const VERSION = '2.2.2';
+    public const VERSION = '2.3.0';
 
     protected $strTemplate = 'be_zeroonetheme_setup';
 

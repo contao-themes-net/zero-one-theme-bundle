@@ -11,6 +11,10 @@
   .logo img {
     width: inherit;
   }
+
+  .navbar-section {
+    padding: 0 15px;
+  }
 }
 
 .navbar {
@@ -21,10 +25,15 @@
 
   &.block {
     display: flex;
+    flex-wrap: inherit;
   }
 
   .mod_article {
     padding: 0;
+
+    &.level_1 {
+      justify-content: flex-start;
+    }
   }
 
   .navbar-section {
@@ -122,7 +131,6 @@
 
       li {
         width: 100%;
-        text-align: center;
         padding: 3px 0;
 
         &.active, &.trail {
@@ -163,6 +171,10 @@
         background: $zeroOneColor_4;
       }
 
+      li {
+        text-align: left;
+      }
+
       .open-dropdown:hover {
         background: none;
       }
@@ -177,6 +189,7 @@
 
       li {
         justify-content: flex-end;
+        text-align: right;
       }
 
       a, strong {
@@ -234,6 +247,12 @@
 
   > ul {
     display: block;
+  }
+}
+
+@media (max-width: 1500px) {
+  .navbar {
+    padding: 0 40px;
   }
 }
 
@@ -297,7 +316,6 @@
       .level_2, .level_3 {
         position: relative;
         padding: 0;
-        margin: 15px 0 0;
         width: 100%;
         background: none;
 
