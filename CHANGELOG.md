@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.13.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.0) – 2024-03-08
+
+- [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
+- [Changed] Update sql files for contao 4.13
+
 ## [1.12.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/1.12.1) – 2023-08-01
 
 - [Fixed] Fix mobile dropdown menu
