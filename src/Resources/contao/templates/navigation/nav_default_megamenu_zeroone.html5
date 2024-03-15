@@ -15,13 +15,7 @@
     ?>
 
     <?php if ($item['isActive']): ?>
-      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?= $item['link'] ?>
-
-          <?php if(isset($item['megamenuImage'])): ?>
-            <div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div>
-          <?php endif; ?>
-
-        </a>
+      <li class="<?= $item['class'] ?>"><a href="{{env::path}}{{env::request}}" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?= $item['class'] ?><?php if( !empty($item['subitems']) ): ?> submenu<?php endif; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="name"><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div><?php endif; ?><?= $item['link'] ?></a>
 
         <?php if( !empty($item['subitems']) ): ?>
         <a href="#open-nav" class="open-dropdown"><span class="plus-icon">+</span><span class="minus-icon">-</span></a>
@@ -29,13 +23,7 @@
 
         <?= $item['subitems'] ?></li>
     <?php else: ?>
-      <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span>
-
-    <?php if(isset($item['megamenuImage'])): ?>
-      <div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div>
-    <?php endif; ?>
-
-  </a>
+      <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><?php if(isset($item['megamenuImage'])): ?><div class="megamenu-image"><?php $this->insert('picture_default', $picture); ?></div><?php endif; ?><span itemprop="name"><?= $item['link'] ?></span></a>
 
   <?php if( !empty($item['subitems']) ): ?>
   <a href="#open-nav" class="open-dropdown"><span class="plus-icon">+</span><span class="minus-icon">-</span></a>
