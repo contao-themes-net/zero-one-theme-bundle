@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.3.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.3.1) – 2024-03-14
+
+- [Changed] Change image position in the megamenu
+
 ## [2.3.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.3.0) – 2024-03-08
 
 - [Added] Add mega menu (new templates `mod_navigation_megamenu_zeroone` and `nav_default_megamenu_zeroone`)
