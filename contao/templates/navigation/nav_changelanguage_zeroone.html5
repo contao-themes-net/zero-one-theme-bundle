@@ -1,0 +1,10 @@
+<ul>
+  <li>
+    <a href="" class="lang-icon" title="{{iflng::de}}Sprache{{iflng::en}}Language{{iflng}}"><img src="bundles/contaothemesnetzeroonetheme/img/language-solid.svg" alt="{{iflng::de}}Sprache Icon{{iflng::en}}Language Icon{{iflng}}" width="50"></a>
+    <ul class="level_2">
+      <?php foreach ($this->items as $item): ?>
+      <li<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?>><a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>"<?php if ($item['class']) echo ' class="' . $item['class'] . '"'; ?><?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?><?= $item['target'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span></a></li>
+      <?php endforeach; ?>
+    </ul>
+  </li>
+</ul>

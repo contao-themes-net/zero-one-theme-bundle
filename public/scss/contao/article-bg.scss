@@ -21,35 +21,35 @@ div.mod_article[class*=' bg-'] {
 }
 
 .mod_article.bg-primary:before {
-  @extend .bg-primary;
+  background-color: $primary-color;
 }
 
 .mod_article.bg-secondary:before {
-  @extend .bg-secondary;
+  background-color: $secondary-color;
 }
 
 .mod_article.bg-dark:before {
-  @extend .bg-dark;
+  background-color: $dark-color;
 }
 
 .mod_article.bg-gray:before {
-  @extend .bg-gray;
+  background-color: $gray-color;
 }
 
 .mod_article.bg-light:before {
-  @extend .bg-light;
+  background-color: $light-color;
 }
 
 .mod_article.bg-success:before {
-  @extend .bg-success;
+  background-color: $success-color;
 }
 
 .mod_article.bg-warning:before {
-  @extend .bg-warning;
+  background-color: $warning-color;
 }
 
 .mod_article.bg-error:before {
-  @extend .bg-error;
+  background-color: $error-color;
 }
 
 .mod_article.bg-zeroone-2:before {
