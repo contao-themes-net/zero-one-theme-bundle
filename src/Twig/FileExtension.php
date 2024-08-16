@@ -39,8 +39,12 @@ class FileExtension extends AbstractExtension
     /**
      * @return string|int|array<int, string>|float
      */
-    public function getFile(string $uuid, string|null $attribute = null): string|int|array|float
+    public function getFile(?string $uuid, string|null $attribute = null): string|int|array|float
     {
+        if (null === $uuid) {
+            return '';
+        }
+
         $filesAdapter = $this->framework->getAdapter(FilesModel::class);
         $filesModel = $filesAdapter->findByUuid($uuid);
 
