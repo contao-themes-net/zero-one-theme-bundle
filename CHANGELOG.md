@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.0](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.0) – 2024-08-16
+
+- [Added] Changelanguage dropdown
+- [Fixed] Uuid is null in Twig file extension
+
 ## [2.3.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.3.1) – 2024-03-14
 
 - [Changed] Change image position in the megamenu

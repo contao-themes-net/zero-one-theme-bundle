@@ -1,9 +1,9 @@
 
 <ul class="<?= $this->level ?>">
   <?php if($this->level == "level_1"): ?>
-  <li class="show-lg search">
-    {{theme::content::ZeroOne01/03}}
-  </li>
+    <li class="show-lg search">
+      {{theme::content::ZeroOne01/03}}
+    </li>
   <?php endif; ?>
 
   <?php foreach ($this->items as $item): ?>
@@ -25,4 +25,10 @@
   <?= $item['subitems'] ?></li>
     <?php endif; ?>
   <?php endforeach; ?>
+
+  <?php if($this->level == "level_1"): ?>
+    <li class="show-lg nav-bottom">
+      {{theme::content::ZeroOne01/04}}
+    </li>
+  <?php endif; ?>
 </ul>
