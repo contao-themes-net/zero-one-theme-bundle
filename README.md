@@ -53,13 +53,14 @@ Only paths starting from the Contao root are supported.
 
 Compatible with Contao >=4.4
 
-## dependencies
+## dependencies & licenses
 
 - [Spectre CSS Framework](https://github.com/picturepan2/spectre)
 - [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
 - [Theme Components Bundle](https://github.com/contao-themes-net/theme-components-bundle) by [pdir GmbH](https://pdir.de/ "Webdesign für Dresden")
 - [Contao Folderpage](https://github.com/terminal42/contao-folderpage)
 - [Contao Advanced Classes](https://github.com/Contao-DD/advanced-classes-bundle)
+- [Fontawesome](https://fontawesome.com/) | [Github](https://github.com/FortAwesome/Font-Awesome) | Font Awesome Free License
 
 ## Donation
 
