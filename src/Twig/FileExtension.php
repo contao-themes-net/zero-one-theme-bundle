@@ -44,7 +44,7 @@ class FileExtension extends AbstractExtension
         if (null === $uuid) {
             return '';
         }
-        
+
         $filesAdapter = $this->framework->getAdapter(FilesModel::class);
         $filesModel = $filesAdapter->findByUuid($uuid);
 
