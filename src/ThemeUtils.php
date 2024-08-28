@@ -114,8 +114,11 @@ class ThemeUtils
         ]);
 
         $objFile = new File('assets/css/zeroOne.'.$hash.'.css');
-        $objFile->write($compiler->compileString($scssStr)->getCss());
-        $objFile->close();
+
+        if (!$objFile->exists()) {
+            $objFile->write($compiler->compileString($scssStr)->getCss());
+            $objFile->close();
+        }
 
         $GLOBALS['TL_CSS'][] = $objFile->path.'|static';
     }
