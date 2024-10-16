@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.4.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.1) – 2024-10-01
+## [2.4.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.1) – 2024-10-16
 
 - [Fixed] Fix new css generation with every page request
 - [Fixed] Fix header search field
