@@ -2,13 +2,13 @@
 // The number of carousel images
 $carousel-number: 8;
 
-.carousel-image-checked {
+%carousel-image-checked { 
   animation: carousel-slidein .75s ease-in-out 1;
   opacity: 1;
   z-index: $zindex-1;
 }
 
-.carousel-nav-checked {
+%carousel-nav-checked { 
   color: $gray-color-light;
 }
 
@@ -25,6 +25,11 @@ $carousel-number: 8;
     height: 100%;
     left: 0;
     position: relative;
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 56.25%;
+    }
 
     .carousel-item {
       animation: carousel-slideout 1s ease-in-out 1;
@@ -65,15 +70,15 @@ $carousel-number: 8;
   }
 
   .carousel-locator {
-    @for $i from 1 through $carousel-number {
+    @for $i from 1 through ($carousel-number) {
       &:nth-of-type(#{$i}):checked ~ .carousel-container .carousel-item:nth-of-type(#{$i}) {
-        @extend .carousel-image-checked;
+        @extend %carousel-image-checked;
       }
     }
 
-    @for $i from 1 through $carousel-number {
+    @for $i from 1 through ($carousel-number) {
       &:nth-of-type(#{$i}):checked ~ .carousel-nav .nav-item:nth-of-type(#{$i}) {
-        @extend .carousel-nav-checked;
+        @extend %carousel-nav-checked;
       }
     }
   }
@@ -107,10 +112,6 @@ $carousel-number: 8;
         width: 100%;
       }
     }
-  }
-
-  img {
-    width: 100%;
   }
 }
 

@@ -1,6 +1,8 @@
 // 360 Degree Viewer
 
 // Mixin: Viewer slider sizes
+@use "sass:math";
+
 @mixin viewer-slider-size($image-number: 36) {
   @for $s from 1 through ($image-number) {
     .viewer-slider[max='#{$image-number}'][value='#{$s}'] + .viewer-image {

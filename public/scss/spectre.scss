@@ -2,7 +2,8 @@
 @import "variables";
 @import "mixins";
 
-/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
+/*! SpectreCSS %VERSION% | MIT License | https://github.com/spectre-org/spectre-css */
+
 // Reset and dependencies
 @import "normalize";
 @import "base";
@@ -23,26 +24,26 @@
 //@import "navbar";
 
 // Components
-/*@import "accordions";
-@import "avatars";
-@import "badges";
-@import "breadcrumbs";
-@import "bars";
-@import "cards";
-@import "chips";
-@import "dropdowns";
-@import "empty";
-@import "menus";
-@import "modals";
-@import "navs";
-@import "pagination";
-@import "panels";
-@import "popovers";
-@import "steps";
-@import "tabs";
-@import "tiles";
-@import "toasts";
-@import "tooltips";*/
+//@import "accordions";
+//@import "avatars";
+//@import "badges";
+//@import "breadcrumbs";
+//@import "bars";
+//@import "cards";
+//@import "chips";
+//@import "dropdowns";
+//@import "empty";
+//@import "menus";
+//@import "modals";
+//@import "navs";
+//@import "pagination";
+//@import "panels";
+//@import "popovers";
+//@import "steps";
+//@import "tabs";
+//@import "tiles";
+//@import "toasts";
+//@import "tooltips";
 
 // Utility classes
 @import "animations";
