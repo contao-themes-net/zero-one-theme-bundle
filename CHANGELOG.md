@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.2) – 2025-03-21
+
+- [Fixed] Updated scssphp dependency to 1.0 for Contao 5.5 compatibility
+
 ## [2.4.1](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.1) – 2024-10-16
 
 - [Fixed] Fix new css generation with every page request
