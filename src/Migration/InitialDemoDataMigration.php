@@ -18,6 +18,7 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\ZeroOneThemeBundle\Migration;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
@@ -61,6 +62,11 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
+        // Check wich Contao Version is used
+        if (version_compare(ContaoCoreBundle::getVersion(), '5.6.0', '>=') || false !== strpos(ContaoCoreBundle::getVersion(), '5.6.')) {
+            $this->sqlFile = str_replace('51', '56', $this->sqlFile);
+        }
+
         // check some tables for content
         $count = (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
         $count += (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
@@ -100,7 +106,7 @@ class InitialDemoDataMigration extends AbstractMigration
                 continue;
             }
 
-            $this->connection->prepare($sql)->execute();
+            $this->connection->executeStatement($sql);
         }
 
         return $this->createResult(true, 'Initial structure and content added.');
