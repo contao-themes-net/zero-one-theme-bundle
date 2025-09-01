@@ -18,6 +18,7 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\ZeroOneThemeBundle\Migration;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
@@ -61,8 +62,9 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
-        if (!isset($schemaManager->listTableColumns('tl_page')['noSearch'])) {
-            $this->sqlFile = str_replace('51', '53', $this->sqlFile);
+        // Check wich Contao Version is used
+        if (version_compare(ContaoCoreBundle::getVersion(), '5.6.0', '>=') || false !== strpos(ContaoCoreBundle::getVersion(), '5.6.')) {
+            $this->sqlFile = str_replace('51', '56', $this->sqlFile);
         }
 
         // check some tables for content

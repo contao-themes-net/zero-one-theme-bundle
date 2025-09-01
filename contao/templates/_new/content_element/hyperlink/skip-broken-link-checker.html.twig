@@ -1,0 +1,18 @@
+{% extends "@Contao/content_element/hyperlink.html.twig" %}
+
+{% block text_link %}
+  {{- text_before -}}
+  {% set link_attributes = (link_attributes|default({}))|merge({'data-skip-broken-link-checker': ''}) %}
+  <a{{ attrs(link_attributes) }}>{{ link_text|insert_tag }}</a>
+  {{- text_after -}}
+{% endblock %}
+
+{% block media_link %}
+  {% set link_attributes = attrs(figure.linkAttributes(true)|default)
+    .setIfExists('title', figure.hasLightbox and figure.hasMetadata ? figure.metadata.title : null)
+    .mergeWith(figure.options.link_attr|default)
+    .mergeWith(link_attributes|default)
+    .set('data-skip-broken-link-checker', '')
+  %}
+  <a{{ link_attributes }}>{{ block('media') }}</a>
+{% endblock %}
