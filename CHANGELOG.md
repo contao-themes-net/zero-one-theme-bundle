@@ -15,7 +15,7 @@ Types of changes
 - [Added] Add data-skip-broken-link-checker attribute to unimportant external links (use hyperlink template `skip-broken-link-checker`) ([#46](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/46))
 - [Changed] Update sql files for Contao 5.3
 - [Fixed] Demo data import for Contao 5.6
-- [Fixed] Remove favicon from fe_page template to allow root page override
+- [Fixed] Remove favicon from fe_page template to allow root page override ([#58](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/58))
 
 ## [2.4.2](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.2) – 2025-03-21
 
