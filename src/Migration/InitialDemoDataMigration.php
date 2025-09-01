@@ -61,6 +61,10 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
+        if (!isset($schemaManager->listTableColumns('tl_page')['noSearch'])) {
+            $this->sqlFile = str_replace('51', '53', $this->sqlFile);
+        }
+
         // check some tables for content
         $count = (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
         $count += (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
@@ -100,7 +104,7 @@ class InitialDemoDataMigration extends AbstractMigration
                 continue;
             }
 
-            $this->connection->prepare($sql)->execute();
+            $this->connection->executeStatement($sql);
         }
 
         return $this->createResult(true, 'Initial structure and content added.');
