@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.4](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.4) – 2025-09-30
+
+- [Fixed] Removed the outdated TMG notice from the theme demo imprint
+
 ## [2.4.3](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.3) – 2025-09-01
 
 - [Added] Add data-skip-broken-link-checker attribute to unimportant external links (use hyperlink template `skip-broken-link-checker`) ([#46](https://github.com/contao-themes-net/zero-one-theme-bundle/issues/46))
