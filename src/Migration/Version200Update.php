@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * 0.1 theme for Contao Open Source CMS
  *
- * Copyright (C) 2025 pdir / digital agentur // pdir GmbH
+ * Copyright (C) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-themes-net/zero-one-theme-bundle
  * @link       https://github.com/contao-themes-net/zero-one-theme-bundle
@@ -55,17 +55,17 @@ class Version200Update extends AbstractMigration
             FROM
                 tl_content
             WHERE
-                customTpl = 'ce_hyperlink_button_zeroone' OR 
-                customTpl = 'ce_hyperlink_zeroone' OR 
-                customTpl = 'ce_toplink_zeroone' OR 
-                customTpl = 'ce_headline_zeroone' OR 
-                customTpl = 'ce_code_zeroone' OR 
-                customTpl = 'ce_table_zeroone' OR 
-                customTpl = 'ce_gallery_zeroone' OR 
-                customTpl = 'ce_download_zeroone' OR 
-                customTpl = 'ce_downloads_zeroone' OR 
-                customTpl = 'ce_youtube_zeroone' OR 
-                customTpl = 'ce_text_hero_parallax_zeroone' OR 
+                customTpl = 'ce_hyperlink_button_zeroone' OR
+                customTpl = 'ce_hyperlink_zeroone' OR
+                customTpl = 'ce_toplink_zeroone' OR
+                customTpl = 'ce_headline_zeroone' OR
+                customTpl = 'ce_code_zeroone' OR
+                customTpl = 'ce_table_zeroone' OR
+                customTpl = 'ce_gallery_zeroone' OR
+                customTpl = 'ce_download_zeroone' OR
+                customTpl = 'ce_downloads_zeroone' OR
+                customTpl = 'ce_youtube_zeroone' OR
+                customTpl = 'ce_text_hero_parallax_zeroone' OR
                 cssID LIKE '%headline-dotted%'
         ");
 
