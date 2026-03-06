@@ -67,10 +67,6 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('51', '56', $this->sqlFile);
         }
 
-        if (version_compare(ContaoCoreBundle::getVersion(), '5.7.0', '>=') || false !== strpos(ContaoCoreBundle::getVersion(), '5.7.')) {
-            $this->sqlFile = str_replace('51', '57', $this->sqlFile);
-        }
-
         // check some tables for content
         $count = (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
         $count += (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
