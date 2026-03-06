@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.5](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.4) – 2026-03-06
+
+- [Added] Added SQL files to enable demo import in Contao 5.7
+
 ## [2.4.4](https://github.com/contao-themes-net/zero-one-theme-bundle/tree/2.4.4) – 2025-09-30
 
 - [Fixed] Removed the outdated TMG notice from the theme demo imprint
